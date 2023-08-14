@@ -1,0 +1,24 @@
+{
+    "title":  "Testimonials",
+    "rating": {
+        "value": "4.0",
+        "label": "Rating from all Client's"
+    },
+    "items": [
+        {
+            "name": "Thomas Smith",
+            "role": "Customer Support",
+            "text": "Their high level of customer service <br />complemented their technical expertise. <br />They were responsive, supportive, and <br />communicative. Their dedication to <br />the project was impressive."
+        },
+        {
+            "name": "Mike Cameron",
+            "role": "Code Quality",
+            "text": "Their high level of customer service <br />complemented their technical expertise. <br />They were responsive, supportive, and <br />communicative. Their dedication to <br />the project was impressive."
+        },
+        {
+            "name": "Jessica Brown",
+            "role": "Design Quality",
+            "text": "Their high level of customer service <br />complemented their technical expertise. <br />They were responsive, supportive, and <br />communicative. Their dedication to <br />the project was impressive."
+        }
+    ]
+}
