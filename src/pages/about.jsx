@@ -13,6 +13,7 @@ import Team2Section from "@components/sections/Team2"
 import PartnersSection from "@components/sections/Partners"
 import AwardsSection from "@components/sections/Awards"
 import Services4Section from "@components/sections/Services4"
+import Link from "next/link";
 
 const HistorySlider = dynamic(() => import("@components/sliders/History"), {ssr: false});
 const Testimonial2Slider = dynamic(() => import("@components/sliders/Testimonial2"), {ssr: false});
@@ -22,151 +23,48 @@ const About = (props) => {
     circleText();
   }, []);
 
-  const clickedVideoButton = (e) => {
-    e.preventDefault();
-
-    e.target.parentNode.classList.add('active');
-    let videoIframe = e.target.parentNode.querySelector('.js-video-iframe');
-    let videoUrl = videoIframe.dataset.src;
-    videoIframe.setAttribute('src', videoUrl);
-  }
-
   return (
     <Layouts>
-      <PageBanner pageTitle={"About Us"}
-                  pageDesc={"Creative studio at the intersection of art, designand technology."}/>
+      <PageBanner pageTitle={"About"} />
 
       {/*  About */}
-      <section className="app-section gap-top-140 gap-bottom-140">
-        <div className="container">
-          <div className="row">
-            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+      <section className="app-section gap-top-70 gap-bottom-80">
+        <div className="container-md">
 
-              {/* Heading */}
-              <div className="app-heading gap-bottom-60">
-                <div className="app-subtitle-1">
-                  <span> Welcome </span>
+            {props.team.map((item, key) => (
+              <div key={`team-item-${key}`} className="row gap-row">
+                <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                  <div className="app-team-two-item">
+                    <div className="image app-hover-3 app-hover-black-30" data-app-overlay data-app-scroll>
+                      <Link href={`/team/${item.id}`}>
+                        <img src={item.image} alt={item.name}/>
+                      </Link>
+                      <div className="app-social-2">
+                        <ul>
+                          {item.social.map((link, link_key) => (
+                            <li key={`team-item-${key}-link-${link_key}`}>
+                              <a key={`teamsocial-item-${link_key}`} className="app-social-link app-hover-2"
+                                 href={link.link} title={link.title} target="_blank">
+                                <i aria-hidden="true" className={link.icon}/>
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <h2 className="app-title-2">
-                  <span> We are a digital agency, <br/>passionate about building <br/>and designing brands </span>
-                </h2>
-                <div className="app-text">
-                  <p>From the moment our company was founded, we have helped our clients find <strong>exceptional
-                    solutions for their businesses</strong>, creating memorable brands and digital products. Our
-                    expertise grows with each year, and our accumulated experience. </p>
+                <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                  {item.bio != "" &&
+                    <span data-splitting data-app-scroll><div dangerouslySetInnerHTML={{__html : item.bio}} /></span>
+                  }
                 </div>
               </div>
-
-            </div>
-            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 offset-lg-1 hide-on-mobile">
-
-              {/* Image */}
-              <img src="/images/app-about-logo.png" alt=""/>
-
-            </div>
-          </div>
-
-          {/* Numbers items */}
-          <div className="row gap-row gap-bottom-100">
-
-            {/*number-item*/}
-            <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-              <div className="app-counter">
-                <div className="num app-text-white js-counter" data-end-value="23">
-                  <CountUp end="23" duration={7} enableScrollSpy={true} scrollSpyOnce={true}/>
-                </div>
-                <div className="num-after app-text-white"> +</div>
-                <div className="label"> Team members</div>
-              </div>
-            </div>
-
-            {/*number-item*/}
-            <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-              <div className="app-counter">
-                <div className="num app-text-white js-counter" data-end-value="99">
-                  <CountUp end="99" duration={7} enableScrollSpy={true} scrollSpyOnce={true}/>
-                </div>
-                <div className="num-after app-text-white"> +</div>
-                <div className="label"> Completed projects</div>
-              </div>
-            </div>
-
-            {/*number-item*/}
-            <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-              <div className="app-counter">
-                <div className="num app-text-white js-counter" data-end-value="12">
-                  <CountUp end="12" duration={7} enableScrollSpy={true} scrollSpyOnce={true}/>
-                </div>
-                <div className="num-after app-text-white"> M</div>
-                <div className="label"> Lines of code</div>
-              </div>
-            </div>
-
-          </div>
-
-          {/* Video */}
-          <div className="app-video" data-app-overlay data-app-scroll>
-            <div className="image" onClick={(e) => clickedVideoButton(e)}
-                 style={{"backgroundImage": "url(/images/hero-digital-1.jpg)"}}/>
-            <iframe className="js-video-iframe"
-                    data-src="https://www.youtube.com/embed/Gu6z6kIukgg?showinfo=0&rel=0&autoplay=1"></iframe>
-            <div className="play app-circle-text" onClick={(e) => clickedVideoButton(e)}>
-              <div className="arrow"/>
-              <div className="label app-text-black app-circle-text-label"> Play Video - Play Video - Play Video -</div>
-            </div>
-          </div>
-
-          {/* Description */}
-          <div className="row gap-top-100">
-            <div className="col-xs-12 col-sm-12 col-md-4 col-lg-3">
-              <h5 className="text-uppercase">Our Mission</h5>
-            </div>
-            <div className="col-xs-12 col-sm-12 col-md-8 col-lg-9">
-              From the moment our company was founded, we have helped our clients find exceptional solutions for their
-              businesses , creating memorable brands and digital products. Our expertise grows with each year, and our
-              accumulated experience.
-            </div>
-          </div>
-
-          {/* Description */}
-          <div className="row gap-top-60">
-            <div className="col-xs-12 col-sm-12 col-md-4 col-lg-3">
-              <h5 className="text-uppercase">Our Goal</h5>
-            </div>
-            <div className="col-xs-12 col-sm-12 col-md-8 col-lg-9">
-              Our goal is to deliver amazing experiences that make people talk, and build strategic value for brands,
-              tech, entertainment, arts &amp; culture.
-            </div>
-          </div>
-
-          {/* Gallery */}
-          <div className="row gap-top-100">
-            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-              <a href="/images/posts1.jpg" className="mfp-image">
-                <img src="/images/posts1-1024x683.jpg" alt=""/>
-              </a>
-            </div>
-            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 gap-top-60">
-              <a href="/images/posts2.jpg" className="mfp-image">
-                <img src="/images/posts2-1024x683.jpg" alt=""/>
-              </a>
-            </div>
-          </div>
-
+            ))}
         </div>
       </section>
-
-      <Services4Section services={props.services}/>
-
-      <AwardsSection/>
-
-      <HistorySlider/>
-
-      <Team2Section team={props.team}/>
-
       <Testimonial2Slider/>
 
-      <PartnersSection/>
 
     </Layouts>
   );

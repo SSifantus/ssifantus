@@ -34,7 +34,7 @@ body {
   height: auto !important;
   font-size: 18px;
   color: #1B252E;
-  font-family: "Epilogue", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -77,7 +77,7 @@ img {
 input,
 textarea,
 button {
-  font-family: "Epilogue";
+  font-family: "Raleway";
 }
 
 label {
@@ -367,7 +367,7 @@ h4,
 h5,
 h6 {
   font-weight: 600;
-  font-family: "Epilogue";
+  font-family: "Raleway";
   margin: 0;
   margin-bottom: 15px;
   color: #000;
@@ -675,7 +675,7 @@ label,
 legend {
   display: block;
   padding-bottom: 20px;
-  font-family: "Epilogue";
+  font-family: "Raleway";
 }
 
 fieldset {
@@ -7524,6 +7524,6 @@ h6,
 }
 
 /* ---
-	Skin Options
+	Theme Options
 ---*/
-@import "skin-options";
+@import "theme-options";
