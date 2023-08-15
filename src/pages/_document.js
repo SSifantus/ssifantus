@@ -5,28 +5,21 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          {/* meta begin */}
           <meta charSet="UTF-8"/>
           <meta httpEquiv="X-UA-Compatible" content="ie=edge"/>
-          {/* meta end */}
 
-          {/* favicon begin */}
           <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon"/>
           <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon"/>
-          {/* favicon */}
 
-          {/* Fonts */}
           <link rel="dns-prefetch" href="//fonts.googleapis.com"/>
           <link rel="stylesheet"
                 href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600&display=swap"
                 type="text/css" media="all"/>
           <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin="true"/>
 
-          {/* public assets begin */}
           <link rel="stylesheet" href="/css/vendors/bootstrap.css"/>
           <link rel="stylesheet" href="/fonts/font-awesome/css/font-awesome.css"/>
           <link rel="stylesheet" href="/css/vendors/magnific-popup.css"/>
-          {/* public assets end */}
         </Head>
         <body>
         <Main/>

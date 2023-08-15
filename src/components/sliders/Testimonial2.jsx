@@ -7,17 +7,17 @@ const Testimonial2Slider = () => {
   return (
     <>
         {/*  Reviews */}
-        <section className="app-section gap-bottom-140">
+        <section className="app-section app-section-bg">
             <div className="container">
 
                 {/* Reviews */}
-                <div className="app-reviews gap-140" style={{"backgroundColor": "#000"}}>
+                <div className="app-reviews gap-140">
                     <div style={{"backgroundImage": "url("+Data.bg_image+")", "backgroundPosition": "center center", "backgroundRepeat": "no-repeat", "backgroundSize": "cover", "position": "absolute", "left": "0", "top": "0", "width": "100%", "height": "100%", "opacity": "0.24"}} />
                     <div className="row">
                         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
                             {/* Reviews swiper */}
-                            <div className="app-reviews-carousel reviews--full app-text-white align-center">
+                            <div className="app-reviews-carousel reviews--full align-center">
                                 <Swiper
                                     {...sliderProps.testimonialSlider}
                                     className="swiper-container js-reviews-carousel"
@@ -36,13 +36,6 @@ const Testimonial2Slider = () => {
                                             <div className="subtitle">
                                                 <span data-splitting>{item.role}</span>
                                             </div>
-                                            <div className="app-stars stars--small">
-                                                <i className="fas fa-star" />
-                                                <i className="fas fa-star" />
-                                                <i className="fas fa-star" />
-                                                <i className="fas fa-star" />
-                                                <i className="fas fa-star" />
-                                            </div>
                                         </SwiperSlide>
                                         ))}
                                     </div>
@@ -50,10 +43,10 @@ const Testimonial2Slider = () => {
 
                                 {/*navs */}
                                 <div className="js-reviews-carousel-navs">
-                                    <div className="app-prev js-reviews-carousel-prev app-hover-2 nav--white">
+                                    <div className="app-prev js-reviews-carousel-prev app-hover-2">
                                         <i />
                                     </div>
-                                    <div className="app-next js-reviews-carousel-next app-hover-2 nav--white">
+                                    <div className="app-next js-reviews-carousel-next app-hover-2">
                                         <i />
                                     </div>
                                 </div>
@@ -63,7 +56,7 @@ const Testimonial2Slider = () => {
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </section>
     </>

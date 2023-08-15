@@ -5,28 +5,6 @@ import appData from "@data/app.json";
 import { Formik } from 'formik';
 
 const Contact = () => {
-  const faqData = {
-    "title": "Client’s FAQ",
-    "subtitle": "Solving Business Problems <br>is An Everyday",
-    "items": [
-        {
-            "title": "Secure Management and Workforce?",
-            "text": "Duis sed odio sit amet nibh vulputate cursus a sit tellus a odio tincdunt ilm auctor Class apten sociosqu a ds Etiam ante ex fermentum litora aorquper conuauris ine odi. Duis sed odio sit amet nibh vulputate cursus a sit tellus a odio tincdunt ilm auctor Class apten sociosqu a ds Et iam ante ex fermentum litora aorquper conuauris ine odi."
-        },
-        {
-            "title": "Logistics Workforce on Track?",
-            "text": "Duis sed odio sit amet nibh vulputate cursus a sit tellus a odio tincdunt ilm auctor Class apten sociosqu a ds Etiam ante ex fermentum litora aorquper conuauris ine odi. Duis sed odio sit amet nibh vulputate cursus a sit tellus a odio tincdunt ilm auctor Class apten sociosqu a ds Et iam ante ex fermentum litora aorquper conuauris ine odi."
-        },
-        {
-            "title": "Online Courses & Certification?",
-            "text": "Duis sed odio sit amet nibh vulputate cursus a sit tellus a odio tincdunt ilm auctor Class apten sociosqu a ds Etiam ante ex fermentum litora aorquper conuauris ine odi. Duis sed odio sit amet nibh vulputate cursus a sit tellus a odio tincdunt ilm auctor Class apten sociosqu a ds Et iam ante ex fermentum litora aorquper conuauris ine odi."
-        },
-        {
-            "title": "Figures and data representative of an organization's?",
-            "text": "Duis sed odio sit amet nibh vulputate cursus a sit tellus a odio tincdunt ilm auctor Class apten sociosqu a ds Etiam ante ex fermentum litora aorquper conuauris ine odi. Duis sed odio sit amet nibh vulputate cursus a sit tellus a odio tincdunt ilm auctor Class apten sociosqu a ds Et iam ante ex fermentum litora aorquper conuauris ine odi."
-        }
-    ]
-  }
 
   return (
     <Layouts>
@@ -109,10 +87,10 @@ const Contact = () => {
                                 <div className="row">
                                     <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                         <p>
-                                            <input 
-                                              placeholder="Full Name" 
-                                              type="text" 
-                                              name="name" 
+                                            <input
+                                              placeholder="Full Name"
+                                              type="text"
+                                              name="name"
                                               required="required"
                                               onChange={handleChange}
                                               onBlur={handleBlur}
@@ -122,10 +100,10 @@ const Contact = () => {
                                     </div>
                                     <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                         <p>
-                                            <input 
-                                              placeholder="Email Address" 
-                                              type="email" 
-                                              name="email" 
+                                            <input
+                                              placeholder="Email Address"
+                                              type="email"
+                                              name="email"
                                               required="required"
                                               onChange={handleChange}
                                               onBlur={handleBlur}
@@ -135,10 +113,10 @@ const Contact = () => {
                                     </div>
                                     <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                         <p>
-                                            <input 
-                                              placeholder="Phone Number" 
-                                              type="tel" 
-                                              name="tel" 
+                                            <input
+                                              placeholder="Phone Number"
+                                              type="tel"
+                                              name="tel"
                                               required="required"
                                               onChange={handleChange}
                                               onBlur={handleBlur}
@@ -148,8 +126,8 @@ const Contact = () => {
                                     </div>
                                     <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                         <p>
-                                            <textarea 
-                                              placeholder="Message" 
+                                            <textarea
+                                              placeholder="Message"
                                               name="message"
                                               required="required"
                                               onChange={handleChange}
@@ -183,7 +161,7 @@ const Contact = () => {
                                     <h5>Contact Info</h5>
                                     <a href="tel:+10204302973" className="app-lnk lnk--white" target="_blank">+ 1 (020) 430 2973</a><br/>
                                     <a href="mailto:username@domain.com" className="app-lnk lnk--white" target="_blank">username@domain.com</a>
-                                    
+
                                     <div className="app-social-1 app-social-active" style={{"marginTop": "10px"}}>
                                         <ul>
                                             {appData.social.map((item, key) => (
@@ -212,46 +190,6 @@ const Contact = () => {
             </div>
         </section>
 
-        {/*  Faq */}
-        <section className="app-section gap-top-140">
-            <div className="container">
-
-                {/* Heading */}
-                <div className="app-heading align-center gap-bottom-40">
-                    <div className="app-subtitle-1">
-                        <span>{faqData.title}</span>
-                    </div>
-                    <h2 className="app-title-2">
-                        <span dangerouslySetInnerHTML={{ __html: faqData.subtitle }} />
-                    </h2>
-                </div>
-
-                {/* Faq items */}
-                <div className="app-faq-items">
-                <Accordion defaultActiveKey="faq-acc-0">
-                    {faqData.items.map((item, key) => (
-                    <Accordion.Item key={`faq-item-${key}`} eventKey={`faq-acc-${key}`}>
-                    <div key={`faq-item-${key}`} className="app-faq-item app-collapse-item">
-                        <Accordion.Header>
-                        <h5 className="title app-collapse-btn">
-                            <span>{item.title}</span>
-                            <i className="arrow" />
-                        </h5>
-                        </Accordion.Header>
-                        <Accordion.Body>
-                        <div className="app-text">
-                            <div dangerouslySetInnerHTML={{ __html: item.text }} />
-                        </div>
-                        </Accordion.Body>
-                    </div>
-                    </Accordion.Item>
-                    ))}
-                </Accordion>
-                </div>
-                
-            </div>
-        </section>
-      
     </Layouts>
   );
 };

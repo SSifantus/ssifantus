@@ -82,8 +82,33 @@ const DefaultHeader = ({darkHeader, cartButton}) => {
                 </div>
 
               </div>
-              <div className="col-4 col-xs-4 col-sm-4 col-md-4 col-lg-6 align-self-center align-center">
+              <div className="col-8 col-xs-8 col-sm-8 col-md-4 col-lg-6 align-self-center align-center m-align-right">
 
+                {/* Menu Horizontal */}
+                <div className="app-menu-horizontal">
+                  <ul className="app-menu-nav">
+                    {navItems.map((item, key) => (
+                      <li key={`header-nav-item-${key}`} className={item.classes}>
+                        <Link
+                          className={item.children ? "app-lnk lnk--active app-dropdown-toggle" : "app-lnk lnk--active"}
+                          onClick={item.children != 0 ? (e) => clickedMobileMenuItemParent(e) : ""}
+                          href={item.link}>{item.label}</Link>
+                        {item.children != 0 &&
+                          <i className="icon fas fa-chevron-down"/>
+                        }
+                        {item.children != 0 &&
+                          <ul className="sub-menu">
+                            {item.children.map((subitem, key) => (
+                              <li key={`header-nav-sub-item-${key}`}>
+                                <Link className="app-lnk lnk--active" href={subitem.link}>{subitem.label}</Link>
+                              </li>
+                            ))}
+                          </ul>
+                        }
+                      </li>
+                    ))}
+                  </ul>
+                </div>
                 {/* Menu Hamburger */}
                 <a href="#" className={desktopMenu ? "app-menu-btn btn--active" : "app-menu-btn"}
                    onClick={(e) => clickedDesktopMenu(e)}><span/></a>

@@ -1,12 +1,14 @@
 ---
 #preview
-title: Museums Art Concept
+title: Groundswell Admin Portal
 image: /images/project-n01-3-1200x900.jpg
-category: Branding
-category_slug: branding
-type: Art Direction, Branding, Interactive Design
-team: Thomas Jackki
-date: 2021-2023
+category: Corporate
+category_slug: corporate
+client: Groundswell Giving
+date: 2022
+description: Corporate Philanthropy Software
+link: https://admin.groundswell.io
+type: Lead Engineer
 
 #full details
 details:
@@ -60,8 +62,6 @@ additional:
       </ul>
     "
 ---
-
-### Description
 
 Most innovative and successful builders and real estate enterprises in the country, has been selected for the design-build expansion of Air sides A and E at Tampa International Airport. This expansion will support Hillsborough County Aviation Authority and Tampa International Airport as they project up to 38.8 million annual passengers, 402,000 tons of cargo per year and 344,000 annual aircraft operations.
 

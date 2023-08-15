@@ -1,24 +1,24 @@
 {
-    "title":  "Testimonials",
-    "rating": {
-        "value": "4.0",
-        "label": "Rating from all Client's"
+  "title": "Testimonials",
+  "rating": {
+    "value": "5.0",
+    "label": "What clients say"
+  },
+  "items": [
+    {
+      "name": "Jesse Kanner",
+      "role": "Programmer",
+      "text": "It was a real pleasure working with Sam… She is a triple threat: coder, designer, and project manager."
     },
-    "items": [
-        {
-            "name": "Thomas Smith",
-            "role": "Customer Support",
-            "text": "Their high level of customer service <br />complemented their technical expertise. <br />They were responsive, supportive, and <br />communicative. Their dedication to <br />the project was impressive."
-        },
-        {
-            "name": "Mike Cameron",
-            "role": "Code Quality",
-            "text": "Their high level of customer service <br />complemented their technical expertise. <br />They were responsive, supportive, and <br />communicative. Their dedication to <br />the project was impressive."
-        },
-        {
-            "name": "Jessica Brown",
-            "role": "Design Quality",
-            "text": "Their high level of customer service <br />complemented their technical expertise. <br />They were responsive, supportive, and <br />communicative. Their dedication to <br />the project was impressive."
-        }
-    ]
+    {
+      "name": "Chris Hajian",
+      "role": "Composer",
+      "text": "Samantha is a true professional in every sense. Her work ethic is unparalleled and I am truly grateful I found her."
+    },
+    {
+      "name": "Mark Danson",
+      "role": "Psychologist",
+      "text": "Integrity” is the word I would choose to describe Samantha both as a person and her approach to development."
+    }
+  ]
 }

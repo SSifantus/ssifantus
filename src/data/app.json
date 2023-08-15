@@ -6,20 +6,24 @@
     "portfolio": {
       "categories": [
         {
-          "label": "Marketing",
-          "slug": "marketing"
+          "label": "Corporate",
+          "slug": "corporate"
         },
         {
-          "label": "Interactive",
-          "slug": "interactive"
+          "label": "ECommerce",
+          "slug": "ecommerce"
         },
         {
-          "label": "Design",
-          "slug": "design"
+          "label": "Entertainment",
+          "slug": "entertainment"
         },
         {
-          "label": "Branding",
-          "slug": "branding"
+          "label": "Music",
+          "slug": "music"
+        },
+        {
+          "label": "Services",
+          "slug": "services"
         }
       ]
     }
@@ -58,11 +62,11 @@
         ]
       },
       {
-        "label": "About",
+        "label": "Samples",
         "link": "/about",
         "children": [
           {
-            "label": "About Us",
+            "label": "About",
             "link": "/about",
             "children": 0
           },
@@ -161,7 +165,17 @@
         ]
       },
       {
-        "label": "Contact Us",
+        "label": "Work",
+        "link": "/projects",
+        "children": 0
+      },
+      {
+        "label": "About",
+        "link": "/about",
+        "children": 0
+      },
+      {
+        "label": "Contact",
         "link": "/contact",
         "children": 0
       }
@@ -216,19 +230,21 @@
   },
   "social": [
     {
-      "link": "https://facebook.com",
+      "link": "https://facebook.com/SSifantus",
       "icon": "fab fa-facebook",
       "title": "Facebook"
     },
     {
-      "link": "https://twitter.com",
+      "link": "https://twitter.com/ssifantus",
       "icon": "fab fa-twitter",
       "title": "Twitter"
     },
     {
-      "link": "https://linkedin.com",
+      "link": "https://www.linkedin.com/in/ssifantus",
       "icon": "fab fa-linkedin",
       "title": "Linkedin"
     }
-  ]
+  ],
+  "expo": {
+  }
 }

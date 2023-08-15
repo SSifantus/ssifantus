@@ -13,7 +13,7 @@ const DefaultFooter = () => {
       {/* Footer */}
       <footer className="app-footer">
         <div className="footer--default">
-          <div className="container">
+          <div className="container-fluid">
 
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 align-self-center">

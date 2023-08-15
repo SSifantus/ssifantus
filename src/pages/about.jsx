@@ -32,6 +32,7 @@ const About = (props) => {
         <div className="container-md">
 
             {props.team.map((item, key) => (
+              <>
               <div key={`team-item-${key}`} className="row gap-row">
                 <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                   <div className="app-team-two-item">
@@ -58,8 +59,48 @@ const About = (props) => {
                   {item.bio != "" &&
                     <span data-splitting data-app-scroll><div dangerouslySetInnerHTML={{__html : item.bio}} /></span>
                   }
+                  <div className="row">
+                    {item.languages?.length > 0 &&
+                      <div className="col-xs-12 col-sm-4 tech">
+                        <ul>
+                          {item.languages.map((tech, key) => (
+                            <li key={`tech-item-${key}`}>
+                              {tech.label}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    }
+                    {item.roles?.length > 0 &&
+                      <div className="col-xs-12 col-sm-6 tech">
+                        <ul>
+                          {item.roles.map((role, key) => (
+                            <li key={`tech-item-${key}`}>
+                              {role}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    }
+                  </div>
                 </div>
               </div>
+              <div className="row">
+                {typeof item.icons != "undefined" &&
+                  <div className="social-share app-post-socials app-social-2">
+                    <ul>
+                      {item.icons.map((lang, key) => (
+                        <li key={`teamsocial-item-${key}`}>
+                          <a className="app-social-link app-hover-2" href={lang.link} title={lang.title} target="_blank">
+                            <i aria-hidden="true" className={lang.icon} />
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                }
+              </div>
+              </>
             ))}
         </div>
       </section>

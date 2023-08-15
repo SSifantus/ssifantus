@@ -1,20 +1,20 @@
 {
-    "bg_image": "/images/testi-bg.jpg",
-    "items": [
-        {
-            "name": "Thomas Smith",
-            "role": "Customer Support",
-            "text": "Their high level of customer service complemented their technical expertise. They were responsive, supportive, and communicative. Their dedication to the project was impressive."
-        },
-        {
-            "name": "Mike Cameron",
-            "role": "Code Quality",
-            "text": "Their high level of customer service complemented their technical expertise. They were responsive, supportive, and communicative. Their dedication to the project was impressive."
-        },
-        {
-            "name": "Jessica Brown",
-            "role": "Design Quality",
-            "text": "Their high level of customer service complemented their technical expertise. They were responsive, supportive, and communicative. Their dedication to the project was impressive."
-        }
-    ]
+  "bg_image": "",
+  "items": [
+    {
+      "name": "Jesse Kanner",
+      "role": "Programmer",
+      "text": "It was a real pleasure working with Sam… She is a triple threat: coder, designer, and project manager."
+    },
+    {
+      "name": "Chris Hajian",
+      "role": "Composer",
+      "text": "Samantha is a true professional in every sense. Her work ethic is unparalleled and I am truly grateful I found her."
+    },
+    {
+      "name": "Mark Danson",
+      "role": "Psychologist",
+      "text": "Integrity” is the word I would choose to describe Samantha both as a person and her approach to development."
+    }
+  ]
 }

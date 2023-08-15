@@ -149,7 +149,7 @@ b, strong {
 }
 
 .app-section-bg {
-  background-color: #FAFAFA;
+  background-color: #f2f2f2;
 }
 
 @media (max-width: 991px) {
@@ -1736,7 +1736,7 @@ button > span,
   align-items: center;
   justify-content: center;
   font-size: 16px !important;
-  color: #fff !important;
+  //color: #fff !important;
   font-weight: 700 !important;
   transition: all .4s cubic-bezier(0.3, 0, 0.3, 1);
   -webkit-transition: all .4s cubic-bezier(0.3, 0, 0.3, 1);
@@ -4935,6 +4935,24 @@ ul.app-footer-menu li {
 
 .app-project-info > ul > li strong {
   color: #D8FF36;
+}
+
+.app-project-summary {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      span {
+        display: inline-block;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        text-transform: none;
+        width: 100px;
+      }
+    }
+  }
 }
 
 @media (min-width: 1025px) {
