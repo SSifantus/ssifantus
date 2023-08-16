@@ -1,13 +1,13 @@
 ---
 #preview
-title: Groundswell Giving
-image: /images/groundswell.jpg
-category: Corporate
-category_slug: corporate
-client: Groundswell Giving
+title: Anna Journey
+image: /images/annajourney.jpg
+category: Arts & Entertainment
+category_slug: arts
+client: Anna Journey
 date: 2022
-description: Corporate Philanthropy Software
-link: https://admin.groundswell.io
+description: Poet's Website
+link: https://annajourney.com
 type: Lead Engineer
 
 #full details

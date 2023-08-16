@@ -1,13 +1,13 @@
 ---
 #preview
-title: Groundswell Giving
-image: /images/groundswell.jpg
-category: Corporate
-category_slug: corporate
-client: Groundswell Giving
-date: 2022
-description: Corporate Philanthropy Software
-link: https://admin.groundswell.io
+title: Bill Silva Entertainment
+image: /images/bse.jpg
+category: Arts & Entertainment
+category_slug: arts
+client: Bill Silva Entertainment
+date: 2014
+description: Entertainment Company Website
+link: https://www.billsilvaentertainment.com
 type: Lead Engineer
 
 #full details

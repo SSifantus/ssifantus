@@ -1,13 +1,13 @@
 ---
 #preview
-title: Groundswell Giving
-image: /images/groundswell.jpg
+title: LuminAI Refinery Advisor
+image: /images/luminai.jpg
 category: Corporate
 category_slug: corporate
-client: Groundswell Giving
-date: 2022
-description: Corporate Philanthropy Software
-link: https://admin.groundswell.io
+client: Beyond Limits
+date: 2021
+description: Industrial AI Software
+link: https://beyond.ai
 type: Lead Engineer
 
 #full details

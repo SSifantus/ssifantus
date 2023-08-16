@@ -1,13 +1,14 @@
 ---
 #preview
-title: Groundswell Giving
-image: /images/groundswell.jpg
-category: Corporate
-category_slug: corporate
-client: Groundswell Giving
-date: 2022
-description: Corporate Philanthropy Software
-link: https://admin.groundswell.io
+title: Teeki
+image: /images/teeki.jpg
+marquee: /images/teeki_marquee.jpg
+category: Ecommerce
+category_slug: ecommerce
+client: Teeki
+date: 2015
+description: Retail Website
+link: http://teeki.com
 type: Lead Engineer
 
 #full details

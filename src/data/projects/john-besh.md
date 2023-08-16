@@ -1,13 +1,13 @@
 ---
 #preview
-title: Groundswell Giving
-image: /images/groundswell.jpg
-category: Corporate
-category_slug: corporate
-client: Groundswell Giving
-date: 2022
-description: Corporate Philanthropy Software
-link: https://admin.groundswell.io
+title: John Besh
+image: /images/johnbesh.jpg
+category: Arts & Entertainment
+category_slug: arts
+client: Chef John Besh
+date: 2013
+description: Interactive Campaign
+link: 
 type: Lead Engineer
 
 #full details

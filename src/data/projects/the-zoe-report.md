@@ -1,12 +1,15 @@
 ---
 #preview
-title: Headphones 3D Rendering
-image: /images/project-2-1200x988.jpg
-category: Design
-category_slug: design
-type: UI/UX Design, Branding, Logo Design
-team: Steven Morrison
-date: 2021-2023
+title: The Zoe Report
+image: /images/tzr.jpg
+marquee: /images/tzr_marquee.jpg
+category: Ecommerce
+category_slug: ecommerce
+client: The Zoe Report
+date: 2015
+description: Fashion and Retail Website
+link: http://thezoereport.com
+type: Lead Engineer
 
 #full details
 details:
@@ -61,6 +64,13 @@ additional:
     "
 ---
 
-Most innovative and successful builders and real estate enterprises in the country, has been selected for the design-build expansion of Airsides A and E at Tampa International Airport. This expansion will support Hillsborough County Aviation Authority and Tampa International Airport as they project up to 38.8 million annual passengers, 402,000 tons of cargo per year and 344,000 annual aircraft operations.
+Most innovative and successful builders and real estate enterprises in the country, has been selected for the design-build expansion of Air sides A and E at Tampa International Airport. This expansion will support Hillsborough County Aviation Authority and Tampa International Airport as they project up to 38.8 million annual passengers, 402,000 tons of cargo per year and 344,000 annual aircraft operations.
 
-I learned that this waste product could be stabilised, reducing the potential for leachable heavy metals by 96%. Research has shown that the **Construction patent pending process demonstrates** that after metal extraction and recycling, any residual chemicals can be securely contained when utilised in hydraulically bound concrete products.
+Global demand for a Circular Economy solution is already high, with global concrete manufacturers engaging with us to **develop specific testing programms**.
+
+###### Project Requirement
+
+- Far curiosity incommode now led smallness allowance.
+- Favour bed assure son things yet.
+- She consisted consulted elsewhere happiness.
+- Widow downs you new shade drift hopes small.s

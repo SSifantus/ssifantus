@@ -1,13 +1,14 @@
 ---
 #preview
-title: Groundswell Giving
-image: /images/groundswell.jpg
+title: Verano Capital
+image: /images/verano.jpg
 category: Corporate
 category_slug: corporate
-client: Groundswell Giving
-date: 2022
-description: Corporate Philanthropy Software
-link: https://admin.groundswell.io
+client: Verano Capital
+date: 2018
+description: Corporate Website
+link: https://veranocapital.com
+marquee: /images/verano_marquee.jpg
 type: Lead Engineer
 
 #full details
