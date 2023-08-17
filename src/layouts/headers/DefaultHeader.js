@@ -1,9 +1,9 @@
 import Link from "next/link";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import appData from "@data/app.json";
-import {headerSticky} from "@common/utilits";
+import { headerSticky } from "@common/utilits";
 
-const DefaultHeader = ({darkHeader, cartButton}) => {
+const DefaultHeader = ({ darkHeader, cartButton }) => {
   const navItems = [];
 
   appData.header.menu.forEach((item, index) => {
@@ -12,7 +12,7 @@ const DefaultHeader = ({darkHeader, cartButton}) => {
     if (item.children != 0) {
       s_class1 += 'menu-item-has-children';
     }
-    let newobj = Object.assign({}, item, {"classes": s_class1});
+    let newobj = Object.assign({}, item, { "classes": s_class1 });
     navItems.push(newobj);
   });
 
@@ -69,102 +69,82 @@ const DefaultHeader = ({darkHeader, cartButton}) => {
       {/* Header */}
       <header className="app-header">
         <div className="header--builder">
-          <div className="container">
-            <div className="row">
-              <div className="col-4 col-xs-4 col-sm-4 col-md-4 col-lg-3 align-self-center">
+          <div className="container-fluid app-header-wrapper">
 
-                {/* Logo */}
-                <div className="app-logo-image">
-                  <Link href="/">
-                    <img src={appData.header.logo.image} alt={appData.header.logo.alt}/>
-                    <img className="logo--white" src={appData.header.logo.image_white} alt={appData.header.logo.alt}/>
-                  </Link>
-                </div>
+            {/* Logo */}
+            <div className="app-logo-image">
+              <Link href="/">
+                <img src={appData.header.logo.image} alt={appData.header.logo.alt} />
+                <img className="logo--white" src={appData.header.logo.image_white} alt={appData.header.logo.alt} />
+              </Link>
+            </div>
 
-              </div>
-              <div className="col-8 col-xs-8 col-sm-8 col-md-4 col-lg-6 align-self-center align-center m-align-right">
+            {/* Menu Horizontal */}
+            <div className="app-menu-horizontal">
+              <ul className="app-menu-nav">
+                {navItems.map((item, key) => (
+                  <li key={`header-nav-item-${key}`} className={item.classes}>
+                    <Link
+                      className={item.children ? "app-lnk lnk--active app-dropdown-toggle" : "app-lnk lnk--active"}
+                      onClick={item.children != 0 ? (e) => clickedMobileMenuItemParent(e) : ""}
+                      href={item.link}>{item.label}</Link>
+                    {item.children != 0 &&
+                      <i className="icon fas fa-chevron-down" />
+                    }
+                    {item.children != 0 &&
+                      <ul className="sub-menu">
+                        {item.children.map((subitem, key) => (
+                          <li key={`header-nav-sub-item-${key}`}>
+                            <Link className="app-lnk lnk--active" href={subitem.link}>{subitem.label}</Link>
+                          </li>
+                        ))}
+                      </ul>
+                    }
+                  </li>
+                ))}
+              </ul>
+            </div>
+            {/* Menu Hamburger */}
+            <a href="#" className={desktopMenu ? "app-menu-btn btn--active" : "app-menu-btn"}
+              onClick={(e) => clickedDesktopMenu(e)}><span /></a>
 
-                {/* Menu Horizontal */}
-                <div className="app-menu-horizontal">
-                  <ul className="app-menu-nav">
-                    {navItems.map((item, key) => (
-                      <li key={`header-nav-item-${key}`} className={item.classes}>
-                        <Link
-                          className={item.children ? "app-lnk lnk--active app-dropdown-toggle" : "app-lnk lnk--active"}
-                          onClick={item.children != 0 ? (e) => clickedMobileMenuItemParent(e) : ""}
-                          href={item.link}>{item.label}</Link>
-                        {item.children != 0 &&
-                          <i className="icon fas fa-chevron-down"/>
-                        }
-                        {item.children != 0 &&
-                          <ul className="sub-menu">
-                            {item.children.map((subitem, key) => (
-                              <li key={`header-nav-sub-item-${key}`}>
-                                <Link className="app-lnk lnk--active" href={subitem.link}>{subitem.label}</Link>
-                              </li>
-                            ))}
-                          </ul>
-                        }
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                {/* Menu Hamburger */}
-                <a href="#" className={desktopMenu ? "app-menu-btn btn--active" : "app-menu-btn"}
-                   onClick={(e) => clickedDesktopMenu(e)}><span/></a>
+            <div className="app-menu-popup align-left">
+              <div className="app-menu-overlay" />
+              <div className="app-menu-overlay-after" />
 
-                <div className="app-menu-popup align-left">
-                  <div className="app-menu-overlay"/>
-                  <div className="app-menu-overlay-after"/>
-
-                  <div className="app-menu-container app--noscroll">
-                    <div className="container">
-                      <div className="app-menu">
-                        <ul className="app-menu-nav">
-                          {navItems.map((item, key) => (
-                            <li key={`header-nav-item-${key}`} className={item.classes}>
-                              <Link
-                                className={item.children ? "app-lnk lnk--active app-dropdown-toggle" : "app-lnk lnk--active"}
-                                onClick={item.children != 0 ? (e) => clickedMobileMenuItemParent(e) : ""}
-                                href={item.link}>{item.label}</Link>
-                              {item.children &&
-                                <i className="icon fas fa-chevron-down"/>
-                              }
-                              {item.children != 0 &&
-                                <ul className="sub-menu">
-                                  {item.children.map((subitem, key) => (
-                                    <li key={`header-nav-sub-item-${key}`}>
-                                      <Link className="app-lnk lnk--active" href={subitem.link}>{subitem.label}</Link>
-                                    </li>
-                                  ))}
-                                </ul>
-                              }
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
+              <div className="app-menu-container app--noscroll">
+                <div className="container">
+                  <div className="app-menu">
+                    <ul className="app-menu-nav">
+                      {navItems.map((item, key) => (
+                        <li key={`header-nav-item-${key}`} className={item.classes}>
+                          <Link
+                            className={item.children ? "app-lnk lnk--active app-dropdown-toggle" : "app-lnk lnk--active"}
+                            onClick={item.children != 0 ? (e) => clickedMobileMenuItemParent(e) : ""}
+                            href={item.link}>{item.label}</Link>
+                          {item.children &&
+                            <i className="icon fas fa-chevron-down" />
+                          }
+                          {item.children != 0 &&
+                            <ul className="sub-menu">
+                              {item.children.map((subitem, key) => (
+                                <li key={`header-nav-sub-item-${key}`}>
+                                  <Link className="app-lnk lnk--active" href={subitem.link}>{subitem.label}</Link>
+                                </li>
+                              ))}
+                            </ul>
+                          }
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
-
-              </div>
-              <div className="col-4 col-xs-4 col-sm-4 col-md-4 col-lg-3 align-self-center align-right">
-
-                {/* Button */}
-                <Link className="app-head-btn app-hover-btn" href={appData.header.button.link}>
-                  <span>
-                    <span className="app-lnk lnk--active">{appData.header.button.label}</span>
-                  </span>
-                  <i className="arrow">
-                    <span/>
-                  </i>
-                </Link>
-
               </div>
             </div>
+
           </div>
         </div>
-      </header>
+      </header >
     </>
   );
 };

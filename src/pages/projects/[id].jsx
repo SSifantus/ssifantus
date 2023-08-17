@@ -64,7 +64,7 @@ const ProjectDetail = (props) => {
               <h5>{postData.title}</h5>
               <div className="app-project-summary">
                 <ul>
-                  <li><span>Project:</span> {postData.description}</li>
+                  <li><span>Project:</span> <p>{postData.description} {postData?.type ? <><br />{postData.type}</> : null}</p></li>
                   <li><span>Client:</span> {postData.client}</li>
                   <li><span>Launched:</span> {postData.date}</li>
                 </ul>
@@ -81,82 +81,6 @@ const ProjectDetail = (props) => {
             </div>
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-4 offset-lg-1">
 
-              {/* Project Info */}
-              <div className="app-project-info app-text-white text-uppercase">
-                <ul>
-                  {typeof postData.details != "undefined" &&
-                    <>
-                      {postData.details.items.map((item, key) => (
-                        <li key={`details-item-${key}`}>
-                          <div><strong>{item.label}</strong></div>
-                          <div>{item.value}</div>
-                        </li>
-                      ))}
-                    </>
-                  }
-
-                  <li>
-                    <div><strong>Share:</strong></div>
-                    <div className="app-share">
-                      <div className="social-share app-post-socials app-social-2">
-                        <ul>
-                          <li>
-                            <FacebookShareButton
-                              className="app-social-link app-hover-2"
-                              url={shareUrl}
-                              quote={postData.title}
-                              hashtag={'#' + postData.category}
-                            >
-                              <i className="icon fab fa-facebook"/>
-                            </FacebookShareButton>
-                          </li>
-                          <li>
-                            <TwitterShareButton
-                              className="app-social-link app-hover-2"
-                              url={shareUrl}
-                              title={postData.title}
-                              hashtag={'#' + postData.category}
-                            >
-                              <i className="icon fab fa-twitter"></i>
-                            </TwitterShareButton>
-                          </li>
-                          <li>
-                            <LinkedinShareButton
-                              className="app-social-link app-hover-2"
-                              url={shareUrl}
-                              title={postData.title}
-                              summary={postData.type}
-                              source={shareUrl}
-                            >
-                              <i className="icon fab fa-linkedin"/>
-                            </LinkedinShareButton>
-                          </li>
-                          <li>
-                            <RedditShareButton
-                              className="app-social-link app-hover-2"
-                              url={shareUrl}
-                              title={postData.title}
-                            >
-                              <i className="icon fab fa-reddit"/>
-                            </RedditShareButton>
-                          </li>
-                          <li>
-                            <PinterestShareButton
-                              className="app-social-link app-hover-2"
-                              url={shareUrl}
-                              media={postData.image}
-                              description={postData.title}
-                            >
-                              <i className="icon fab fa-pinterest"/>
-                            </PinterestShareButton>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </li>
-
-                </ul>
-              </div>
 
             </div>
           </div>

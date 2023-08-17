@@ -59,7 +59,7 @@ const ProjectsGrid = ({ projects, layout, cols, sideFilter, masonry, galleryMode
     if ( activeFilterNav != undefined ) {
         let current_pos = activeItem.parentNode.offsetLeft;
         let current_width = activeItem.parentNode.offsetWidth;
-        
+
         activeFilterNav.style.width = current_width+6+'px';
         activeFilterNav.style.left = current_pos-3+'px';
     }
@@ -81,7 +81,7 @@ const ProjectsGrid = ({ projects, layout, cols, sideFilter, masonry, galleryMode
   return (
     <>
       {/*  Projects */}
-      <section className="app-section gap-top-140">
+      <section className="app-section">
         <div className="container">
 
           {/* Projects Grid */}
@@ -120,24 +120,22 @@ const ProjectsGrid = ({ projects, layout, cols, sideFilter, masonry, galleryMode
 
                         {projects.map((item, key) => (
                         <div key={`projects-item-${key}`} className={`${columns} app-portfolio-col ${item.category_slug}`}>
-                            {layout == "grid" &&    
+                            {layout == "grid" &&
                                 <div className="app-portfolio-item">
                                     <div className={masonry ? "image" : "image image-square"} data-app-overlay data-app-scroll>
                                         <Link href={galleryMode ? item.image : `/projects/${item.id}`} className="app-hover-3">
                                             <img src={item.image} alt={item.title} />
-                                        </Link>
-                                    </div>
-                                    <div className="desc">
-                                        <h5 className="title">
-                                            <Link className="app-lnk" href={galleryMode ? item.image : `/projects/${item.id}`}>
-                                                <span data-splitting data-app-scroll>{item.title}</span>
-                                            </Link>
-                                        </h5>
-                                        <div className="text">
-                                            <div data-splitting data-app-scroll>
-                                                <span>{item.category}</span>
+                                          <div className="desc">
+                                            <h5 className="title">
+                                              <span data-splitting data-app-scroll>{item.title}</span>
+                                            </h5>
+                                            <div className="text">
+                                              <div data-splitting data-app-scroll>
+                                                <span>{item.description}</span>
+                                              </div>
                                             </div>
-                                        </div>
+                                          </div>
+                                        </Link>
                                     </div>
                                 </div>
                             }
@@ -188,7 +186,7 @@ const ProjectsGrid = ({ projects, layout, cols, sideFilter, masonry, galleryMode
                 </div>
             </div>
           </div>
-            
+
         </div>
       </section>
 

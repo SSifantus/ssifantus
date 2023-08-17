@@ -87,7 +87,7 @@ const About = (props) => {
               </div>
               <div className="row">
                 {typeof item.icons != "undefined" &&
-                  <div className="social-share app-post-socials app-social-2">
+                  <div className="social-share app-post-socials app-social-2 align-center">
                     <ul>
                       {item.icons.map((lang, key) => (
                         <li key={`teamsocial-item-${key}`}>
