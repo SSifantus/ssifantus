@@ -15,9 +15,6 @@ const PageBanner = ({pageTitle, pageDesc}) => {
       {/*  Intro */}
       <section className="app-section app-intro">
         <div className="container">
-          <h1 className="app-title">
-            <span>{pageTitle}</span>
-          </h1>
           {pageDesc != "" &&
             <div className="app-subtitle-2  app-text-white">
               <span>{pageDesc}</span>
