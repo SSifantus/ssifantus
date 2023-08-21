@@ -29,41 +29,41 @@ const FAQ = () => {
 
   return (
     <Layouts>
-      <PageBanner pageTitle={"Client’s FAQ"} pageDesc={"Solving business problems is an everyday."} />
-      
+      <PageBanner pageTitle={"Client’s FAQ"} pageDesc={"Solving business problems is an everyday."}/>
+
       {/*  Faq */}
-			<section className="app-section gap-top-140 gap-bottom-140">
-				<div className="container">
+      <section className="app-section gap-top-140 gap-bottom-140">
+        <div className="container">
 
           {/* Faq items */}
           <Accordion>
-          <div className="app-faq-items">
-            {Content.items.map((item, key) => (
-            <Accordion.Item key={`faq-item-${key}`} eventKey={`faq-acc-${key}`}>
-            <div className="app-faq-item app-collapse-item">
-              <Accordion.Header>
-              <h5 className="title app-collapse-btn">
-                <span>{item.heading}</span>
-                <i className="arrow" />
-              </h5>
-              </Accordion.Header>
-              <Accordion.Body>
-                <div className="app-text">
-                  <div dangerouslySetInnerHTML={{__html : item.content}} />
-                </div>
-              </Accordion.Body>
+            <div className="app-faq-items">
+              {Content.items.map((item, key) => (
+                <Accordion.Item key={`faq-item-${key}`} eventKey={`faq-acc-${key}`}>
+                  <div className="app-faq-item app-collapse-item">
+                    <Accordion.Header>
+                      <h5 className="title app-collapse-btn">
+                        <span>{item.heading}</span>
+                        <i className="arrow"/>
+                      </h5>
+                    </Accordion.Header>
+                    <Accordion.Body>
+                      <div className="app-text">
+                        <div dangerouslySetInnerHTML={{__html: item.content}}/>
+                      </div>
+                    </Accordion.Body>
+                  </div>
+                </Accordion.Item>
+              ))}
             </div>
-            </Accordion.Item>
-            ))}
-          </div>
           </Accordion>
 
         </div>
-			</section>
+      </section>
 
-      <CallToActionSection />
+      <CallToActionSection/>
 
-      <PartnersSection paddingTop />
+      <PartnersSection paddingTop/>
 
     </Layouts>
   );
