@@ -98,8 +98,6 @@ const About = (props) => {
         </div>
       </section>
       <Testimonial2Slider/>
-
-
     </Layouts>
   );
 };
