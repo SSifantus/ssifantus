@@ -136,7 +136,7 @@ strong {
 }
 
 .footer--fixed .wrapper {
-  padding-bottom: 90px;
+  padding-bottom: 0;
 }
 
 .app-section-full {
@@ -144,6 +144,13 @@ strong {
   min-height: 100vh;
   display: flex;
   align-items: center;
+}
+
+.app-section-fullscreen {
+  height: calc(100vh - 37px);
+  max-height: calc(100vh - 37px);
+  overflow: hidden;
+  width: 100%;
 }
 
 .app-section-full > div {
@@ -1335,26 +1342,6 @@ a.app-lnk,
 span.app-lnk,
 .app-lnk a {
   position: relative;
-}
-
-a.app-lnk::after,
-span.app-lnk::after,
-.app-lnk a::after,
-a.app-lnk.lnk--revert::after,
-span.app-lnk.lnk--revert::after,
-.app-lnk.lnk--revert a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: #000;
-  transform: scaleX(0);
-  -webkit-transform: scaleX(0);
-  transition: transform .4s ease-out;
-  -webkit-transition: transform .4s ease-out;
-  transform-origin: bottom right;
 }
 
 a.app-lnk.lnk--white::after,
@@ -3217,7 +3204,7 @@ ul.app-footer-menu li {
   }
 
   .app-footer .footer--default {
-    padding: 60px 0 30px 0;
+    padding: 60px 0 5px 0;
   }
 
   .app-footer-lnk {

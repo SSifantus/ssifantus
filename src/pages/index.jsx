@@ -7,12 +7,14 @@ import { getSortedProjectsData } from "@library/projects";
 import { getSortedServicesData } from "@library/services";
 import { getSortedTeamData } from "@library/team";
 
+import Waves from "@components/Waves";
 import Services3Section from "@components/sections/Services3";
 import Team2Section from "@components/sections/Team2"
 import PricingSection from "@components/sections/Pricing"
 import CallToAction2Section from "@components/sections/CallToAction2"
 import PartnersSection from "@components/sections/Partners"
 
+const Hero2Slider = dynamic( () => import("@components/sliders/Hero2"), { ssr: false } );
 const Hero3Slider = dynamic( () => import("@components/sliders/Hero3"), { ssr: false } );
 const Testimonial2Slider = dynamic( () => import("@components/sliders/Testimonial2"), { ssr: false } );
 const HistorySlider = dynamic( () => import("@components/sliders/History"), { ssr: false } );
@@ -21,17 +23,9 @@ const LatestPostsSlider = dynamic( () => import("@components/sliders/LatestPosts
 const Home3 = (props) => {
   return (
     <Layouts darkHeader>
-      <>
-        <Hero3Slider projects={props.projects} />
-        <Services3Section services={props.services} />
-        <Team2Section team={props.team} />
-        <Testimonial2Slider />
-        <HistorySlider />
-        <PricingSection />
-        <LatestPostsSlider posts={props.posts} />
-        <CallToAction2Section />
-        <PartnersSection />
-      </>
+      <div className="app-section-fullscreen">
+        <Waves />
+      </div>
     </Layouts>
   );
 };
