@@ -123,7 +123,7 @@ const ProjectsGrid = ({ projects, layout, cols, sideFilter, masonry, galleryMode
                             {layout == "grid" &&
                                 <div className="app-portfolio-item">
                                     <div className={masonry ? "image" : "image image-square"} data-app-overlay data-app-scroll>
-                                        <Link href={galleryMode ? item.image : `/projects/${item.id}`} className="app-hover-3">
+                                        <Link href={galleryMode ? item.image : `/projects/${item.id}`}>
                                             <img src={item.image} alt={item.title} />
                                           <div className="desc">
                                             <h5 className="title">
@@ -142,7 +142,7 @@ const ProjectsGrid = ({ projects, layout, cols, sideFilter, masonry, galleryMode
                             {layout == "list" &&
                                 <div className="app-portfolio-item app-portfolio-item-list">
                                     <div className="image" data-app-overlay data-app-scroll>
-                                        <Link href={`/projects/${item.id}`} className="app-hover-3">
+                                        <Link href={`/projects/${item.id}`}>
                                           <img src={item.image} alt={item.title} />
                                         </Link>
                                     </div>

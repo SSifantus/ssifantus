@@ -19,8 +19,6 @@ const About = (props) => {
   return (
     <Layouts>
       <PageBanner pageTitle={"About"} />
-
-      {/*  About */}
       <section className="app-section gap-top-70 gap-bottom-80">
         <div className="container-md">
 
@@ -34,7 +32,7 @@ const About = (props) => {
                     </div>
                   </div>
                 </div>
-                <div className="bio col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <div className="bio col-xs-12 col-sm-12 col-md-9 col-lg-9">
                   {item.bio != "" &&
                     <span data-splitting data-app-scroll><div dangerouslySetInnerHTML={{__html : item.bio}} /></span>
                   }

@@ -186,6 +186,10 @@ strong {
   padding: 140px 100px;
 }
 
+.gap-80 {
+  padding: 80px 100px;
+}
+
 .gap-top-140 {
   padding-top: 140px;
 }
@@ -289,6 +293,9 @@ strong {
 @media (max-width: 1024px) {
   .gap-140 {
     padding: 140px 20px;
+  }
+  .gap-80 {
+    padding: 70px 30px;
   }
 }
 
@@ -1788,8 +1795,6 @@ button > span,
 }
 
 .app-social-2 ul li {
-  margin-left: 12px;
-  margin-right: 12px;
   display: inline-block;
   vertical-align: top;
 }
@@ -1798,14 +1803,13 @@ button > span,
 .app-social-2 ul li button {
   position: relative;
   display: flex;
-  width: 56px;
+  width: 6vw;
   height: 56px;
   border: 1px solid #fff !important;
   border-radius: 56px;
   align-items: center;
   justify-content: center;
   font-size: 24px !important;
-  //color: #fff !important;
   font-weight: 600 !important;
   transition: all .4s cubic-bezier(0.3, 0, 0.3, 1);
   -webkit-transition: all .4s cubic-bezier(0.3, 0, 0.3, 1);
@@ -2581,6 +2585,10 @@ a.app-head-btn,
   font-weight: 600;
   letter-spacing: .025em;
   text-transform: uppercase;
+
+  &.is-active {
+    color: #7e7d96;
+  }
 }
 
 .app-menu-horizontal ul li i {
@@ -3193,10 +3201,10 @@ ul.app-footer-menu li {
     margin-bottom: 0 !important;
   }
 
-  .footer--fixed .app-footer,
-  .footer--sticky .app-footer {
-    position: relative;
-  }
+  //.footer--fixed .app-footer,
+  //.footer--sticky .app-footer {
+  //  position: relative;
+  //}
 }
 
 @media (max-width: 767px) {
@@ -4838,6 +4846,7 @@ ul.app-footer-menu li {
 
   a {
     display: block;
+    position: relative;
   }
 
   .image {
@@ -4852,12 +4861,19 @@ ul.app-footer-menu li {
   }
 
   .desc {
-    bottom: 0;
+    background: none repeat scroll 0 0 rgba(30, 30, 30, .7);
     color: #fff;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    justify-content: flex-end;
     left: 0;
     opacity: 0;
     padding: 24px 30px;
     position: absolute;
+    top: 0;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
     width: 100%;
   }
 
@@ -4884,6 +4900,7 @@ ul.app-footer-menu li {
 }
 
 .app-portfolio-item .image a::after {
+  display: none;
   content: '';
   position: absolute;
   right: 30px;
@@ -4908,6 +4925,19 @@ ul.app-footer-menu li {
   opacity: 1;
   transform: translateY(0px);
   -webkit-transform: translateY(0px);
+}
+
+.app-portfolio-item .image {
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+
+  &:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: all 2s cubic-bezier(.23, 1, .32, 1) 0s;
+    transition: all 2s cubic-bezier(.23, 1, .32, 1) 0s;
+    width: 100%;
+  }
 }
 
 .app-portfolio-item .text span:last-child em {
@@ -5236,10 +5266,6 @@ ul.app-footer-menu li {
     overflow: auto;
   }
 
-  .app-filter ul {
-    white-space: nowrap;
-  }
-
   .app-filter ul li {
     margin: 0 30px 15px 0;
     display: inline-block;
@@ -5299,6 +5325,10 @@ ul.app-footer-menu li {
 
   .app-portfolio .app-loadmore {
     margin: 15px 0 0 0;
+  }
+
+  .app-filter.filter--default ul {
+    white-space: normal;
   }
 }
 
@@ -6268,7 +6298,7 @@ ul.app-footer-menu li {
 
 .bio {
   @media (min-width: 768px) {
-    padding: 0 26px;
+    padding: 0 32px;
   }
 }
 
@@ -6882,7 +6912,7 @@ body .app-subscribe-form .submit-container {
 
 @media (max-width: 767px) {
   .app-intro {
-    padding-top: 160px;
+    padding-top: 80px;
   }
 
   .app-breadcrums ul li {
@@ -7205,7 +7235,7 @@ body .app-subscribe-form .submit-container {
 
 .app-post-socials {
   margin-bottom: 0;
-  margin-top: 40px;
+  margin-top: 56px;
 }
 
 .social-share.app-post-socials.app-social-2 ul {
@@ -7881,8 +7911,7 @@ h6,
   }
 
   .app-social-2 ul li a {
-    width: 48px;
-    height: 48px;
+    width: 15vw;
   }
 
   .app-custom-gallery .col-md-6:nth-child(1),

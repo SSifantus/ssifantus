@@ -1,22 +1,31 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import appData from "@data/app.json";
-import { headerSticky } from "@common/utilits";
+import {headerSticky} from "@common/utilits";
+import {useRouter} from "next/router";
 
-const DefaultHeader = ({ darkHeader, cartButton }) => {
+const DefaultHeader = ({darkHeader, cartButton}) => {
+  const router = useRouter()
   const navItems = [];
 
   appData.header.menu.forEach((item, index) => {
     let s_class1 = 'dropdown-link';
 
-    if (item.children != 0) {
+    if (item.children !== 0) {
       s_class1 += 'menu-item-has-children';
     }
-    let newobj = Object.assign({}, item, { "classes": s_class1 });
+    let newobj = Object.assign({}, item, {"classes": s_class1});
     navItems.push(newobj);
   });
 
   const [desktopMenu, desktopMenuToggle] = useState(false);
+
+  const returnActive = (path) => {
+    if (path.includes(router.pathname.split('/')[1])) {
+      return 'is-active';
+    }
+    return ''
+  };
 
   const clickedDesktopMenu = (e) => {
     e.preventDefault();
@@ -74,8 +83,8 @@ const DefaultHeader = ({ darkHeader, cartButton }) => {
             {/* Logo */}
             <div className="app-logo-image">
               <Link href="/">
-                <img src={appData.header.logo.image} alt={appData.header.logo.alt} />
-                <img className="logo--white" src={appData.header.logo.image_white} alt={appData.header.logo.alt} />
+                <img src={appData.header.logo.image} alt={appData.header.logo.alt}/>
+                <img className="logo--white" src={appData.header.logo.image_white} alt={appData.header.logo.alt}/>
               </Link>
             </div>
 
@@ -85,13 +94,13 @@ const DefaultHeader = ({ darkHeader, cartButton }) => {
                 {navItems.map((item, key) => (
                   <li key={`header-nav-item-${key}`} className={item.classes}>
                     <Link
-                      className={item.children ? "app-lnk lnk--active app-dropdown-toggle" : "app-lnk lnk--active"}
-                      onClick={item.children != 0 ? (e) => clickedMobileMenuItemParent(e) : ""}
+                      className={`app-lnk lnk--active ${returnActive(item.link)}`}
+                      onClick={item.children !== 0 ? (e) => clickedMobileMenuItemParent(e) : ""}
                       href={item.link}>{item.label}</Link>
-                    {item.children != 0 &&
-                      <i className="icon fas fa-chevron-down" />
+                    {item.children !== 0 &&
+                      <i className="icon fas fa-chevron-down"/>
                     }
-                    {item.children != 0 &&
+                    {item.children !== 0 &&
                       <ul className="sub-menu">
                         {item.children.map((subitem, key) => (
                           <li key={`header-nav-sub-item-${key}`}>
@@ -106,11 +115,11 @@ const DefaultHeader = ({ darkHeader, cartButton }) => {
             </div>
             {/* Menu Hamburger */}
             <a href="#" className={desktopMenu ? "app-menu-btn btn--active" : "app-menu-btn"}
-              onClick={(e) => clickedDesktopMenu(e)}><span /></a>
+               onClick={(e) => clickedDesktopMenu(e)}><span/></a>
 
             <div className="app-menu-popup align-left">
-              <div className="app-menu-overlay" />
-              <div className="app-menu-overlay-after" />
+              <div className="app-menu-overlay"/>
+              <div className="app-menu-overlay-after"/>
 
               <div className="app-menu-container app--noscroll">
                 <div className="container">
@@ -119,13 +128,13 @@ const DefaultHeader = ({ darkHeader, cartButton }) => {
                       {navItems.map((item, key) => (
                         <li key={`header-nav-item-${key}`} className={item.classes}>
                           <Link
-                            className={item.children ? "app-lnk lnk--active app-dropdown-toggle" : "app-lnk lnk--active"}
-                            onClick={item.children != 0 ? (e) => clickedMobileMenuItemParent(e) : ""}
+                            className={`app-lnk lnk--active ${returnActive(item.link)}`}
+                            onClick={item.children !== 0 ? (e) => clickedMobileMenuItemParent(e) : ""}
                             href={item.link}>{item.label}</Link>
                           {item.children &&
-                            <i className="icon fas fa-chevron-down" />
+                            <i className="icon fas fa-chevron-down"/>
                           }
-                          {item.children != 0 &&
+                          {item.children !== 0 &&
                             <ul className="sub-menu">
                               {item.children.map((subitem, key) => (
                                 <li key={`header-nav-sub-item-${key}`}>
@@ -144,7 +153,7 @@ const DefaultHeader = ({ darkHeader, cartButton }) => {
 
           </div>
         </div>
-      </header >
+      </header>
     </>
   );
 };

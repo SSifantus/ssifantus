@@ -1,177 +1,180 @@
 import Data from "@data/sections/projects.json";
 import Link from "next/link";
 import Isotope from "isotope-layout";
-import { useEffect, useRef, useState } from "react";
+import {useEffect, useRef, useState} from "react";
 import appData from "@data/app.json";
 
-const ProjectsSection = ( { projects } ) => {
-    const categories = appData.settings.portfolio.categories;
+const ProjectsSection = ({projects}) => {
+  const categories = appData.settings.portfolio.categories;
 
-	// Isotope
-	const isotope = useRef();
-	const [filterKey, setFilterKey] = useState("*");
-  
-	useEffect(() => {
-	  setTimeout(() => {
-		isotope.current = new Isotope(".app-portfolio-items", {
-		  itemSelector: ".app-portfolio-col",
-		  percentPosition: true,
-		  masonry: {
-			columnWidth: ".app-portfolio-col",
-		  },
-		  animationOptions: {
-			duration: 750,
-			easing: "linear",
-			queue: false,
-		  },
-		});
-	  }, 1000);
-  
-	  let filterNavActive = document.querySelectorAll('.app-filter-nav-active');
-  
-	  filterNavActive.forEach((item) => {
-		  item.style.width = item.parentNode.querySelector('.item--active').parentNode.offsetWidth+6+'px';
-	  });
-	}, []);
-  
-	useEffect(() => {
-	  if (isotope.current) {
-		filterKey === "*"
-		  ? isotope.current.arrange({ filter: `*` })
-		  : isotope.current.arrange({ filter: `.${filterKey}` });
-	  }
-	}, [filterKey]);
-  
-	const handleFilterKeyChange = (key) => () => {
-	  setFilterKey(key);
-	  const filterLinks = document.querySelectorAll(".js-app-filter li");
-  
-	  filterLinks.forEach((filter) => {
-		const filterValue = filter.querySelector('button').getAttribute("data-filter");
-		if (filterValue == key) {
-		  filter.querySelector('button').classList.add("item--active");
-		} else {
-		  filter.querySelector('button').classList.remove("item--active");
-		}
-	  });
-  
-	  const activeItem = document.querySelector('.app-filter.filter--default .item--active');
-	  const activeFilterNav = document.querySelector('.app-filter.filter--default .app-filter-nav-active');
-  
-	  if ( activeFilterNav != undefined ) {
-		  let current_pos = activeItem.parentNode.offsetLeft;
-		  let current_width = activeItem.parentNode.offsetWidth;
-		  
-		  activeFilterNav.style.width = current_width+6+'px';
-		  activeFilterNav.style.left = current_pos-3+'px';
-	  }
-	};
+  // Isotope
+  const isotope = useRef();
+  const [filterKey, setFilterKey] = useState("*");
 
-    return (
-        <>
-            {/*  Projects */}
-			<section className="app-section gap-top-140 gap-bottom-140">
-				<div className="container">
-					<div className="row">
-						<div className="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+  useEffect(() => {
+    setTimeout(() => {
+      isotope.current = new Isotope(".app-portfolio-items", {
+        itemSelector: ".app-portfolio-col",
+        percentPosition: true,
+        masonry: {
+          columnWidth: ".app-portfolio-col",
+        },
+        animationOptions: {
+          duration: 750,
+          easing: "linear",
+          queue: false,
+        },
+      });
+    }, 1000);
 
-							{/* Heading */}
-							<div className="app-heading gap-bottom-40">
-								<div className="app-subtitle-1">
-                                    <span dangerouslySetInnerHTML={{__html: Data.subtitle}} />
-								</div>
-								<h2 className="app-title-2">
-                                    <span dangerouslySetInnerHTML={{__html: Data.title}} />
-								</h2>
-							</div>
+    let filterNavActive = document.querySelectorAll('.app-filter-nav-active');
 
-						</div>
-						<div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 align-right hide-on-mobile">
+    filterNavActive.forEach((item) => {
+      item.style.width = item.parentNode.querySelector('.item--active').parentNode.offsetWidth + 6 + 'px';
+    });
+  }, []);
 
-							{/* Button */}
-							<Link className="app-btn app-hover-btn" href={Data.button.link}>
-								<i className="arrow">
-									<span />
-								</i>
-								<span>{Data.button.label}</span>
-							</Link>
+  useEffect(() => {
+    if (isotope.current) {
+      filterKey === "*"
+        ? isotope.current.arrange({filter: `*`})
+        : isotope.current.arrange({filter: `.${filterKey}`});
+    }
+  }, [filterKey]);
 
-						</div>
-					</div>
+  const handleFilterKeyChange = (key) => () => {
+    setFilterKey(key);
+    const filterLinks = document.querySelectorAll(".js-app-filter li");
 
-					{/* Projects Side */}
-					<div className="app-portfolio portfolio--side">
-						<div className="row">
-							<div className="col-xs-12 col-sm-12 col-md-12 col-lg-3">
+    filterLinks.forEach((filter) => {
+      const filterValue = filter.querySelector('button').getAttribute("data-filter");
+      if (filterValue == key) {
+        filter.querySelector('button').classList.add("item--active");
+      } else {
+        filter.querySelector('button').classList.remove("item--active");
+      }
+    });
 
-								{/* Filter projects */}
-								<div className="app-filter-container">
-									<div className="app-filter js-app-filter">
-										<ul>
-											<li>
-												<button onClick={handleFilterKeyChange("*")} className="app-filter-item item--active" type="button" data-filter="*">
-													<span className="app-lnk" data-splitting data-app-scroll>All Projects</span>
-												</button>
-											</li>
-                                            {categories.map((item, key) => (
-                                            <li key={`categories-item-${key}`}>
-												<button onClick={handleFilterKeyChange(item.slug)} className="app-filter-item" type="button" data-filter={item.slug}>
-													<span className="app-lnk" data-splitting data-app-scroll>{item.label}</span>
-												</button>
-											</li>
-                                            ))}
-										</ul>
-									</div>
-								</div>
+    const activeItem = document.querySelector('.app-filter.filter--default .item--active');
+    const activeFilterNav = document.querySelector('.app-filter.filter--default .app-filter-nav-active');
 
-							</div>
-							<div className="col-xs-12 col-sm-12 col-md-12 col-lg-9">
+    if (activeFilterNav != undefined) {
+      let current_pos = activeItem.parentNode.offsetLeft;
+      let current_width = activeItem.parentNode.offsetWidth;
 
-								{/* Projects items */}
-								<div className="row app-portfolio-items">
-                                    {projects.slice(0, Data.numOfItems).map((item, key) => (
-									<div key={`projects-item-${key}`} className={`col-xs-12 col-sm-12 col-md-6 col-lg-6 app-portfolio-col ${item.category_slug}`}>
-										<div className="app-portfolio-item">
-											<div className="image" data-app-overlay data-app-scroll>
-												<a href={`/projects/${item.id}`} className="app-hover-3">
-													<img src={item.image} alt={item.title} />
-												</a>
-											</div>
-											<div className="desc">
-												<h5 className="title">
-													<a className="app-lnk" href={`/projects/${item.id}`}>
-														<span data-splitting data-app-scroll>{item.title}</span>
-													</a>
-												</h5>
-												<div className="text">
-													<div data-splitting data-app-scroll>
-														<span>{item.category}</span>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-                                    ))}
-								</div>
+      activeFilterNav.style.width = current_width + 6 + 'px';
+      activeFilterNav.style.left = current_pos - 3 + 'px';
+    }
+  };
 
-								{/* Button */}
-								<div className="align-center hide-on-desktop">
-									<Link className="app-btn app-hover-btn" href={Data.button.link}>
-										<i className="arrow">
-											<span />
-										</i>
-										<span>{Data.button.label}</span>
-									</Link>
-								</div>
+  return (
+    <>
+      {/*  Projects */}
+      <section className="app-section gap-top-140 gap-bottom-140">
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9">
 
-							</div>
-						</div>
-					</div>
+              {/* Heading */}
+              <div className="app-heading gap-bottom-40">
+                <div className="app-subtitle-1">
+                  <span dangerouslySetInnerHTML={{__html: Data.subtitle}}/>
+                </div>
+                <h2 className="app-title-2">
+                  <span dangerouslySetInnerHTML={{__html: Data.title}}/>
+                </h2>
+              </div>
 
-				</div>
-			</section>
-        </>
-    );
+            </div>
+            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 align-right hide-on-mobile">
+
+              {/* Button */}
+              <Link className="app-btn app-hover-btn" href={Data.button.link}>
+                <i className="arrow">
+                  <span/>
+                </i>
+                <span>{Data.button.label}</span>
+              </Link>
+
+            </div>
+          </div>
+
+          {/* Projects Side */}
+          <div className="app-portfolio portfolio--side">
+            <div className="row">
+              <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3">
+
+                {/* Filter projects */}
+                <div className="app-filter-container">
+                  <div className="app-filter js-app-filter">
+                    <ul>
+                      <li>
+                        <button onClick={handleFilterKeyChange("*")} className="app-filter-item item--active"
+                                type="button" data-filter="*">
+                          <span className="app-lnk" data-splitting data-app-scroll>All Projects</span>
+                        </button>
+                      </li>
+                      {categories.map((item, key) => (
+                        <li key={`categories-item-${key}`}>
+                          <button onClick={handleFilterKeyChange(item.slug)} className="app-filter-item" type="button"
+                                  data-filter={item.slug}>
+                            <span className="app-lnk" data-splitting data-app-scroll>{item.label}</span>
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+              <div className="col-xs-12 col-sm-12 col-md-12 col-lg-9">
+
+                {/* Projects items */}
+                <div className="row app-portfolio-items">
+                  {projects.slice(0, Data.numOfItems).map((item, key) => (
+                    <div key={`projects-item-${key}`}
+                         className={`col-xs-12 col-sm-12 col-md-6 col-lg-6 app-portfolio-col ${item.category_slug}`}>
+                      <div className="app-portfolio-item">
+                        <div className="image" data-app-overlay data-app-scroll>
+                          <a href={`/projects/${item.id}`} className="app-hover-3">
+                            <img src={item.image} alt={item.title}/>
+                          </a>
+                        </div>
+                        <div className="desc">
+                          <h5 className="title">
+                            <a className="app-lnk" href={`/projects/${item.id}`}>
+                              <span data-splitting data-app-scroll>{item.title}</span>
+                            </a>
+                          </h5>
+                          <div className="text">
+                            <div data-splitting data-app-scroll>
+                              <span>{item.category}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Button */}
+                <div className="align-center hide-on-desktop">
+                  <Link className="app-btn app-hover-btn" href={Data.button.link}>
+                    <i className="arrow">
+                      <span/>
+                    </i>
+                    <span>{Data.button.label}</span>
+                  </Link>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </>
+  );
 };
 
 export default ProjectsSection;

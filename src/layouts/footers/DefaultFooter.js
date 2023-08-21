@@ -16,7 +16,7 @@ const DefaultFooter = () => {
           <div className="container-fluid">
 
             <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 align-self-center">
+              <div className="col-6 align-self-center">
 
                 {/* Copyright */}
                 <div className="copyright">
@@ -24,7 +24,7 @@ const DefaultFooter = () => {
                 </div>
 
               </div>
-              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 align-right">
+              <div className="col-6 align-right">
 
                 {/* Social */}
                 <div className="app-social-1 app-social-active">
