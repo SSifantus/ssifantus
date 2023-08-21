@@ -29,22 +29,8 @@ const About = (props) => {
               <div key={`team-item-${key}`} className="row gap-row">
                 <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                   <div className="app-team-two-item">
-                    <div className="image app-hover-3 app-hover-black-30" data-app-overlay data-app-scroll>
-                      <Link href={`/team/${item.id}`}>
-                        <img src={item.image} alt={item.name}/>
-                      </Link>
-                      <div className="app-social-2">
-                        <ul>
-                          {item.social.map((link, link_key) => (
-                            <li key={`team-item-${key}-link-${link_key}`}>
-                              <a key={`teamsocial-item-${link_key}`} className="app-social-link app-hover-2"
-                                 href={link.link} title={link.title} target="_blank">
-                                <i aria-hidden="true" className={link.icon}/>
-                              </a>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                    <div className="image" data-app-overlay data-app-scroll>
+                      <img src={item.image} alt={item.name}/>
                     </div>
                   </div>
                 </div>
