@@ -16,8 +16,7 @@ social:
 languages:
   - label: CSS3 / SASS / SCSS
   - label: Javascript / ES6
-  - label: React 
-  - label: React Native
+  - label: React / React Native
   - label: Vue
   - label: Apollo / GraphQL
   - label: MySQL / PostgreSQL
@@ -48,9 +47,6 @@ icons:
 
   - label: HTML
     icon: fab fa-html5
-    
-  - label: Terminal
-    icon: fab fa-terminal
     
   - label: Version Control
     icon: fab fa-git-alt

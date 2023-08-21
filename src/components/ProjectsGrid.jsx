@@ -98,7 +98,7 @@ const ProjectsGrid = ({ projects, layout, cols, sideFilter, masonry, galleryMode
                             <ul>
                                 <li key={`categories-item-first`}>
                                     <button onClick={handleFilterKeyChange("*")} className="app-filter-item item--active" type="button" data-filter="*">
-                                        <span>All Projects</span>
+                                        <span>All</span>
                                     </button>
                                 </li>
                                 {appData.settings.portfolio.categories.map((item, key) => (

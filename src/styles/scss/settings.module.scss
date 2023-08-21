@@ -11,8 +11,8 @@ $btn_font_family: "Raleway"; /* - buttons font */
 $theme_bg_color: #ffffff; /* - background color */
 $theme_color: #f2f2f2; /* - accent color */
 $text_color: #1B252E; /* - paragraphs color */
-$heading_color: #000000; /* - headings color */
-$btn_color: #000000; /* - buttons bg color */
+$heading_color: #333333; /* - headings color */
+$btn_color: #333333; /* - buttons bg color */
 $btn_hover_color: #cccccc; /* - buttons bg color on Hover */
 $intro_color: #ffffff; /* - intro heading color */
 $intro_subtitle_color: #ffffff; /* - intro description color */
@@ -37,10 +37,10 @@ $heading3_letter_spacing: 0px; /* - letter spacing */
 $heading3_font_transform: unset; /* - font transform */
 
 /* --Heading h4 */
-$heading4_font_size: 30px; /* - font size */
+$heading4_font_size: 16px; /* - font size */
 $heading4_font_weight: 600; /* - font weight */
-$heading4_letter_spacing: 0px; /* - letter spacing */
-$heading4_font_transform: unset; /* - font transform */
+$heading4_letter_spacing: .025em; /* - letter spacing */
+$heading4_font_transform: uppercase; /* - font transform */
 
 /* --Heading h5 */
 $heading5_font_size: 20px; /* - font size */
@@ -61,15 +61,15 @@ $text_line_height: 1.7; /* - line height */
 $text_letter_spacing: 0px; /* - letter spacing */
 
 /* --Buttons */
-$btn_font_size: 15px; /* - font size */
-$btn_font_weight: 700; /* - font weight */
+$btn_font_size: 12px; /* - font size */
+$btn_font_weight: 600; /* - font weight */
 $btn_letter_spacing: 0px; /* - letter spacing */
-$btn_font_transform: unset; /* - text transform */
-$btn_border_radius: 66px; /* - border radius */
+$btn_font_transform: uppercase; /* - text transform */
+$btn_border_radius: 34px; /* - border radius */
 
 /* --Preloader */
-$preloader_bg_color: #000000; /* - prelaoder background color */
-$preloader_color: #FAFAFA; /* - preloader figure color */
+$preloader_bg_color: #FAFAFA; /* - prelaoder background color */
+$preloader_color: #FFFFFF; /* - preloader figure color */
 
 /* ---
 	Settings End

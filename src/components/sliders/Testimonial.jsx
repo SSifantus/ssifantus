@@ -53,12 +53,12 @@ const TestimonialSlider = () => {
                                                 <p dangerouslySetInnerHTML={{__html: "“"+item.text+"”"}} />
                                             </div>
                                         </div>
-                                        <h5 className="title">
+                                        <span className="title">
                                             <span data-splitting>{item.name}</span>
-                                        </h5>
-                                        <div className="subtitle">
+                                        </span>
+                                        <span className="subtitle">
                                             <span data-splitting>{item.role}</span>
-                                        </div>
+                                        </span>
                                         <div className="app-stars stars--small">
                                             <i className="fas fa-star" />
                                             <i className="fas fa-star" />
@@ -84,7 +84,7 @@ const TestimonialSlider = () => {
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </section>
     </>

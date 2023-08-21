@@ -77,7 +77,7 @@ img {
 input,
 textarea,
 button {
-  font-family: "Epilogue";
+  font-family: "Raleway";
 }
 
 label {
@@ -94,7 +94,7 @@ form p {
 
 b,
 strong {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .clear {
@@ -278,8 +278,12 @@ strong {
   padding-bottom: 40px;
 }
 
+.gap-bottom-30 {
+  padding-bottom: 30px;
+}
+
 .gap-bottom-0 {
-  padding-bottom: 0px;
+  padding-bottom: 0;
 }
 
 @media (max-width: 1024px) {
@@ -322,7 +326,7 @@ strong {
   }
 
   .gap-top-70 {
-    padding-top: 35px;
+    padding-top: 34px;
   }
 
   .gap-top-60 {
@@ -366,7 +370,7 @@ strong {
   }
 
   .gap-bottom-70 {
-    padding-bottom: 35px;
+    padding-bottom: 34px;
   }
 
   .gap-bottom-60 {
@@ -395,7 +399,7 @@ h4,
 h5,
 h6 {
   font-weight: 600;
-  font-family: "Epilogue";
+  font-family: "Raleway";
   margin: 0;
   margin-bottom: 15px;
   color: #000;
@@ -474,7 +478,7 @@ h5.app-title-2 strong,
 h6.app-title-2 strong,
 .app-title-2 strong {
   font-size: 1.2em;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 h1.app-title-3,
@@ -491,7 +495,7 @@ h6.app-title-3,
 .app-subtitle-1 {
   margin: 0 0 20px 0;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
 }
@@ -681,7 +685,7 @@ p {
 }
 
 strong {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 input[type="text"],
@@ -693,37 +697,37 @@ input[type="address"],
 input[type="number"],
 textarea {
   position: relative;
-  padding: 0 30px;
+  padding: 0 15px;
   display: block;
   width: 100%;
-  height: 62px;
-  font-size: 16px;
+  height: 34px;
+  font-size: 13px;
   color: #000;
   resize: none;
   outline: 0;
   font-weight: 400;
   background: #fff;
   border: 1px solid #B2B2B2;
-  border-radius: 62px;
-  -webkit-border-radius: 62px;
+  border-radius: 17px;
+  -webkit-border-radius: 17px;
   transition: all 0.4s cubic-bezier(0.3, 0, 0.3, 1);
   -webkit-transition: all 0.4s cubic-bezier(0.3, 0, 0.3, 1);
 }
 
 textarea {
   height: 125px !important;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   resize: none;
-  border-radius: 31px;
-  -webkit-border-radius: 31px;
+  border-radius: 17px;
+  -webkit-border-radius: 17px;
 }
 
 label,
 legend {
   display: block;
   padding-bottom: 20px;
-  font-family: "Epilogue";
+  font-family: "Raleway";
 }
 
 fieldset {
@@ -746,10 +750,10 @@ label.error {
 
 ul {
   list-style: disc;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  padding-left: 0px;
   list-style-position: inside;
+  margin-top: 24px;
+  margin-bottom: 30px;
+  padding-left: 0;
 }
 
 ol {
@@ -797,7 +801,7 @@ ins {
 
 dt {
   margin-bottom: 5px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 dd {
@@ -821,7 +825,7 @@ blockquote {
 blockquote::before {
   content: '';
   position: absolute;
-  top: 35px;
+  top: 34px;
   left: 70px;
   width: 80px;
   height: 80px;
@@ -857,7 +861,7 @@ blockquote a {
 
 blockquote cite {
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
   font-style: normal;
   display: block;
   margin-top: 20px;
@@ -903,6 +907,16 @@ select,
 
 hr {
   border-top: 1px solid #8d99a7;
+}
+
+.contact-form {
+  display: flex;
+  transition: display .3s ease-out;
+  -webkit-transition: display .3s ease-out;
+
+  &.submitted {
+    display: none;
+  }
 }
 
 .app-contact-info {
@@ -1040,7 +1054,7 @@ hr {
 }
 
 .text-bold {
-  font-weight: 700 !important;
+  font-weight: 600 !important;
 }
 
 .text-italic {
@@ -1247,8 +1261,8 @@ hr {
   right: 1px;
   bottom: 1px;
   background: #000;
-  border-radius: 66px;
-  -webkit-border-radius: 66px;
+  border-radius: 34px;
+  -webkit-border-radius: 34px;
 }
 
 .app-hover-btn::after {
@@ -1293,7 +1307,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 700;
+  font-weight: 600;
   z-index: 2;
   opacity: 0;
   transform: translateY(8px) scale(0.8);
@@ -1309,6 +1323,7 @@ hr {
 }
 
 /*buttons*/
+
 a.app-lnk,
 span.app-lnk,
 .app-lnk a {
@@ -1381,30 +1396,31 @@ a.app-btn-circle,
   position: relative;
   overflow: hidden;
   display: inline-block;
-  vertical-align: top;
-  font-size: 16px;
+  font-size: 12px;
   color: #fff;
-  font-weight: 700;
-  height: 66px;
-  line-height: 66px;
+  font-weight: 600;
+  height: 34px;
+  line-height: 34px;
   text-decoration: none;
   outline: none !important;
   cursor: pointer;
   border: none;
   box-shadow: none !important;
-  text-align: center;
   background: transparent;
-  border-radius: 66px;
-  -webkit-border-radius: 66px;
+  border-radius: 34px;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-border-radius: 34px;
   transition: all 0.4s cubic-bezier(0.3, 0, 0.3, 1);
   -webkit-transition: all 0.4s cubic-bezier(0.3, 0, 0.3, 1);
+  vertical-align: top;
 }
 
 button[type="submit"],
 input[type="submit"] {
   background: #000;
-  border-radius: 66px;
-  -webkit-border-radius: 66px;
+  border-radius: 34px;
+  -webkit-border-radius: 34px;
 }
 
 button[type="submit"].app-btn,
@@ -1417,7 +1433,7 @@ a.app-btn.btn--large,
   padding: 0 40px;
   color: #000;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   height: 100px;
   line-height: 100px;
   border-radius: 100px;
@@ -1712,7 +1728,7 @@ button > span,
 }
 
 .app-social-1 ul li {
-  margin-right: 4px;
+  margin: 0 5px;
   display: inline-block;
   vertical-align: top;
 }
@@ -1726,8 +1742,8 @@ button > span,
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 600;
   color: #666;
   transition: all .4s cubic-bezier(0.3, 0, 0.3, 1);
   -webkit-transition: all .4s cubic-bezier(0.3, 0, 0.3, 1);
@@ -1737,7 +1753,7 @@ button > span,
   width: 40px;
   height: 40px;
   border: none;
-  font-size: 18px;
+  font-size: 12px;
   color: #000;
 }
 
@@ -1772,8 +1788,8 @@ button > span,
 }
 
 .app-social-2 ul li {
-  margin-left: 4px;
-  margin-right: 4px;
+  margin-left: 12px;
+  margin-right: 12px;
   display: inline-block;
   vertical-align: top;
 }
@@ -1790,7 +1806,7 @@ button > span,
   justify-content: center;
   font-size: 24px !important;
   //color: #fff !important;
-  font-weight: 700 !important;
+  font-weight: 600 !important;
   transition: all .4s cubic-bezier(0.3, 0, 0.3, 1);
   -webkit-transition: all .4s cubic-bezier(0.3, 0, 0.3, 1);
 }
@@ -2008,9 +2024,6 @@ button > span,
   position: relative;
   margin: 60px 0 0 0;
   padding: 15px;
-  border: 1px solid #B2B2B2;
-  border-radius: 60px;
-  -webkit-border-radius: 60px;
 }
 
 .app-page-navigation-content::after {
@@ -2070,7 +2083,7 @@ button > span,
   border-radius: 100%;
   -webkit-border-radius: 100%;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
   transition: all 0.4s cubic-bezier(0.3, 0, 0.3, 1);
   -webkit-transition: all 0.4s cubic-bezier(0.3, 0, 0.3, 1);
@@ -2262,9 +2275,12 @@ button > span,
 }
 
 .preloader__spinner {
+  background-image: url(/images/loading.gif);
+  background-size: contain;
+  width: 80px;
+  height: 80px;
+  display: block;
   position: relative;
-  width: 50px;
-  height: 50px;
   align-self: center;
   z-index: 2;
 }
@@ -2333,7 +2349,7 @@ button > span,
 ---*/
 
 .app-header {
-  padding: 10px 0;
+  padding: 10px;
   position: absolute;
   top: 0;
   left: 0;
@@ -2383,7 +2399,7 @@ button > span,
     box-shadow: 0 0 15px rgba(0, 0, 0, .07);
     height: 56px;
     margin-top: 0;
-    padding: 0 5px;
+    padding: 10px 5px;
     top: 0;
   }
 }
@@ -2561,7 +2577,10 @@ a.app-head-btn,
 }
 
 .app-menu-horizontal ul li a {
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .025em;
+  text-transform: uppercase;
 }
 
 .app-menu-horizontal ul li i {
@@ -2606,7 +2625,7 @@ a.app-head-btn,
 
 .app-menu-horizontal ul li:hover > ul ul {
   transform: translate(0, 0);
-  -webkit-transform: translate(0, -35px);
+  -webkit-transform: translate(0, -34px);
 }
 
 .app-menu-horizontal ul ul:before {
@@ -2963,7 +2982,7 @@ a.app-menu-btn,
   left: -80px;
   top: 15px;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
   color: #494949;
@@ -3654,7 +3673,7 @@ ul.app-footer-menu li {
   margin: 0;
   display: block;
   font-size: 38px;
-  font-weight: 700;
+  font-weight: 600;
   height: 45px;
 }
 
@@ -3772,7 +3791,7 @@ ul.app-footer-menu li {
   margin: 0 0 30px 0;
   position: relative;
   font-size: 80px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.2;
 }
 
@@ -4086,7 +4105,7 @@ ul.app-footer-menu li {
 .app-service-item-inner .title {
   margin: 0;
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .app-service-item-inner .list {
@@ -4289,8 +4308,8 @@ ul.app-footer-menu li {
 
 .app-bubble .bubble-3 {
   position: absolute;
-  width: 35px;
-  height: 35px;
+  width: 34px;
+  height: 34px;
   bottom: 30%;
   left: 30%;
   border-radius: 100%;
@@ -4326,7 +4345,7 @@ ul.app-footer-menu li {
   position: absolute;
   left: 0;
   top: 0;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 16px;
   color: #555;
 }
@@ -4372,7 +4391,7 @@ ul.app-footer-menu li {
 
 .app-service-item-list .title {
   font-size: 26px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .app-service-item-list p {
@@ -4406,7 +4425,7 @@ ul.app-footer-menu li {
   display: flex;
   align-items: center;
   font-size: 26px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .app-services-showcase .items .title a {
@@ -4475,8 +4494,8 @@ ul.app-footer-menu li {
   position: absolute;
   top: 90px;
   left: 28%;
-  width: 366px;
-  height: 366px;
+  width: 334px;
+  height: 334px;
   background: #D8FF36;
   border-radius: 100%;
   transition: all .4s cubic-bezier(0.3, 0, 0.3, 1);
@@ -4611,10 +4630,10 @@ ul.app-footer-menu li {
 .app-number::before {
   content: '';
   position: absolute;
-  left: 35px;
-  top: 35px;
-  right: 35px;
-  bottom: 35px;
+  left: 34px;
+  top: 34px;
+  right: 34px;
+  bottom: 34px;
   border: 1px solid #000;
   border-radius: 100%;
   -webkit-border-radius: 100%;
@@ -4624,7 +4643,7 @@ ul.app-footer-menu li {
   position: relative;
   top: 7px;
   font-size: 90px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
   text-shadow: 3px 3px 0 #000, -3px 3px 0 #000, 3px -3px 0 #000, -3px -3px 0 #000;
 }
@@ -4636,7 +4655,7 @@ ul.app-footer-menu li {
   width: 90%;
   height: 90%;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   line-height: 1;
   animation: onovoRotateText 10s linear infinite;
@@ -4679,7 +4698,7 @@ ul.app-footer-menu li {
 .app-ticker-slider .title,
 .app-ticker-slider .title a {
   margin: 0;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 100px;
   line-height: 1.3;
   text-shadow: 3px 3px 0 #000, -3px 3px 0 #000, 3px -3px 0 #000, -3px -3px 0 #000;
@@ -4707,7 +4726,7 @@ ul.app-footer-menu li {
 ---*/
 
 .app-filter-container {
-  text-align: center;
+  text-align: right;
 }
 
 .app-filter ul {
@@ -4749,18 +4768,6 @@ ul.app-footer-menu li {
   vertical-align: top;
 }
 
-.app-filter.filter--default::before {
-  content: '';
-  position: absolute;
-  left: 3px;
-  top: 0;
-  right: 3px;
-  bottom: 0;
-  border: 1px solid #6A6A6A;
-  border-radius: 85px;
-  -webkit-border-radius: 85px;
-}
-
 .app-filter.filter--default ul {
   white-space: nowrap;
   font-size: 0;
@@ -4773,41 +4780,31 @@ ul.app-footer-menu li {
   vertical-align: middle;
 }
 
-.app-filter.filter--default ul li::before {
-  margin-top: -13px;
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 1px;
-  height: 26px;
-  background: #D0D0D0;
-  z-index: -1;
-}
-
-.app-filter.filter--default ul li:first-child::before {
-  display: none;
-}
-
 .app-filter.filter--default ul li button {
-  padding: 0 40px;
-  height: 85px;
-  line-height: 85px;
-  font-size: 16px;
-  font-weight: 700;
-  color: #000;
+  padding: 0 20px;
+  height: 34px;
+  letter-spacing: .025em;
+  line-height: 34px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #333333;
+  text-transform: uppercase;
+
+  &.item--active {
+    color: #000000;
+  }
 }
 
 .app-filter.filter--default .app-filter-nav-active {
   position: absolute;
   left: 0;
   top: 0;
-  padding: 0 40px;
-  height: 85px;
-  line-height: 85px;
+  padding: 0 20px;
+  height: 34px;
+  line-height: 34px;
   background: #D8FF36;
-  border-radius: 85px;
-  -webkit-border-radius: 85px;
+  border-radius: 55px;
+  -webkit-border-radius: 34px;
   transition: all .4s cubic-bezier(0.3, 0, 0.3, 1);
   -webkit-transition: all .4s cubic-bezier(0.3, 0, 0.3, 1);
 }
@@ -5023,7 +5020,7 @@ ul.app-footer-menu li {
 .app-showcase-item .category {
   width: 155px;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
@@ -5035,7 +5032,7 @@ ul.app-footer-menu li {
   margin: 0;
   width: calc(100% - 155px);
   font-size: 26px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .app-showcase-item .title a {
@@ -5231,7 +5228,7 @@ ul.app-footer-menu li {
 
   .app-filter-container {
     margin-bottom: 30px;
-    text-align: left;
+    text-align: right;
   }
 
   .app-filter {
@@ -5391,7 +5388,7 @@ ul.app-footer-menu li {
   right: -20px;
   bottom: 0;
   font-size: 300px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 0.5;
   text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
   transition: all 0.4s cubic-bezier(0.3, 0, 0.3, 1);
@@ -5448,7 +5445,7 @@ ul.app-footer-menu li {
 .app-reviews-summary .label {
   font-size: 22px;
   line-height: 26px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .app-reviews-carousel {
@@ -5480,15 +5477,17 @@ ul.app-footer-menu li {
 }
 
 .app-reviews-item .title {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .03em;
   margin: 0 0 10px 0;
-  font-size: 26px;
-  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .app-reviews-item .subtitle {
-  display: inline-block;
-  vertical-align: top;
-  line-height: 21px;
+  font-size: 12px;
+  letter-spacing: .03em;
+  text-transform: uppercase;
 }
 
 .app-reviews-item .app-stars {
@@ -5735,7 +5734,7 @@ ul.app-footer-menu li {
   display: inline-block;
   vertical-align: top;
   font-size: 150px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
   text-shadow: 3px 3px 0 #000, -3px 3px 0 #000, 3px -3px 0 #000, -3px -3px 0 #000;
 }
@@ -5746,7 +5745,7 @@ ul.app-footer-menu li {
 
 .app-counter .label {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
   color: #666;
 }
@@ -5832,8 +5831,8 @@ ul.app-footer-menu li {
 .app-cta-social {
   margin-bottom: -200px;
   position: relative;
-  width: 700px;
-  height: 700px;
+  width: 600px;
+  height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6071,7 +6070,7 @@ ul.app-footer-menu li {
   color: #000;
   font-size: 14px;
   line-height: 20px;
-  font-weight: 700;
+  font-weight: 600;
   background: #D8FF36;
   border-radius: 36px;
   -webkit-border-radius: 36px;
@@ -6080,7 +6079,7 @@ ul.app-footer-menu li {
 .app-blog-item .desc .title {
   margin: 0;
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .app-blog-item.archive-item .title {
@@ -6156,11 +6155,11 @@ ul.app-footer-menu li {
   margin-bottom: 12px;
   padding: 0 25px;
   font-size: 14px;
-  font-weight: 700;
-  height: 35px;
-  line-height: 35px;
-  border-radius: 35px;
-  -webkit-border-radius: 35px;
+  font-weight: 600;
+  height: 34px;
+  line-height: 34px;
+  border-radius: 34px;
+  -webkit-border-radius: 34px;
   background: #D8FF36;
 }
 
@@ -6174,7 +6173,7 @@ ul.app-footer-menu li {
 .app-blog-slide-item .desc .title {
   padding-right: 10px;
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .post_excerpt_disabled .app-blog-slide-item .desc .text {
@@ -6202,7 +6201,7 @@ ul.app-footer-menu li {
 }
 
 .app-readmore {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 @media (max-width: 1024px) {
@@ -6266,6 +6265,12 @@ ul.app-footer-menu li {
 /*---
 	16. Team
 ---*/
+
+.bio {
+  @media (min-width: 768px) {
+    padding: 0 26px;
+  }
+}
 
 .app-team-two-item {
   position: relative;
@@ -6339,7 +6344,7 @@ ul.app-footer-menu li {
 .app-team-two-item .title {
   margin: 0 0 10px 0;
   font-size: 26px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
 }
 
@@ -6364,14 +6369,14 @@ ul.app-footer-menu li {
   right: 10px;
   top: -14px;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
   height: 29px;
   line-height: 29px;
   background: #000;
 }
 
 .app-pricing-item .title {
-  padding: 44px 66px;
+  padding: 44px 34px;
   position: relative;
   min-height: 236px;
 }
@@ -6379,7 +6384,7 @@ ul.app-footer-menu li {
 .app-pricing-item .name {
   margin: 0 0 10px 0;
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
 }
 
@@ -6393,13 +6398,13 @@ ul.app-footer-menu li {
 .app-pricing-item .price {
   font-size: 50px;
   line-height: 1;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .app-pricing-item .image {
   padding: 0;
   position: absolute;
-  top: -35px;
+  top: -34px;
   left: 68px;
   width: 70px;
   height: 70px;
@@ -6621,7 +6626,7 @@ body .app-subscribe-form .submit-container {
 .app-history-item .subtitle {
   margin: 20px 0;
   font-size: 90px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
   text-shadow: 3px 3px 0 #000, -3px 3px 0 #000, 3px -3px 0 #000, -3px -3px 0 #000;
 }
@@ -6629,7 +6634,7 @@ body .app-subscribe-form .submit-container {
 .app-history-item .title {
   margin: 0;
   font-size: 38px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .app-history-item .text {
@@ -6709,7 +6714,7 @@ body .app-subscribe-form .submit-container {
   top: -40px;
   left: 50%;
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
   width: 80px;
   white-space: nowrap;
 }
@@ -6855,7 +6860,7 @@ body .app-subscribe-form .submit-container {
   display: inline-block;
   vertical-align: top;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .app-breadcrums ul li {
@@ -6924,7 +6929,7 @@ body .app-subscribe-form .submit-container {
   overflow: hidden;
   display: block;
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
   border-radius: 85px;
   -webkit-border-radius: 85px;
@@ -7056,7 +7061,7 @@ body .app-subscribe-form .submit-container {
 
 .app-team-info ul li .title {
   width: 40%;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .app-team-info ul li .app-text {
@@ -7088,7 +7093,7 @@ body .app-subscribe-form .submit-container {
 .page-404__num {
   position: relative;
   display: inline-block;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 200px;
   margin: 0;
   color: #000;
@@ -7310,7 +7315,7 @@ body .app-subscribe-form .submit-container {
   text-align: center;
   background: #000;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
 }
 
@@ -7508,7 +7513,7 @@ body .app-subscribe-form .submit-container {
 
 .wp-block-latest-posts__post-title {
   line-height: 1.3;
-  font-weight: 700;
+  font-weight: 600;
   display: block;
 }
 
@@ -7599,7 +7604,7 @@ body .app-subscribe-form .submit-container {
   font-size: 15px !important;
   line-height: 1.7;
   color: #000;
-  font-weight: 700;
+  font-weight: 600;
   transition: all 0.3s ease;
   border-radius: 50px;
   -webkit-border-radius: 50px;
@@ -7726,7 +7731,7 @@ body .app-subscribe-form .submit-container {
 }
 
 .wp-block-latest-comments__comment a {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .wp-block-latest-comments__comment-excerpt {

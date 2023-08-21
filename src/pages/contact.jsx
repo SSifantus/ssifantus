@@ -1,25 +1,29 @@
+import React, { useState } from 'react';
 import PageBanner from "@components/PageBanner";
 import Layouts from "@layouts/Layouts";
-import Accordion from 'react-bootstrap/Accordion';
 import appData from "@data/app.json";
 import { Formik } from 'formik';
 
 const Contact = () => {
 
+  const [submitted, setSubmitted] = useState(false);
+
+  const Box = () => {
+
+  }
   return (
     <Layouts>
-        <PageBanner pageTitle={"Contact Us"} pageDesc={"Have ideas for your business? Let’s build something awesome together."} />
+        <PageBanner pageTitle={"Contact"} />
 
         {/*  Contact Info */}
         <section className="app-section gap-top-140">
-            <div className="container">
+            <div className="container-md">
                 <div className="row">
-                    <div className="col-xs-12 col-sm-12 col-md-12 col-lg-7">
+                    <div className="col-xs-12 col-sm-12 col-md-12 col-lg-5">
 
                         {/* Heading */}
-                        <div className="app-text gap-bottom-40">
-                            <h4>Send Us A Message</h4>
-                            Then let us know about it and we can see what we can do to help
+                        <div className="app-text gap-bottom-30">
+                            <h4>Send A Message</h4>
                         </div>
 
                         {/* Form */}
@@ -40,7 +44,7 @@ const Contact = () => {
                             onSubmit = {( values, { setSubmitting } ) => {
                                 const form = document.getElementById("contactForm");
                                 const status = document.getElementById("contactFormStatus");
-                                const data = new FormData();
+                                let data = new FormData();
 
                                 data.append('name', values.name);
                                 data.append('tel', values.tel);
@@ -55,8 +59,9 @@ const Contact = () => {
                                     }
                                 }).then(response => {
                                     if (response.ok) {
-                                        status.innerHTML = "Thanks for your submission!";
-                                        form.reset()
+                                        setSubmitted(true);
+                                        status.innerHTML = "Thanks for your message!";
+                                        form.reset();
                                     } else {
                                         response.json().then(data => {
                                             if (Object.hasOwn(data, 'errors')) {
@@ -84,11 +89,11 @@ const Contact = () => {
                                 /* and other goodies */
                             }) => (
                             <form onSubmit={handleSubmit} id="contactForm" action={appData.settings.formspreeURL} className="cform" method="post">
-                                <div className="row">
+                                <div className={`row contact-form ${submitted ? 'submitted' : ''}`}>
                                     <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                         <p>
                                             <input
-                                              placeholder="Full Name"
+                                              placeholder="Name"
                                               type="text"
                                               name="name"
                                               required="required"
@@ -114,7 +119,7 @@ const Contact = () => {
                                     <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                         <p>
                                             <input
-                                              placeholder="Phone Number"
+                                              placeholder="Phone"
                                               type="tel"
                                               name="tel"
                                               required="required"
@@ -137,7 +142,9 @@ const Contact = () => {
                                         </p>
                                     </div>
                                     <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                        <p>
+                                      <div className="g-recaptcha" data-sitekey="6LfuZ8AnAAAAAPBRguwJ6oz05_7Xbv2ErhyPc80E"></div>
+
+                                      <p>
                                             <button type="submit" className="app-btn app-hover-btn">
                                                 <span>Send Message</span>
                                             </button>
@@ -151,40 +158,11 @@ const Contact = () => {
                             </Formik>
                         </div>
 
-                    </div>
-                    <div className="col-xs-12 col-sm-12 col-md-12 col-lg-5">
+                      <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6">
 
-                        {/* Contact Info */}
-                        <div className="app-contact-info app-text-white">
-                            <ul>
-                                <li>
-                                    <h5>Contact Info</h5>
-                                    <a href="tel:+10204302973" className="app-lnk lnk--white" target="_blank">+ 1 (020) 430 2973</a><br/>
-                                    <a href="mailto:username@domain.com" className="app-lnk lnk--white" target="_blank">username@domain.com</a>
 
-                                    <div className="app-social-1 app-social-active" style={{"marginTop": "10px"}}>
-                                        <ul>
-                                            {appData.social.map((item, key) => (
-                                            <li key={`contact-social-item-${key}`}>
-                                                <a href={item.link} target="_blank" className="app-social-link app-hover-2" title={item.title}>
-                                                    <i className={`icon ${item.icon}`} />
-                                                </a>
-                                            </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h5>Houston</h5>
-                                    <div>2001 N. Clybourn Avenue Suite 202, <br/>Block D, IL 60614</div>
-                                </li>
-                                <li>
-                                    <h5>Los Angeles</h5>
-                                    <div>2001 N. Clybourn Avenue Suite 202</div>
-                                </li>
-                            </ul>
-                        </div>
 
+                      </div>
                     </div>
                 </div>
             </div>

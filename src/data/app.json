@@ -2,7 +2,7 @@
   "settings": {
     "siteName": "S. Sifantus",
     "preloader": true,
-    "formspreeURL": "https://formspree.io/f/your_api_key",
+    "formspreeURL": "https://formspree.io/f/mdorgayr",
     "portfolio": {
       "categories": [
         {
@@ -230,18 +230,13 @@
   },
   "social": [
     {
-      "link": "https://facebook.com/SSifantus",
-      "icon": "fab fa-facebook",
-      "title": "Facebook"
-    },
-    {
-      "link": "https://twitter.com/ssifantus",
-      "icon": "fab fa-twitter",
+      "link": "https://github.com/SSifantus",
+      "icon": "fab fa-github",
       "title": "Twitter"
     },
     {
       "link": "https://www.linkedin.com/in/ssifantus",
-      "icon": "fab fa-linkedin",
+      "icon": "fab fa-linkedin-in",
       "title": "Linkedin"
     }
   ],

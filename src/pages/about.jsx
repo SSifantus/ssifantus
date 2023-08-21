@@ -1,18 +1,11 @@
 import {useEffect} from "react";
 import dynamic from "next/dynamic";
 import Layouts from "@layouts/Layouts";
-
 import {getSortedTeamData} from "@library/team";
 import {getSortedServicesData} from "@library/services";
-
-import CountUp from 'react-countup';
 import {circleText} from "@common/utilits";
 
 import PageBanner from "@components/PageBanner";
-import Team2Section from "@components/sections/Team2"
-import PartnersSection from "@components/sections/Partners"
-import AwardsSection from "@components/sections/Awards"
-import Services4Section from "@components/sections/Services4"
 import Link from "next/link";
 
 const HistorySlider = dynamic(() => import("@components/sliders/History"), {ssr: false});
@@ -55,7 +48,7 @@ const About = (props) => {
                     </div>
                   </div>
                 </div>
-                <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <div className="bio col-xs-12 col-sm-12 col-md-8 col-lg-8">
                   {item.bio != "" &&
                     <span data-splitting data-app-scroll><div dangerouslySetInnerHTML={{__html : item.bio}} /></span>
                   }
