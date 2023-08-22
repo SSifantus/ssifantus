@@ -2710,45 +2710,37 @@ a.app-head-btn,
 
 a.app-menu-btn,
 .app-menu-btn {
-  position: relative;
+  align-items: flex-start;
   display: inline-block;
+  height: 40px;
+  position: relative;
   vertical-align: top;
   width: 50px;
-  height: 40px;
-  align-items: center;
   z-index: 2;
 }
 
 .app-menu-btn span {
-  margin-top: -6px;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  height: 12px;
   display: block;
+  font-size: 22px;
+  margin-top: 0;
+  position: absolute;
+  right: 8px;
+  height: 25px;
+  top: 0;
+  width: 25px;
 }
 
-.app-menu-btn span::before,
-.app-menu-btn span::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 1px;
-  background: #000;
-  transform: rotate(0);
-  -webkit-transform: rotate(0);
-  transition: all .4s cubic-bezier(0.3, 0, 0.3, 1);
-  -webkit-transition: all .4s cubic-bezier(0.3, 0, 0.3, 1);
+.app-menu-btn::after {
+  color: #222222;
+  margin-left: 10px;
+  opacity: 1;
 }
 
 .header--white .app-menu-btn span::before,
 .header--white .app-menu-btn span::after,
 .header--active .app-menu-btn span::before,
 .header--active .app-menu-btn span::after {
-  background: #fff;
+  background: #222;
 }
 
 .header--active .app-menu-btn span::before,

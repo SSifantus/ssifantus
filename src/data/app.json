@@ -135,6 +135,11 @@
       "link": "https://www.linkedin.com/in/ssifantus",
       "icon": "fab fa-linkedin-in",
       "title": "Linkedin"
+    },
+    {
+      "link": "https://www.linkedin.com/in/ssifantus",
+      "icon": "fa fa-terminal",
+      "title": "Linkedin"
     }
   ],
   "expo": {
