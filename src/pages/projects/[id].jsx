@@ -7,14 +7,6 @@ import {useRouter} from 'next/router';
 
 import {getSortedProjectsData, getAllProjectsIds, getProjectData} from "@library/projects";
 
-import {
-  FacebookShareButton,
-  LinkedinShareButton,
-  PinterestShareButton,
-  RedditShareButton,
-  TwitterShareButton
-} from "react-share";
-
 const ProjectDetail = (props) => {
 
   const postData = props.data;
@@ -36,21 +28,11 @@ const ProjectDetail = (props) => {
     }
   });
 
-  const {asPath} = useRouter();
-  const origin =
-    typeof window !== 'undefined' && window.location.origin
-      ? window.location.origin
-      : '';
-  const shareUrl = `${origin}${asPath}`;
-  console.log(shareUrl);
-
   return (
     <Layouts>
       <PageBanner pageTitle={postData.title} pageDesc={postData.type}/>
-
-      {/*  Project Detail */}
       <section className="app-section">
-        <div className="container">
+        <div className="container-md">
 
           {/* Image */}
           <div className="gap-bottom-80">
@@ -67,7 +49,7 @@ const ProjectDetail = (props) => {
                   <li><span>Project:</span> <p>{postData.description} {postData?.type ? <>
                     <br/>{postData.type}</> : null}</p></li>
                   <li><span>Client:</span> {postData.client}</li>
-                  <li><span>Launched:</span> {postData.date}</li>
+                  {/*<li><span>Launched:</span> {postData.date}</li>*/}
                 </ul>
               </div>
               {postData.contentHtml != "" &&
@@ -127,17 +109,17 @@ const ProjectDetail = (props) => {
             <div className="app-page-navigation-content">
               {prev_id != 0 && prev_id != undefined &&
                 <Link href={`/projects/${prev_id}`} className="page-navigation__prev">
-                  <span className="app-prev-arrow">
+                  <span className="app-prev app-hover-2">
                     <i/>
                   </span>
                 </Link>
               }
               <Link href="/projects" className="page-navigation__posts">
-                <i className="fas fa-th"/>
+                <i className="fas fa-grid-4"/>
               </Link>
               {next_id != 0 && next_id != undefined &&
                 <Link href={`/projects/${next_id}`} className="page-navigation__next">
-                  <span className="app-next-arrow">
+                  <span className="app-next app-hover-2">
                     <i/>
                   </span>
                 </Link>

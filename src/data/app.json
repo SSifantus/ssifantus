@@ -36,32 +36,6 @@
     },
     "menu": [
       {
-        "label": "Home",
-        "link": "/",
-        "children": [
-          {
-            "label": "Creative Agency",
-            "link": "/",
-            "children": 0
-          },
-          {
-            "label": "Digital Agency",
-            "link": "/index-2",
-            "children": 0
-          },
-          {
-            "label": "Creative Portfolio",
-            "link": "/index-3",
-            "children": 0
-          },
-          {
-            "label": "Fullscreen Parallax",
-            "link": "/index-4",
-            "children": 0
-          }
-        ]
-      },
-      {
         "label": "Work",
         "link": "/projects",
         "children": 0
@@ -134,11 +108,6 @@
     {
       "link": "https://www.linkedin.com/in/ssifantus",
       "icon": "fab fa-linkedin-in",
-      "title": "Linkedin"
-    },
-    {
-      "link": "https://www.linkedin.com/in/ssifantus",
-      "icon": "fa fa-terminal",
       "title": "Linkedin"
     }
   ],

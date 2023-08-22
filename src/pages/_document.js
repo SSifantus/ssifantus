@@ -10,7 +10,6 @@ class MyDocument extends Document {
 
           <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon"/>
           <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon"/>
-
           <link rel="dns-prefetch" href="//fonts.googleapis.com"/>
           <link rel="stylesheet"
                 href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600&display=swap"

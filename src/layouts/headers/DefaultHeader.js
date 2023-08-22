@@ -112,7 +112,7 @@ const DefaultHeader = ({darkHeader, cartButton}) => {
               </ul>
             </div>
             <a href="#" className={desktopMenu ? "app-menu-btn btn--active" : "app-menu-btn"}
-               onClick={(e) => clickedDesktopMenu(e)}><span></span><i className="fa fa-terminal"/></a>
+               onClick={(e) => clickedDesktopMenu(e)}><span></span><i className="fas fa-terminal"/></a>
 
             <div className="app-menu-popup">
               <div className="app-menu-overlay"/>

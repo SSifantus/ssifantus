@@ -20,7 +20,7 @@ const About = (props) => {
     <Layouts>
       <PageBanner pageTitle={"About"} />
       <section className="app-section gap-top-70 gap-bottom-80">
-        <div className="container-md">
+        <div className="container">
 
             {props.team.map((item, key) => (
               <>
