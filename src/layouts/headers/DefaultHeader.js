@@ -75,12 +75,10 @@ const DefaultHeader = ({darkHeader, cartButton}) => {
 
   return (
     <>
-      {/* Header */}
       <header className="app-header">
         <div className="header--builder">
           <div className="container-fluid app-header-wrapper">
 
-            {/* Logo */}
             <div className="app-logo-image">
               <Link href="/">
                 <img src={appData.header.logo.image} alt={appData.header.logo.alt}/>
@@ -88,7 +86,6 @@ const DefaultHeader = ({darkHeader, cartButton}) => {
               </Link>
             </div>
 
-            {/* Menu Horizontal */}
             <div className="app-menu-horizontal">
               <ul className="app-menu-nav">
                 {navItems.map((item, key) => (
@@ -113,7 +110,6 @@ const DefaultHeader = ({darkHeader, cartButton}) => {
                 ))}
               </ul>
             </div>
-            {/* Menu Hamburger */}
             <a href="#" className={desktopMenu ? "app-menu-btn btn--active" : "app-menu-btn"}
                onClick={(e) => clickedDesktopMenu(e)}><span/></a>
 
@@ -131,18 +127,6 @@ const DefaultHeader = ({darkHeader, cartButton}) => {
                             className={`app-lnk lnk--active ${returnActive(item.link)}`}
                             onClick={item.children !== 0 ? (e) => clickedMobileMenuItemParent(e) : ""}
                             href={item.link}>{item.label}</Link>
-                          {item.children &&
-                            <i className="icon fas fa-chevron-down"/>
-                          }
-                          {item.children !== 0 &&
-                            <ul className="sub-menu">
-                              {item.children.map((subitem, key) => (
-                                <li key={`header-nav-sub-item-${key}`}>
-                                  <Link className="app-lnk lnk--active" href={subitem.link}>{subitem.label}</Link>
-                                </li>
-                              ))}
-                            </ul>
-                          }
                         </li>
                       ))}
                     </ul>

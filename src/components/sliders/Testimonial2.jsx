@@ -42,10 +42,10 @@ const Testimonial2Slider = () => {
                                 </Swiper>
 
                                 <div className="js-reviews-carousel-navs">
-                                    <div className="app-prev js-reviews-carousel-prev app-hover-2">
+                                    <div className="app-prev-arrow js-reviews-carousel-prev">
                                         <i />
                                     </div>
-                                    <div className="app-next js-reviews-carousel-next app-hover-2">
+                                    <div className="app-next-arrow js-reviews-carousel-next">
                                         <i />
                                     </div>
                                 </div>

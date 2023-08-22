@@ -2205,6 +2205,54 @@ button > span,
   border-left-color: #000;
 }
 
+
+.app-prev-arrow,
+.app-next-arrow {
+  cursor: pointer;
+  display: inline-block;
+  height: 18px;
+  margin: 18px auto;
+  position: absolute;
+  top: 40%;
+  transition: all .4s cubic-bezier(0.3, 0, 0.3, 1);
+  -webkit-transition: all .4s cubic-bezier(0.3, 0, 0.3, 1);
+  width: 18px;
+  vertical-align: middle;
+}
+
+.app-prev-arrow i,
+.app-next-arrow i {
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
+  display: block;
+  height: 14px;
+  width: 14px;
+}
+
+.app-prev-arrow {
+  left: 30px;
+
+  &:hover {
+    left: 20px;
+  }
+
+  i {
+    transform: rotate(-45deg);
+  }
+}
+
+.app-next-arrow {
+  right: 30px;
+
+  &:hover {
+    right: 20px;
+  }
+
+  i {
+    transform: rotate(135deg);
+  }
+}
+
 /* Preloader */
 .preloader {
   position: fixed;
@@ -2726,11 +2774,12 @@ a.app-menu-btn,
 }
 
 .app-menu-popup {
+  box-shadow: 0 0 30px rgba(0, 0, 0, .17);
   position: fixed;
   overflow: hidden;
   top: 0;
-  left: 0;
-  width: 100%;
+  right: 0;
+  width: 215px;
   height: 100%;
   z-index: -1;
   opacity: 0;
@@ -2769,7 +2818,7 @@ a.app-menu-btn,
 }
 
 .app-menu-overlay-after {
-  background: #000;
+  background: #fff;
   animation: app-menu-overlay-close 0.6s forwards cubic-bezier(0.3, 0, 0.3, 1);
 }
 
@@ -2859,14 +2908,13 @@ a.app-menu-btn,
   left: 0;
   top: 140px;
   display: flex;
-  align-items: center;
   width: 100%;
   height: calc(100% - 140px);
   -webkit-overflow-scrolling: touch;
 }
 
 .app-menu-container .container {
-  margin: auto;
+  margin: 0;
 }
 
 .app-menu {
@@ -2895,13 +2943,13 @@ a.app-menu-btn,
 }
 
 .app-menu ul li {
-  margin: 30px 0;
+  padding: 30px 0;
   position: relative;
   font-size: 90px;
   font-weight: 600;
   line-height: 1;
-  counter-increment: app-menu-counter;
   opacity: 0;
+  text-transform: uppercase;
   transform: translateY(3px);
   -webkit-transform: translateY(3px);
   transition: all 0.6s cubic-bezier(0.3, 0, 0.3, 1);
@@ -2972,7 +3020,6 @@ a.app-menu-btn,
 }
 
 .app-menu ul li a::before {
-  content: "0" counter(app-menu-counter) ".";
   position: absolute;
   left: -80px;
   top: 15px;
@@ -3068,12 +3115,12 @@ a.app-menu-btn,
   }
 
   .app-menu {
-    padding-left: 40px;
+    padding-left: 30px;
   }
 
   .app-menu ul li {
-    margin: 20px 0;
-    font-size: 38px;
+    padding: 16px 0;
+    font-size: 12px;
   }
 
   .app-menu ul li a::before {
@@ -3118,7 +3165,7 @@ a.app-menu-btn,
   }
 
   .app-menu > ul > li > a {
-    color: #fff;
+    color: #333;
   }
 
   .app-menu ul.sub-menu .opened ul.sub-menu {
