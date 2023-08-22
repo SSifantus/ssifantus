@@ -21,7 +21,8 @@ const DefaultHeader = ({darkHeader, cartButton}) => {
   const [desktopMenu, desktopMenuToggle] = useState(false);
 
   const returnActive = (path) => {
-    if (path.includes(router.pathname.split('/')[1])) {
+    const route = router.pathname.split('/')[1];
+    if (route?.length > 0 && path.includes(route)) {
       return 'is-active';
     }
     return ''
@@ -111,9 +112,9 @@ const DefaultHeader = ({darkHeader, cartButton}) => {
               </ul>
             </div>
             <a href="#" className={desktopMenu ? "app-menu-btn btn--active" : "app-menu-btn"}
-               onClick={(e) => clickedDesktopMenu(e)}><span><i className="fa fa-terminal"/></span></a>
+               onClick={(e) => clickedDesktopMenu(e)}><span></span><i className="fa fa-terminal"/></a>
 
-            <div className="app-menu-popup align-left">
+            <div className="app-menu-popup">
               <div className="app-menu-overlay"/>
               <div className="app-menu-overlay-after"/>
 
@@ -129,6 +130,10 @@ const DefaultHeader = ({darkHeader, cartButton}) => {
                             href={item.link}>{item.label}</Link>
                         </li>
                       ))}
+                      <li key={`header-nav-item-4`} className="dropdown-link profile">
+                        <a href="https://www.linkedin.com/in/ssifantus/" target="_blank"
+                           className="app-lnk lnk--active"><i className="fab fa-linkedin-in"/></a>
+                      </li>
                     </ul>
                   </div>
                 </div>

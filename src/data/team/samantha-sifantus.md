@@ -14,12 +14,12 @@ social:
     title: Linkedin
 
 languages:
-  - label: CSS3 / SASS / SCSS
   - label: Javascript / ES6
-  - label: React / React Native
-  - label: Vue
+  - label: React / React Native / Next
+  - label: Vue / Nuxt
   - label: Apollo / GraphQL
   - label: MySQL / PostgreSQL
+  - label: CSS3 / SASS / SCSS
   - label: Git version control
 
 icons:
@@ -52,7 +52,7 @@ icons:
     icon: fab fa-git-alt
 
 roles: 
-  - Development
+  - Software Development
   - Information Architecture
   - Technical Lead
   - Technical Project Management

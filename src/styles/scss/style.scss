@@ -1,4 +1,4 @@
-/* MAIN */
+@import "settings.module";
 
 /* ---
  1. Global
@@ -1342,6 +1342,12 @@ a.app-lnk,
 span.app-lnk,
 .app-lnk a {
   position: relative;
+
+  .profile & {
+    i {
+      font-size: 15px;
+    }
+  }
 }
 
 a.app-lnk.lnk--white::after,
@@ -1708,8 +1714,9 @@ a.app-btn.btn--border.btn--color:hover,
 .app-btn > span,
 button > span,
 .app-head-btn span {
-  position: relative;
   display: inline-block;
+  letter-spacing: .05em;
+  position: relative;
   z-index: 2;
 }
 
@@ -2013,7 +2020,7 @@ button > span,
 /*  Navigations */
 .app-page-navigation {
   position: relative;
-  margin: 60px 0 0 0;
+  margin: 0 0 30px 0;
   padding: 15px;
 }
 
@@ -2441,6 +2448,10 @@ button > span,
     padding: 10px 5px;
     top: 0;
   }
+
+  .app-logo-image {
+    margin-top: 0;
+  }
 }
 
 .header--white.app-header.sticky {
@@ -2455,7 +2466,6 @@ button > span,
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin-left: 10px;
   margin-right: 10px;
 }
 
@@ -2492,6 +2502,7 @@ button > span,
 }
 
 .app-logo-image {
+  margin-top: 5px;
   max-width: 170px;
   position: relative;
   line-height: 1;
@@ -2712,76 +2723,174 @@ a.app-menu-btn,
 .app-menu-btn {
   align-items: flex-start;
   display: inline-block;
-  height: 40px;
-  position: relative;
+  height: 50px;
+  overflow: hidden;
+  padding-left: 20px;
+  padding-right: 10px;
+  position: absolute;
+  right: 0;
+  top: 5px;
   vertical-align: top;
-  width: 50px;
+  width: 66px;
   z-index: 2;
 }
 
-.app-menu-btn span {
-  display: block;
-  font-size: 22px;
-  margin-top: 0;
-  position: absolute;
-  right: 8px;
-  height: 25px;
-  top: 0;
-  width: 25px;
+.app-menu-btn {
+  i {
+    display: block;
+    font-size: 24px;
+    height: 25px;
+    margin-top: 0;
+    opacity: 0;
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    width: 25px;
+  }
+
+  span {
+    background-color: $text_color;
+    content: "";
+    display: block;
+    height: 2px;
+    margin-top: -1px;
+    position: absolute;
+    transition-timing-function: ease;
+    transition-duration: .15s;
+    transition-property: transform;
+    top: 50%;
+    transition: background-color .125s ease-in .175s;
+    width: 25px;
+
+    &:before, &:after {
+      background-color: $text_color;
+      content: "";
+      display: block;
+      height: 2px;
+      position: absolute;
+      transition: background-color .125s ease-in .175s;
+      transition-timing-function: ease;
+      transition-duration: .15s;
+      transition-property: transform;
+      width: 25px;
+    }
+
+    &:before {
+      left: 0;
+      top: -6px;
+      transition: transform .125s cubic-bezier(.6, .04, .98, .335), top .05s linear .125s, left .125s ease-in .175s;
+    }
+
+    &:after {
+      right: 0;
+      top: 6px;
+      transition: transform .125s cubic-bezier(.6, .04, .98, .335), top .05s linear .125s, right .125s ease-in .175s;
+    }
+  }
+
+  &.btn--active {
+    i {
+      -webkit-animation: .35s ease 0s normal forwards 1 fadein;
+      animation: .35s ease 0s normal forwards 1 fadein;
+    }
+
+    span {
+      transition-delay: 0s;
+      transition-timing-function: ease-out;
+      background-color: transparent;
+
+      &::before, &::after {
+        -webkit-animation: .3s ease 0s normal forwards 1 fadeOut;
+        animation: .3s ease 0s normal forwards 1 fadeOut;
+      }
+
+      &::before {
+        top: -50px;
+        left: -50px;
+        transition: left .125s ease-out, top .05s linear .125s, transform .125s cubic-bezier(.075, .82, .165, 1) .175s;
+        transform: translate3d(50px, 50px, 0) rotate(45deg);
+      }
+
+      &::after {
+        top: -50px;
+        right: -50px;
+        transition: right .125s ease-out, top .05s linear .125s, transform .125s cubic-bezier(.075, .82, .165, 1) .175s;
+        transform: translate3d(-50px, 50px, 0) rotate(-45deg);
+      }
+    }
+  }
 }
 
-.app-menu-btn::after {
-  color: #222222;
-  margin-left: 10px;
-  opacity: 1;
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-.header--white .app-menu-btn span::before,
-.header--white .app-menu-btn span::after,
-.header--active .app-menu-btn span::before,
-.header--active .app-menu-btn span::after {
-  background: #222;
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-.header--active .app-menu-btn span::before,
-.header--active .app-menu-btn span::after {
-  transition-delay: 0.6s;
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-.app-menu-btn span::after {
-  top: auto;
-  bottom: 0;
-}
-
-.app-menu-btn.btn--active span::before {
-  top: 5px;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}
-
-.app-menu-btn.btn--active span::after {
-  bottom: 5px;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .app-menu-popup {
-  box-shadow: 0 0 30px rgba(0, 0, 0, .17);
+  box-shadow: none;
   position: fixed;
   overflow: hidden;
   top: 0;
   right: 0;
   width: 215px;
   height: 100%;
-  z-index: -1;
   opacity: 0;
+  transition: box-shadow 0.6s ease-in;
   visibility: hidden;
+  z-index: -1;
 }
 
 .app-menu-popup.menu--visible {
   opacity: 1;
   visibility: visible;
   z-index: 0;
+}
+
+.app-menu-popup.menu--ready {
+  box-shadow: 0 0 30px rgba(0, 0, 0, .17);
 }
 
 .app-menu-overlay,
@@ -2937,8 +3046,9 @@ a.app-menu-btn,
 .app-menu ul li {
   padding: 30px 0;
   position: relative;
-  font-size: 90px;
+  font-size: 12px;
   font-weight: 600;
+  letter-spacing: 1px;
   line-height: 1;
   opacity: 0;
   text-transform: uppercase;
@@ -2947,6 +3057,10 @@ a.app-menu-btn,
   transition: all 0.6s cubic-bezier(0.3, 0, 0.3, 1);
   -webkit-transition: all 0.6s cubic-bezier(0.3, 0, 0.3, 1);
   transform-origin: top left;
+
+  &.profile {
+    margin-top: 14px;
+  }
 }
 
 .app-menu ul ul li {
@@ -3027,7 +3141,7 @@ a.app-menu-btn,
 }
 
 .app-menu ul li a:hover {
-  color: #fff;
+  color: $hover_color;
 }
 
 .app-menu ul li .icon {
@@ -3106,6 +3220,10 @@ a.app-menu-btn,
     font-size: 0;
   }
 
+  .app-header.sticky .app-logo-image {
+    margin-top: 5px;
+  }
+
   .app-menu {
     padding-left: 30px;
   }
@@ -3158,6 +3276,10 @@ a.app-menu-btn,
 
   .app-menu > ul > li > a {
     color: #333;
+
+    &.is-active {
+      color: #7e7d96;
+    }
   }
 
   .app-menu ul.sub-menu .opened ul.sub-menu {
@@ -4844,11 +4966,11 @@ ul.app-footer-menu li {
 }
 
 .app-portfolio-items {
-  margin: 0 -30px;
+  margin: 0 -20px;
 }
 
 .app-portfolio-items > .col-xs-12 {
-  padding: 0 30px;
+  padding: 0 20px;
 }
 
 @media (min-width: 992px) {

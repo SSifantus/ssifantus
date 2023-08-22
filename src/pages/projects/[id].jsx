@@ -64,7 +64,8 @@ const ProjectDetail = (props) => {
               <h5>{postData.title}</h5>
               <div className="app-project-summary">
                 <ul>
-                  <li><span>Project:</span> <p>{postData.description} {postData?.type ? <><br />{postData.type}</> : null}</p></li>
+                  <li><span>Project:</span> <p>{postData.description} {postData?.type ? <>
+                    <br/>{postData.type}</> : null}</p></li>
                   <li><span>Client:</span> {postData.client}</li>
                   <li><span>Launched:</span> {postData.date}</li>
                 </ul>
@@ -126,9 +127,9 @@ const ProjectDetail = (props) => {
             <div className="app-page-navigation-content">
               {prev_id != 0 && prev_id != undefined &&
                 <Link href={`/projects/${prev_id}`} className="page-navigation__prev">
-								<span className="app-prev app-hover-2">
-									<i/>
-								</span>
+                  <span className="app-prev-arrow">
+                    <i/>
+                  </span>
                 </Link>
               }
               <Link href="/projects" className="page-navigation__posts">
@@ -136,9 +137,9 @@ const ProjectDetail = (props) => {
               </Link>
               {next_id != 0 && next_id != undefined &&
                 <Link href={`/projects/${next_id}`} className="page-navigation__next">
-								<span className="app-next app-hover-2">
-									<i/>
-								</span>
+                  <span className="app-next-arrow">
+                    <i/>
+                  </span>
                 </Link>
               }
             </div>
