@@ -347,7 +347,7 @@ strong {
   }
 
   .gap-top-70 {
-    padding-top: 34px;
+    padding-top: 16px;
   }
 
   .gap-top-60 {
@@ -433,7 +433,7 @@ h1 {
 
 h2 {
   font-size: 50px;
-  letter-spacing: .1em;
+  letter-spacing: .05em;
 }
 
 h3 {
@@ -6455,6 +6455,10 @@ ul.app-footer-menu li {
   a {
     color: $heading_color;
   }
+
+  @media (max-width: 991px) {
+    height: 140px;
+  }
 }
 
 .app-brands .image {
@@ -7096,7 +7100,8 @@ body .app-subscribe-form .submit-container {
 
 @media (max-width: 767px) {
   .app-intro {
-    padding-top: 80px;
+    padding-bottom: 0;
+    padding-top: 100px;
   }
 
   .app-breadcrums ul li {

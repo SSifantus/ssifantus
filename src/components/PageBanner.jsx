@@ -16,7 +16,7 @@ const PageBanner = ({pageTitle, pageDesc}) => {
       <section className="app-section app-intro">
         <div className="container">
           {pageTitle?.length > 0 ?
-            <h2 className="section-title">
+            <h2 className="section-title hide-on-desktop">
               <span>{pageTitle}</span>
             </h2>
           : null}

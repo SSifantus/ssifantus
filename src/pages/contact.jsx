@@ -10,7 +10,7 @@ const Contact = () => {
 
   return (
     <Layouts>
-      <PageBanner pageTitle={"Contact"}/>
+      <PageBanner pageTitle={""}/>
       <section className="app-section gap-top-140">
         <div className="container-md">
           <div className="row">
@@ -18,7 +18,7 @@ const Contact = () => {
 
               {/* Heading */}
               <div className="app-text gap-bottom-30">
-                <h2 className="section-title">Send A Message</h2>
+                <h2 className="section-title contact">Send A Message</h2>
               </div>
 
               {/* Form */}
