@@ -6,7 +6,7 @@ marquee:
 category: Services
 category_slug: services
 date: 2014
-description: Learning Website
+description: Online Learning Website
 client: Modus Institute
 type: Management Education
 link: 

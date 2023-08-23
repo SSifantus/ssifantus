@@ -33,7 +33,7 @@ const About = (props) => {
                 </div>
                 <div className="bio col-xs-12 col-sm-12 col-md-9 col-lg-9">
                   {item.bio != "" &&
-                    <span data-splitting data-app-scroll><div dangerouslySetInnerHTML={{__html : item.bio}} /></span>
+                    <div dangerouslySetInnerHTML={{__html : item.bio}} />
                   }
                   <div className="row">
                     {item.languages?.length > 0 &&
