@@ -4,7 +4,7 @@ import appData from "@data/app.json";
 import {useRouter} from 'next/router';
 
 const PageBanner = ({pageTitle, pageDesc}) => {
-  const headTitle = `${appData.settings.siteName} - ${pageTitle}`;
+  const headTitle = `${pageTitle} / ${appData.settings.siteName}`;
   const {asPath} = useRouter();
 
   return (

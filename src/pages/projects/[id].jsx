@@ -30,7 +30,7 @@ const ProjectDetail = (props) => {
 
   return (
     <Layouts>
-      <PageBanner pageTitle="" />
+      <PageBanner pageTitle={postData.title} />
       <section className="app-section">
         <div className="container-md">
 
@@ -43,7 +43,7 @@ const ProjectDetail = (props) => {
 
           <div className="row gap-bottom-80">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-7">
-              <h5>{postData.title}</h5>
+              <h5 className="hide-on-mobile">{postData.title}</h5>
               <div className="app-project-summary">
                 <ul>
                   <li><span>Client:</span> {postData.client}</li>
@@ -54,7 +54,6 @@ const ProjectDetail = (props) => {
               </div>
               {postData.contentHtml != "" &&
                 <>
-                  {/* Description */}
                   <div className="app-text">
                     <div dangerouslySetInnerHTML={{__html: postData.contentHtml}}/>
                   </div>
