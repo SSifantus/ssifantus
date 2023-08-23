@@ -2,6 +2,7 @@ import appData from "@data/app.json";
 import {useEffect} from "react";
 import ImageView from "@components/ImageView";
 import {footerSticky} from "@common/utilits";
+import Link from "next/link";
 
 const DefaultFooter = () => {
   useEffect(() => {
@@ -20,7 +21,9 @@ const DefaultFooter = () => {
 
                 {/* Copyright */}
                 <div className="copyright">
-                  <div dangerouslySetInnerHTML={{__html: appData.footer.copy}}/>
+                  <Link href="/">
+                    <div dangerouslySetInnerHTML={{__html: appData.footer.copy}}/>
+                  </Link>
                 </div>
 
               </div>
