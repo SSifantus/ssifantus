@@ -1,10 +1,11 @@
 import Data from "@data/sections/partners.json";
+import Link from "next/link";
 
 const PartnersSection = ( { paddingTop } ) => {
   return (
     <>
         {/*  Brands */}
-        <section className={paddingTop ? "app-section gap-top-140" : "app-section"}>
+        <section className={paddingTop ? "app-section gap-top-80 gap-bottom-80" : "app-section"}>
             <div className="container">
 
                 {/* Heading */}
@@ -22,12 +23,12 @@ const PartnersSection = ( { paddingTop } ) => {
                     {Data.items.map((item, key) => (
                     <div key={`partners-item-${key}`} className="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-3">
                         <div className="app-brands app-hover-3 app-hover-label" data-app-overlay data-app-scroll>
-                            <a target="_blank" href={item.link}>
+                            <Link href={item.link}>
                                 <span className="image">
                                     <img decoding="async" src={item.image} width="285" height="200" alt={item.alt} />
                                 </span>
-                                <span className="label app-white-black">Visit Website</span>
-                            </a>
+                                <span className="label app-white-black">{item.label}</span>
+                            </Link>
                         </div>
                     </div>
                     ))}

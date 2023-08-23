@@ -1,46 +1,46 @@
 {
-    "subtitle": "Fantastic and Premium Clients",
-    "title": "We Have Had the Pleasure of <br/>Working with Some Clients",
-    "items": [
-        {
-            "link": "https://google.com",
-            "label": "Visit Website",
-            "image": "/images/brand1.png"
-        },
-        {
-            "link": "https://google.com",
-            "label": "Visit Website",
-            "image": "/images/brand2.png"
-        },
-        {
-            "link": "https://google.com",
-            "label": "Visit Website",
-            "image": "/images/brand3.png"
-        },
-        {
-            "link": "https://google.com",
-            "label": "Visit Website",
-            "image": "/images/brand4.png"
-        },
-        {
-            "link": "https://google.com",
-            "label": "Visit Website",
-            "image": "/images/brand5.png"
-        },
-        {
-            "link": "https://google.com",
-            "label": "Visit Website",
-            "image": "/images/brand6.png"
-        },
-        {
-            "link": "https://google.com",
-            "label": "Visit Website",
-            "image": "/images/brand7.png"
-        },
-        {
-            "link": "https://google.com",
-            "label": "Visit Website",
-            "image": "/images/brand2.png"
-        }
-    ]
+  "subtitle": "Past Projects",
+  "title": "",
+  "items": [
+    {
+      "link": "/projects",
+      "label": "View Projects",
+      "image": "/images/clients_disney.jpg"
+    },
+    {
+      "link": "/projects",
+      "label": "View Projects",
+      "image": "/images/clients_jt.jpg"
+    },
+    {
+      "link": "/projects",
+      "label": "View Projects",
+      "image": "/images/clients_rachelzoe.jpg"
+    },
+    {
+      "link": "/projects",
+      "label": "View Projects",
+      "image": "/images/clients_groundswell.jpg"
+    },
+    {
+      "link": "/projects",
+      "label": "View Projects",
+      "image": "/images/clients_champ.jpg"
+    },
+    {
+      "link": "/projects",
+      "label": "View Projects",
+      "image": "/images/clients_verano.jpg"
+    },
+    {
+      "link": "/projects",
+      "label": "View Projects",
+      "image": "/images/clients_dmb.jpg"
+    },
+    {
+      "link": "/projects",
+      "label": "View Projects",
+      "image": "/images/clients_marshall.jpg"
+    }
+  ]
 }

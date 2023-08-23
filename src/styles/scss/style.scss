@@ -4990,7 +4990,7 @@ ul.app-footer-menu li {
 }
 
 .app-portfolio-item {
-  border: 1px solid #eee;
+  border: 1px solid $border_color;
   margin-bottom: 60px;
   position: relative;
 
@@ -5511,7 +5511,7 @@ ul.app-footer-menu li {
   position: relative;
   margin-bottom: -70px;
   z-index: 2;
-  background-color: #eef0ef;
+  background-color: $border_color;
 }
 
 .app-team-item {
@@ -6428,7 +6428,11 @@ ul.app-footer-menu li {
   height: 200px;
   text-align: center;
   line-height: 1;
-  border: 1px solid #3E3E3E;
+  border: 1px solid $border_color;
+
+  a {
+    color: $heading_color;
+  }
 }
 
 .app-brands .image {
@@ -8144,7 +8148,7 @@ h6,
 }
 
 .project-image {
-  border: 1px solid #eee;
+  border: 1px solid $border_color;
 
   img {
     height: auto;

@@ -1,4 +1,4 @@
-import {useEffect} from "react";
+import React, {useEffect} from "react";
 import dynamic from "next/dynamic";
 import Layouts from "@layouts/Layouts";
 import {getSortedTeamData} from "@library/team";
@@ -6,9 +6,8 @@ import {getSortedServicesData} from "@library/services";
 import {circleText} from "@common/utilits";
 
 import PageBanner from "@components/PageBanner";
-import Link from "next/link";
-
-const HistorySlider = dynamic(() => import("@components/sliders/History"), {ssr: false});
+import PartnersSection from "@components/sections/Partners";
+import ServicesSection from "@components/sections/Services";
 const Testimonial2Slider = dynamic(() => import("@components/sliders/Testimonial2"), {ssr: false});
 
 const About = (props) => {
@@ -82,6 +81,7 @@ const About = (props) => {
         </div>
       </section>
       <Testimonial2Slider/>
+      <PartnersSection paddingTop />
     </Layouts>
   );
 };
