@@ -18,7 +18,7 @@ const Contact = () => {
 
               {/* Heading */}
               <div className="app-text gap-bottom-30">
-                <h4>Send A Message</h4>
+                <h2 className="section-title">Send A Message</h2>
               </div>
 
               {/* Form */}

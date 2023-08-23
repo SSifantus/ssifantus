@@ -38,6 +38,7 @@ const About = (props) => {
                   <div className="row">
                     {item.languages?.length > 0 &&
                       <div className="col-xs-12 col-sm-4 tech">
+                        <h6>Technologies</h6>
                         <ul>
                           {item.languages.map((tech, key) => (
                             <li key={`tech-item-${key}`}>
@@ -49,6 +50,7 @@ const About = (props) => {
                     }
                     {item.roles?.length > 0 &&
                       <div className="col-xs-12 col-sm-6 tech">
+                        <h6>Roles</h6>
                         <ul>
                           {item.roles.map((role, key) => (
                             <li key={`tech-item-${key}`}>

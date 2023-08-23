@@ -81,24 +81,20 @@ const ProjectsGrid = ({projects, layout, cols, sideFilter, masonry, galleryMode}
       columns = 'col-xs-12 col-sm-12 col-md-6 col-lg-6';
   }
 
-  if (layout == "list") {
+  if (layout === "list") {
     columns = 'col-xs-12 col-sm-12 col-md-12 col-lg-12';
   }
 
   return (
     <>
-      {/*  Projects */}
       <section className="app-section">
         <div className="container">
-
-          {/* Projects Grid */}
           <div className={sideFilter ? "app-portfolio portfolio--side" : "app-portfolio"}>
             <div className="row">
               <div
                 className={!sideFilter ? "col-xs-12 col-sm-12 col-md-12 col-lg-12" : "col-xs-12 col-sm-12 col-md-12 col-lg-3"}>
-
-                {/* Filter projects */}
                 <div className="app-filter-container">
+                  <h2 className="section-title">Work</h2>
                   <div
                     className={!sideFilter ? "app-filter js-app-filter filter--default" : "app-filter js-app-filter"}>
                     {!sideFilter &&
@@ -127,7 +123,6 @@ const ProjectsGrid = ({projects, layout, cols, sideFilter, masonry, galleryMode}
               <div
                 className={!sideFilter ? "col-xs-12 col-sm-12 col-md-12 col-lg-12" : "col-xs-12 col-sm-12 col-md-12 col-lg-9"}>
 
-                {/* Projects items */}
                 <div className="row app-portfolio-items">
 
                   {projects.map((item, key) => (

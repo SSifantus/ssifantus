@@ -15,10 +15,10 @@ const PageBanner = ({pageTitle, pageDesc}) => {
       {/*  Intro */}
       <section className="app-section app-intro">
         <div className="container">
-          {pageDesc?.length > 0 ?
-            <div className="app-subtitle-2  app-text-white">
-              <span>{pageDesc}</span>
-            </div>
+          {pageTitle?.length > 0 ?
+            <h2 className="section-title">
+              <span>{pageTitle}</span>
+            </h2>
           : null}
         </div>
       </section>

@@ -9,7 +9,7 @@ const PartnersSection = ( { paddingTop } ) => {
             <div className="container">
 
                 {/* Heading */}
-                <div className="app-heading gap-bottom-40">
+                <div className="app-heading gap-bottom-20">
                     <div className="app-subtitle-1">
                         <span dangerouslySetInnerHTML={{__html: Data.subtitle}} />
                     </div>

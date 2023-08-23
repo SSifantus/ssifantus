@@ -29,7 +29,7 @@ $heading_font_transform: unset; /* - font transform */
 /* --Heading h2 */
 $heading2_font_size: 60px; /* - font size */
 $heading2_font_weight: 600; /* - font weight */
-$heading2_letter_spacing: 0px; /* - letter spacing */
+$heading2_letter_spacing: .05em; /* - letter spacing */
 $heading2_font_transform: unset; /* - font transform */
 
 /* --Heading h3 */
@@ -53,7 +53,7 @@ $heading5_font_transform: unset; /* - font transform */
 /* --Heading h6 */
 $heading6_font_size: 18px; /* - font size */
 $heading6_font_weight: 600; /* - font weight */
-$heading6_letter_spacing: 0px; /* - letter spacing */
+$heading6_letter_spacing: .05em; /* - letter spacing */
 $heading6_font_transform: unset; /* - font transform */
 
 /* --Paragraphs */

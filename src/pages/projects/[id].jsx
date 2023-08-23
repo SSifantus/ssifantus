@@ -30,7 +30,7 @@ const ProjectDetail = (props) => {
 
   return (
     <Layouts>
-      <PageBanner pageTitle={postData.title} pageDesc={postData.type}/>
+      <PageBanner pageTitle="" />
       <section className="app-section">
         <div className="container-md">
 
@@ -46,9 +46,9 @@ const ProjectDetail = (props) => {
               <h5>{postData.title}</h5>
               <div className="app-project-summary">
                 <ul>
+                  <li><span>Client:</span> {postData.client}</li>
                   <li><span>Project:</span> <p>{postData.description} {postData?.type ? <>
                     <br/>{postData.type}</> : null}</p></li>
-                  <li><span>Client:</span> {postData.client}</li>
                   {/*<li><span>Launched:</span> {postData.date}</li>*/}
                 </ul>
               </div>

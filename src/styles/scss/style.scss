@@ -113,6 +113,7 @@ strong {
 
 .container {
   max-width: 1318px;
+  width: 90%;
 }
 
 .container-md {
@@ -122,10 +123,12 @@ strong {
 
 .container-lg {
   max-width: 1320px;
+  width: 90%;
 }
 
 .container-xl {
   max-width: 1368px;
+  width: 90%;
 }
 
 .wrapper {
@@ -293,6 +296,10 @@ strong {
   padding-bottom: 30px;
 }
 
+.gap-bottom-20 {
+  padding-bottom: 30px;
+}
+
 .gap-bottom-0 {
   padding-bottom: 0;
 }
@@ -426,6 +433,7 @@ h1 {
 
 h2 {
   font-size: 50px;
+  letter-spacing: .1em;
 }
 
 h3 {
@@ -507,15 +515,25 @@ h6.app-title-3,
 }
 
 .app-subtitle-1 {
-  margin: 0 0 20px 0;
+  margin: 0 10px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1;
   text-transform: uppercase;
 }
 
 .app-subtitle-2 {
   margin: 20px 0;
+}
+
+h2.section-title {
+  font-size: 18px;
+  text-transform: uppercase;
+
+  .app-filter-container & {
+    margin-bottom: 70px;
+    margin-top: 6px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -625,11 +643,11 @@ h6.app-title-3,
   }
 
   h5 {
-    font-size: 20px;
+    font-size: 17px;
   }
 
   h6 {
-    font-size: 18px;
+    font-size: 15px;
   }
 
   h1.app-title-1,
@@ -3347,31 +3365,34 @@ ul.app-footer-menu li {
 
 @media (max-width: 1024px) {
   .footer--fixed .wrapper {
-    padding-bottom: 10px;
+    min-height: calc(100vh - 90px);
     margin-bottom: 0 !important;
+    padding-bottom: 10px;
   }
 
-  //.footer--fixed .app-footer,
-  //.footer--sticky .app-footer {
-  //  position: relative;
-  //}
+  .footer--fixed .app-footer,
+  .footer--sticky .app-footer {
+    position: relative;
+  }
 }
 
 @media (max-width: 767px) {
-  .app-footer .copyright {
-    font-size: 12px;
-  }
+  .app-footer {
+    .copyright {
+      font-size: 12px;
+    }
 
-  .app-footer ul.app-footer-menu li {
-    font-size: 12px;
-  }
+    ul.app-footer-menu li {
+      font-size: 12px;
+    }
 
-  .app-footer .footer--default {
-    padding: 60px 0 5px 0;
-  }
+    .footer--default {
+      padding: 60px 0 5px 0;
+    }
 
-  .app-footer-lnk {
-    font-size: 24px;
+    .app-footer-lnk {
+      font-size: 24px;
+    }
   }
 }
 
@@ -4884,7 +4905,8 @@ ul.app-footer-menu li {
 ---*/
 
 .app-filter-container {
-  text-align: right;
+  display: flex;
+  justify-content: space-between;
 }
 
 .app-filter ul {
@@ -4991,7 +5013,7 @@ ul.app-footer-menu li {
 
 .app-portfolio-item {
   border: 1px solid $border_color;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   position: relative;
 
   a {
@@ -5320,7 +5342,7 @@ ul.app-footer-menu li {
         font-weight: 500;
         letter-spacing: 1.5px;
         text-transform: none;
-        width: 100px;
+        width: 80px;
       }
 
       p {
@@ -6453,6 +6475,20 @@ ul.app-footer-menu li {
 .bio {
   @media (min-width: 768px) {
     padding: 0 32px;
+  }
+}
+
+
+.tech {
+  h6 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 30px 0 0;
+    text-transform: uppercase;
+  }
+
+  ul {
+    margin-top: 18px;
   }
 }
 
