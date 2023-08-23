@@ -31,10 +31,10 @@ const Testimonial2Slider = () => {
                                                 </div>
                                             </div>
                                             <span className="title">
-                                                <span data-splitting>{item.name},&nbsp;</span>
+                                                <span data-splitting>{item.name}, </span>
                                             </span>
                                             <span className="subtitle">
-                                                <span data-splitting>{item.role}</span>
+                                                <span data-splitting> {item.role}</span>
                                             </span>
                                         </SwiperSlide>
                                         ))}
