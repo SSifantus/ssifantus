@@ -138,8 +138,6 @@ const Contact = () => {
                           </p>
                         </div>
                         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                          <div className="g-recaptcha" data-sitekey="6LfuZ8AnAAAAAPBRguwJ6oz05_7Xbv2ErhyPc80E"></div>
-
                           <p>
                             <button type="submit" className="app-btn app-hover-btn">
                               <span>Send Message</span>
