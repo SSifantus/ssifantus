@@ -19,22 +19,6 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="/css/vendors/bootstrap.css"/>
           <link rel="stylesheet" href="/fonts/font-awesome/css/font-awesome.css"/>
           <link rel="stylesheet" href="/css/vendors/magnific-popup.css"/>
-          <Script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-53978CWP5N"
-          />
-          <Script
-            dangerouslySetInnerHTML={{
-              __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-53978CWP5N', {
-              page_path: window.location.pathname,
-            });
-          `,
-            }}
-          />
         </Head>
         <body>
         <Main/>

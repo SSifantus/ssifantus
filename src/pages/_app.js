@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import Script from "next/script";
 import appData from "@data/app.json";
 
 import '../styles/scss/style.scss';
@@ -22,6 +23,22 @@ function MyApp({Component, pageProps}) {
         <meta property="og:url" content="https://ssifantus.com"/>
         <meta property="og:description" content="Samantha Sifantus / Software Engineer"/>
         <meta property="og:image" content="/images/og-image.jpg"/>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-53978CWP5N"
+        />
+        <Script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-53978CWP5N', {
+              page_path: window.location.pathname,
+            });
+          `,
+          }}
+        />
       </Head>
       <Component {...pageProps} />
     </>
