@@ -46,9 +46,9 @@ const ProjectDetail = (props) => {
               <h5 className="hide-on-mobile">{postData.title}</h5>
               <div className="app-project-summary">
                 <ul>
-                  <li><span>Client:</span> {postData.client}</li>
-                  <li><span>Project:</span> <p>{postData.description} {postData?.type ? <>
-                    <br/>{postData.type}</> : null}</p></li>
+                  <li><span>Project:</span> <p>{postData.description}</p></li>
+                  <li><span>Client:</span> {postData.client} {postData?.type ? <>
+                    <br/>{postData.type}</> : null}</li>
                   {/*<li><span>Launched:</span> {postData.date}</li>*/}
                 </ul>
               </div>
