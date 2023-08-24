@@ -7,7 +7,6 @@ import {circleText} from "@common/utilits";
 
 import PageBanner from "@components/PageBanner";
 import PartnersSection from "@components/sections/Partners";
-import ServicesSection from "@components/sections/Services";
 const Testimonial2Slider = dynamic(() => import("@components/sliders/Testimonial2"), {ssr: false});
 
 const About = (props) => {
@@ -32,7 +31,7 @@ const About = (props) => {
                   </div>
                 </div>
                 <div className="bio col-xs-12 col-sm-12 col-md-9 col-lg-9">
-                  {item.bio != "" &&
+                  {item.bio !== "" &&
                     <div dangerouslySetInnerHTML={{__html : item.bio}} />
                   }
                   <div className="row">
@@ -40,8 +39,8 @@ const About = (props) => {
                       <div className="col-xs-12 col-sm-4 tech">
                         <h6>Technologies</h6>
                         <ul>
-                          {item.languages.map((tech, key) => (
-                            <li key={`tech-item-${key}`}>
+                          {item.languages.map((tech, i) => (
+                            <li key={`tech-item-${i}`}>
                               {tech.label}
                             </li>
                           ))}
@@ -52,8 +51,8 @@ const About = (props) => {
                       <div className="col-xs-12 col-sm-6 tech">
                         <h6>Roles</h6>
                         <ul>
-                          {item.roles.map((role, key) => (
-                            <li key={`tech-item-${key}`}>
+                          {item.roles.map((role, i) => (
+                            <li key={`role-item-${i}`}>
                               {role}
                             </li>
                           ))}
@@ -67,8 +66,8 @@ const About = (props) => {
                 {typeof item.icons != "undefined" &&
                   <div className="social-share app-post-socials app-social-2 align-center">
                     <ul>
-                      {item.icons.map((lang, key) => (
-                        <li key={`teamsocial-item-${key}`}>
+                      {item.icons.map((lang, i) => (
+                        <li key={`icon-item-${i}`}>
                           <a className="app-social-link app-hover-2" href={lang.link} title={lang.title} target="_blank">
                             <i aria-hidden="true" className={lang.icon} />
                           </a>
