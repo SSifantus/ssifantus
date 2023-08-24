@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Head from "next/head";
 import Script from "next/script";
+import {useRouter} from "next/router"
 import appData from "@data/app.json";
+import * as gtag from "@common/gtag";
 
 import '../styles/scss/style.scss';
 import "../styles/globals.css";
@@ -11,6 +13,17 @@ import {register} from "swiper/element/bundle";
 register();
 
 function MyApp({Component, pageProps}) {
+  const router = useRouter()
+  useEffect(() => {
+    const handleRouteChange = url => {
+      gtag.pageview(url)
+    }
+    router.events.on("routeChangeComplete", handleRouteChange)
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange)
+    }
+  }, [router.events]);
+
   return (
     <>
       <Head>
@@ -23,23 +36,25 @@ function MyApp({Component, pageProps}) {
         <meta property="og:url" content="https://ssifantus.com"/>
         <meta property="og:description" content="Samantha Sifantus / Software Engineer"/>
         <meta property="og:image" content="/images/og-image.jpg"/>
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-53978CWP5N"
-        />
-        <Script
-          dangerouslySetInnerHTML={{
-            __html: `
+      </Head>
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+      />
+      <Script
+        id="gtag-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-53978CWP5N', {
+            gtag('config', '${gtag.GA_TRACKING_ID}', {
               page_path: window.location.pathname,
             });
           `,
-          }}
-        />
-      </Head>
+        }}
+      />
       <Component {...pageProps} />
     </>
   );
