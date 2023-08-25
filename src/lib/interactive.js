@@ -1,10 +1,10 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import { remark } from 'remark'
+import {remark} from 'remark'
 import html from 'remark-html'
 
-const projectsDirectory = path.join(process.cwd(), 'src/data/projects')
+const projectsDirectory = path.join(process.cwd(), 'src/data/interactive')
 
 export function getSortedProjectsData() {
   // Get file names under /posts
@@ -37,7 +37,7 @@ export function getSortedProjectsData() {
 }
 
 export function getFeaturedProjectsData(ids) {
-  
+
   // Get file names under /posts
   const fileNames = fs.readdirSync(projectsDirectory)
   const allData = []
@@ -52,7 +52,7 @@ export function getFeaturedProjectsData(ids) {
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents)
 
-    if ( ids.includes(id) ) {
+    if (ids.includes(id)) {
       // Combine the data with the id
       allData.push({
         id,
@@ -89,7 +89,7 @@ export function getRelatedProjects(current_id) {
 
     // Exclude current id from result
 
-    if ( id != current_id ) {
+    if (id != current_id) {
       // Combine the data with the id
       allData.push({
         id,
@@ -128,8 +128,8 @@ export async function getProjectData(id) {
 
   // Use remark to convert markdown into HTML string
   const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content)
+  .use(html)
+  .process(matterResult.content)
   const contentHtml = processedContent.toString()
 
   // Combine the data with the id and contentHtml

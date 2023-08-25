@@ -3,7 +3,7 @@ import Layouts from "@layouts/Layouts";
 import dynamic from "next/dynamic";
 
 import { getSortedPostsData } from "@library/posts";
-import { getSortedProjectsData } from "@library/projects";
+import { getSortedProjectsData } from "@library/interactive";
 import { getSortedServicesData } from "@library/services";
 import { getSortedTeamData } from "@library/team";
 

@@ -5,7 +5,7 @@ import ImageView from "@components/ImageView";
 
 import {useRouter} from 'next/router';
 
-import {getSortedProjectsData, getAllProjectsIds, getProjectData} from "@library/projects";
+import {getSortedProjectsData, getAllProjectsIds, getProjectData} from "@library/interactive";
 
 const ProjectDetail = (props) => {
 
@@ -105,17 +105,17 @@ const ProjectDetail = (props) => {
           <div className="app-page-navigation projects">
             <div className="app-page-navigation-content">
               {prev_id !== 0 && prev_id !== undefined &&
-                <Link href={`/projects/${prev_id}`} className="page-navigation__prev">
+                <Link href={`/interactive/${prev_id}`} className="page-navigation__prev">
                   <span className="app-prev-arrow">
                     <i/>
                   </span>
                 </Link>
               }
-              <Link href="/projects" className="page-navigation__posts">
+              <Link href="/interactive" className="page-navigation__posts">
                 <i className="fas fa-grid-4"/>
               </Link>
               {next_id !== 0 && next_id !== undefined &&
-                <Link href={`/projects/${next_id}`} className="page-navigation__next">
+                <Link href={`/interactive/${next_id}`} className="page-navigation__next">
                   <span className="app-next-arrow">
                     <i/>
                   </span>

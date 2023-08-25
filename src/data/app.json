@@ -37,7 +37,7 @@
     "menu": [
       {
         "label": "Work",
-        "link": "/projects",
+        "link": "/interactive",
         "children": 0
       },
       {
@@ -53,7 +53,7 @@
     ],
     "button": {
       "label": "Showcase",
-      "link": "/projects"
+      "link": "/interactive"
     },
     "button2": {
       "label": "Start a Project",

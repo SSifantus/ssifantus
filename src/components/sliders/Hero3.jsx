@@ -22,7 +22,7 @@ const Hero3Slider = ( { projects } ) => {
                         <SwiperSlide key={`h2s-slide-${key}`} className="swiper-slide">
                             <div className="app-hero-carousel-item">
                                 <div className="slide">
-                                    <Link href={`/projects/${item.id}`}>
+                                    <Link href={`/interactive/${item.id}`}>
                                         <span className="img" style={{"backgroundImage": "url("+item.image+")"}} />
                                     </Link>
                                 </div>
@@ -34,7 +34,7 @@ const Hero3Slider = ( { projects } ) => {
                                     </div>
                                     <h5 className="title">
                                         <div className="text-line-inner">
-                                            <Link href={`/projects/${item.id}`}>
+                                            <Link href={`/interactive/${item.id}`}>
                                                 <span data-splitting>{item.title}</span>
                                             </Link>
                                         </div>

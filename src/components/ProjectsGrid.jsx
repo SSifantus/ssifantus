@@ -130,7 +130,7 @@ const ProjectsGrid = ({projects, layout, cols, sideFilter, masonry, galleryMode}
                       {layout === "grid" &&
                         <div className="app-portfolio-item">
                           <div className={masonry ? "image" : "image image-square"} data-app-scroll>
-                            <Link href={galleryMode ? item.image : `/projects/${item.id}`}>
+                            <Link href={galleryMode ? item.image : `/interactive/${item.id}`}>
                               <img src={item.image} alt={item.title}/>
                               <div className="desc">
                                 <h5 className="title">
@@ -149,7 +149,7 @@ const ProjectsGrid = ({projects, layout, cols, sideFilter, masonry, galleryMode}
                       {layout === "list" &&
                         <div className="app-portfolio-item app-portfolio-item-list">
                           <div className="image" data-app-overlay data-app-scroll>
-                            <Link href={`/projects/${item.id}`}>
+                            <Link href={`/interactive/${item.id}`}>
                               <img src={item.image} alt={item.title}/>
                             </Link>
                           </div>
@@ -160,7 +160,7 @@ const ProjectsGrid = ({projects, layout, cols, sideFilter, masonry, galleryMode}
                               </div>
                             </div>
                             <h5 className="title">
-                              <Link className="app-lnk" href={`/projects/${item.id}`}>
+                              <Link className="app-lnk" href={`/interactive/${item.id}`}>
                                 <span data-splitting data-app-scroll>{item.title}</span>
                               </Link>
                             </h5>

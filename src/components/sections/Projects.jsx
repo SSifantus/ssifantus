@@ -1,4 +1,4 @@
-import Data from "@data/sections/projects.json";
+import Data from "@data/sections/interactive.json";
 import Link from "next/link";
 import Isotope from "isotope-layout";
 import {useEffect, useRef, useState} from "react";
@@ -136,13 +136,13 @@ const ProjectsSection = ({projects}) => {
                          className={`col-xs-12 col-sm-12 col-md-6 col-lg-6 app-portfolio-col ${item.category_slug}`}>
                       <div className="app-portfolio-item">
                         <div className="image" data-app-overlay data-app-scroll>
-                          <a href={`/projects/${item.id}`} className="app-hover-3">
+                          <a href={`/interactive/${item.id}`} className="app-hover-3">
                             <img src={item.image} alt={item.title}/>
                           </a>
                         </div>
                         <div className="desc">
                           <h5 className="title">
-                            <a className="app-lnk" href={`/projects/${item.id}`}>
+                            <a className="app-lnk" href={`/interactive/${item.id}`}>
                               <span data-splitting data-app-scroll>{item.title}</span>
                             </a>
                           </h5>
