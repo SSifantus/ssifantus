@@ -5052,6 +5052,12 @@ ul.app-footer-menu li {
   a {
     display: block;
     position: relative;
+
+    &.gal {
+      height: 100%;
+      position: absolute;
+      width: 100%;
+    }
   }
 
   .image {
@@ -8238,7 +8244,7 @@ h6,
 
 .image-square {
   position: relative;
-  padding-bottom: 74%;
+  padding-bottom: 100%;
 
   img {
     position: absolute;
