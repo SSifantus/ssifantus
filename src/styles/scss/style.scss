@@ -5026,8 +5026,14 @@ ul.app-footer-menu li {
   margin: 0 -20px;
 }
 
-.app-portfolio-items > .col-xs-12 {
-  padding: 0 20px;
+.app-portfolio-items {
+  > .col-xs-12 {
+    padding: 0 20px;
+  }
+
+  &.sq > .col-xs-12 {
+    padding: 0 20px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -5042,12 +5048,21 @@ ul.app-footer-menu li {
     flex: 0 0 auto;
     width: 25%;
   }
+
+  .app-portfolio-col.col-lg-3.fifths {
+    flex: 0 0 auto;
+    width: 20%;
+  }
 }
 
 .app-portfolio-item {
   border: 1px solid $border_color;
   margin-bottom: 40px;
   position: relative;
+
+  .sq & {
+    margin-bottom: 40px;
+  }
 
   a {
     display: block;

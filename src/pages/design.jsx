@@ -12,7 +12,7 @@ const Design = (props) => {
     <Layouts>
       <PageBanner pageTitle={"Design"} />
 
-      <SquareGrid projects={props.projects} cols={"3"} layout={"grid"} galleryMode />
+      <SquareGrid projects={props.projects} cols={"5"} layout={"grid"} galleryMode />
 
     </Layouts>
   );

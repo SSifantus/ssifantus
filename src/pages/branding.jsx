@@ -1,25 +1,26 @@
 import Layouts from "@layouts/Layouts";
 import dynamic from "next/dynamic";
 
-import { getSortedProjectsData } from "@library/interactive";
+import { getSortedDesignsData } from "@library/design";
 
 import PageBanner from "@components/PageBanner";
 
-const ProjectsGrid = dynamic( () => import("@components/ProjectsGrid"), { ssr: false } );
+const SquareGrid = dynamic( () => import("@components/SquareGrid"), { ssr: false } );
 
-const Portfolio5 = (props) => {
+const Design = (props) => {
   return (
     <Layouts>
       <PageBanner pageTitle={"Branding"} />
-      <ProjectsGrid projects={props.projects} layout={"grid"} cols="3" />
+
+      <SquareGrid projects={props.projects} cols={"5"} layout={"grid"} galleryMode />
 
     </Layouts>
   );
 };
-export default Portfolio5;
+export default Design;
 
 export async function getStaticProps() {
-  const allProjects = getSortedProjectsData();
+  const allProjects = getSortedDesignsData();
 
   return {
     props: {

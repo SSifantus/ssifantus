@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Isotope from "isotope-layout";
 import {useEffect, useRef, useState} from "react";
-import appData from "@data/app.json";
 import ImageView from "@components/ImageView";
 
 const SquareGrid = ({projects, layout, cols, sideFilter, masonry, galleryMode}) => {
@@ -77,6 +76,15 @@ const SquareGrid = ({projects, layout, cols, sideFilter, masonry, galleryMode}) 
     case "3" :
       columns = 'col-xs-12 col-sm-12 col-md-6 col-lg-4';
       break;
+    case "4" :
+      columns = 'col-xs-12 col-sm-12 col-md-4 col-lg-3';
+      break;
+    case "5" :
+      columns = 'col-xs-12 col-sm-12 col-md-3 col-lg-3 fifths';
+      break;
+    case "6" :
+      columns = 'col-xs-12 col-sm-12 col-md-3 col-lg-2';
+      break;
     default:
       columns = 'col-xs-12 col-sm-12 col-md-6 col-lg-6';
   }
@@ -94,36 +102,34 @@ const SquareGrid = ({projects, layout, cols, sideFilter, masonry, galleryMode}) 
               <div
                 className={!sideFilter ? "col-xs-12 col-sm-12 col-md-12 col-lg-12" : "col-xs-12 col-sm-12 col-md-12 col-lg-3"}>
                 <div className="app-filter-container">
-                  <h2 className="section-title hide-on-mobile">Work</h2>
-                  <div
-                    className={!sideFilter ? "app-filter js-app-filter filter--default" : "app-filter js-app-filter"}>
-                    {!sideFilter &&
-                      <div className="app-filter-nav-active"/>
-                    }
-                    <ul>
-                      <li key={`categories-item-first`}>
-                        <button onClick={handleFilterKeyChange("*")} className="app-filter-item item--active"
-                                type="button" data-filter="*">
-                          <span>All</span>
-                        </button>
-                      </li>
-                      {appData.settings.portfolio.categories.map((item, key) => (
-                        <li key={`categories-item-${key}`}>
-                          <button onClick={handleFilterKeyChange(item.slug)} className="app-filter-item" type="button"
-                                  data-filter={item.slug}>
-                            <span>{item.label}</span>
-                          </button>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  <h2 className="section-title hide-on-mobile">Logo Design</h2>
+                  {/*<div*/}
+                  {/*  className={!sideFilter ? "app-filter js-app-filter filter--default" : "app-filter js-app-filter"}>*/}
+                  {/*  {!sideFilter &&*/}
+                  {/*    <div className="app-filter-nav-active"/>*/}
+                  {/*  }*/}
+                  {/*  <ul>*/}
+                  {/*    <li key={`categories-item-first`}>*/}
+                  {/*      <button onClick={handleFilterKeyChange("*")} className="app-filter-item item--active"*/}
+                  {/*              type="button" data-filter="*">*/}
+                  {/*        <span>Branding</span>*/}
+                  {/*      </button>*/}
+                  {/*    </li>*/}
+                  {/*    <li key="systems">*/}
+                  {/*      <button onClick={handleFilterKeyChange("*")} className="app-filter-item item--active"*/}
+                  {/*              type="button" data-filter="*">*/}
+                  {/*        <span>Design Systems</span>*/}
+                  {/*      </button>*/}
+                  {/*    </li>*/}
+                  {/*  </ul>*/}
+                  {/*</div>*/}
                 </div>
 
               </div>
               <div
                 className={!sideFilter ? "col-xs-12 col-sm-12 col-md-12 col-lg-12" : "col-xs-12 col-sm-12 col-md-12 col-lg-9"}>
 
-                <div className="row app-portfolio-items">
+                <div className="row app-portfolio-items sq">
 
                   {projects.map((item, key) => (
                     <div key={`projects-item-${key}`} className={`${columns} app-portfolio-col ${item.category_slug}`}>
@@ -137,11 +143,6 @@ const SquareGrid = ({projects, layout, cols, sideFilter, masonry, galleryMode}) 
                                 <h5 className="title">
                                   <span data-splitting data-app-scroll>{item.title}</span>
                                 </h5>
-                                <div className="text">
-                                  <div data-splitting data-app-scroll>
-                                    <span>{item.description}</span>
-                                  </div>
-                                </div>
                               </div>
                             </Link>
                           </div>

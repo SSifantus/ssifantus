@@ -1,6 +1,6 @@
 ---
 #preview
-title: Verano Capital
+title: Verano Energy
 image: /images/verano.jpg
 category: Corporate
 category_slug: corporate
