@@ -9,6 +9,7 @@ client: The Zoe Report
 date: 2015
 description: Fashion and Retail Website
 link: http://thezoereport.com
-role: Lead Engineer
+roles: 
+  - Lead Engineer
 
 ---

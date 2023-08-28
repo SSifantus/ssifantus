@@ -42,7 +42,7 @@ const ProjectDetail = (props) => {
           </div>
 
           <div className="row gap-bottom-80">
-            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-7">
+            <div className="col-sm-7 col-md-7">
               <h5 className="hide-on-mobile">{postData.title}</h5>
               <div className="app-project-summary">
                 <ul>
@@ -61,9 +61,16 @@ const ProjectDetail = (props) => {
               }
 
             </div>
-            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-4 offset-lg-1">
-
-
+            <div className="col-sm-5 col-md-5">
+              {postData.roles?.length > 0 ? (
+                <div className="project-roles">
+                  <h6>Project Role</h6>
+                  <ul>
+                    {postData.roles.map((item, i) => (
+                      <li key={`role-item-${i}`}>{item}</li>
+                    ))}
+                  </ul></div>)
+                 : null}
             </div>
           </div>
 

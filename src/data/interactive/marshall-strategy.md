@@ -10,7 +10,9 @@ description: Corporate Website
 client: Marshall Strategy
 type: Corporate Identity and Brand Strategy
 link: 
-role: Lead Engineer
+roles: 
+  - Site Design
+  - Site Development
 
 ---
 

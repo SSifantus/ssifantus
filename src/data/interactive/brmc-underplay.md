@@ -8,8 +8,9 @@ client: BRMC
 date: 2012
 description: US Underplay Tour Site
 link: 
-role: Lead Engineer
 type: Band
+roles: 
+  - Lead Engineer
 
 
 ---

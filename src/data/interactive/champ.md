@@ -9,9 +9,10 @@ client: Champ Sports
 date: 2014
 description: Corporate Website
 link: 
-role: Lead Engineer
 type: Sporting Equipment Manufacturer
-
+roles:
+  - Site Design
+  - Site Development
 
 ---
 

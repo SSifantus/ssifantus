@@ -8,9 +8,10 @@ client: Killr Kat
 date: 2011
 description: Official Website
 link: 
-role: Lead Engineer
 type: DJ Duo
-
+roles: 
+  - Site Design
+  - Site Development
 
 ---
 

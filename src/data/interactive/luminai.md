@@ -8,7 +8,8 @@ client: Beyond Limits
 date: 2021
 description: Industrial AI Software
 link: https://beyond.ai
-role: Lead Engineer
 type: 
+roles: 
+  - Software Development
 
 ---

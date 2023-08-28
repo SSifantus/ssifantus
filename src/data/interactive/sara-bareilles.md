@@ -8,8 +8,9 @@ client: Sara Bareilles
 date: 2014
 description: Official Website
 link: https://sarabmusic.com
-role: Lead Engineer
 type: Musician
+roles: 
+  - Site Development
 
 
 ---

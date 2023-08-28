@@ -9,7 +9,9 @@ client: Teeki
 date: 2015
 description: Retail Website
 link: http://teeki.com
-role: Lead Engineer
+roles: 
+  - Site Design
+  - Site Development
 
 
 ---

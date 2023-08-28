@@ -8,7 +8,9 @@ client: Rachel Zoe
 date: 2017
 description: Subscription ECommerce Website
 link: https://www.curateur.com
-role: Lead Engineer
+type: 
+roles: 
+  - Lead Engineer
 
 
 ---

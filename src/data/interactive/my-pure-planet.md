@@ -8,7 +8,9 @@ client: My Pure Planet
 date: 2009
 description: Environmental Services Website
 link: 
-role: Lead Engineer
 type: Carbon Footprint Offset Services
+roles: 
+  - Site Design
+  - Site Development
 
 ---

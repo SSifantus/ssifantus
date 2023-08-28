@@ -8,8 +8,10 @@ client: Anna Journey
 date: 2022
 description: Official Website
 link: https://annajourney.com
-role: Lead Engineer
 type: Poet
+roles: 
+  - Site Design
+  - Site Development
 
 
 ---

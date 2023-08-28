@@ -10,7 +10,9 @@ description: Online Learning Website
 client: Modus Institute
 type: Management Education
 link: 
-role: Lead Engineer
+roles: 
+  - Site Design
+  - Site Development
 
 ---
 

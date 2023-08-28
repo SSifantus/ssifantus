@@ -8,9 +8,10 @@ client: Tortured Soul Music
 date: 2009
 description: Official Website
 link: 
-role: Lead Engineer
 type: Band
-
+roles: 
+  - Site Design
+  - Site Development
 
 ---
 

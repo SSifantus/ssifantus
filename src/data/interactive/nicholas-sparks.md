@@ -9,7 +9,8 @@ client: Nicholas Sparks
 date: 2013
 description: Author Website
 link: https://nicholassparks.com/
-role: Lead Engineer
 type: Author
+roles: 
+  - Lead Engineer
 
 ---

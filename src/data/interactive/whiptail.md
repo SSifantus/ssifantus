@@ -10,7 +10,8 @@ description: Corporate Website
 client: Whiptail
 type: Flash Storage Technology
 link: 
-role: Lead Engineer
+roles: 
+  - Lead Engineer
 
 ---
 

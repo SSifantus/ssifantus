@@ -7,8 +7,9 @@ category_slug: services
 client: Amber Nichols
 date: 2012
 description: Salon Website
-link: 
-role: Lead Engineer
 type: Hair Stylist
+roles: 
+  - Site Design
+  - Site Development
 
 ---

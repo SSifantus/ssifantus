@@ -9,7 +9,8 @@ description: Official Website / Fan Site
 client: Justin Timberlake
 type: Musician
 link: https://justintimberlake.com
-role: Engineer
+roles: 
+  - Site Development
 
 ---
 

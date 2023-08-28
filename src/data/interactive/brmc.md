@@ -8,8 +8,9 @@ client: Black Rebel Motorcycle Club
 date: 2013
 description: Official Website
 link: 
-role: Lead Engineer
 type: Band
+roles: 
+  - Lead Engineer
 
 
 ---

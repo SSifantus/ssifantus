@@ -8,9 +8,9 @@ client: AWOL Nation
 date: 2012
 description: Tour Website
 link: 
-role: Lead Engineer
 type: Band
-
+roles: 
+  - Site Development
 
 ---
 

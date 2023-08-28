@@ -8,8 +8,9 @@ client: Groundswell Giving
 date: 2022
 description: Corporate Philanthropy Software
 link: https://admin.groundswell.io
-role: Lead Engineer
 type: 
+roles: 
+  - Lead Engineer
 
 ---
 

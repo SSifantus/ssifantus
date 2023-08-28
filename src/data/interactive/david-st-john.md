@@ -8,8 +8,10 @@ client: David St. John
 date: 2014
 description: Official Website
 link: https://poetdavidstjohn.com/
-role: Lead Engineer
 type: Poet
+roles: 
+  - Site Design
+  - Site Development
 
 ---
 

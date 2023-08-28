@@ -9,8 +9,8 @@ client: Rachel Zoe Collection
 date: 2016
 description: Ecommerce Retail Website
 link: http://shoprachelzoe.com
-role: Lead Engineer
-
+roles: 
+  - Lead Engineer
 
 ---
 

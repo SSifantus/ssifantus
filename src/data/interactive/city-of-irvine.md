@@ -8,7 +8,8 @@ client: City of Irvine
 date: 2009
 description: Environmental Programs Website
 link: 
-role: Lead Engineer
 type: City Government Agency
+roles: 
+  - Lead Engineer
 
 ---

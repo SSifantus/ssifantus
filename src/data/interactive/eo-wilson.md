@@ -8,7 +8,8 @@ client: E.O. Wilson Biodiversity Foundation
 date: 2013
 description: Event Website
 link: 
-role: Lead Engineer
 type: 
+roles: 
+  - Site Development
 
 ---

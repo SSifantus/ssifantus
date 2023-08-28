@@ -8,8 +8,9 @@ client: BRMC
 date: 2013
 description: Interactive Instagram Campaign
 link: 
-role: Lead Engineer
 type: Album
+roles: 
+  - Lead Engineer
 
 
 ---

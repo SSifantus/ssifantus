@@ -7,9 +7,11 @@ category_slug: arts
 client: Michael Wilding
 date: 2011
 description: Official Website
-link: 
-role: Lead Engineer
+link:
 type: Sculptor
+roles: 
+  - Site Design
+  - Site Development
 
 
 ---

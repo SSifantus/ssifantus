@@ -7,9 +7,10 @@ category_slug: corporate
 client: Verano Capital
 date: 2018
 description: Corporate Website
-link: https://veranocapital.com
+link: https://verano.energy
 marquee: /images/verano_marquee.jpg
-role: Lead Engineer
-
+roles: 
+  - Site Design
+  - Site Development
 ---
 
