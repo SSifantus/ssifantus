@@ -34,14 +34,15 @@ const ProjectDetail = (props) => {
       <section className="app-section">
         <div className="container-md">
 
-          {/* Image */}
-          <div className="gap-bottom-80">
+          <div className="gap-bottom-60">
             <div className="project-image">
-              <img src={postData.image} alt={postData.title}/>
+              {postData?.link ? (
+                <Link href={postData.link} target="_blank"><img src={postData.image} alt={postData.title}/></Link>
+              ) : <img src={postData.image} alt={postData.title}/>}
             </div>
           </div>
 
-          <div className="row gap-bottom-80">
+          <div className="row gap-bottom-60">
             <div className="col-sm-7 col-md-7">
               <h5 className="hide-on-mobile">{postData.title}</h5>
               <div className="app-project-summary">

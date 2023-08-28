@@ -7,10 +7,10 @@ category_slug: corporate
 client: Groundswell Giving
 date: 2022
 description: Corporate Philanthropy Software
-link: https://admin.groundswell.io
+link: https://groundswell.io
 type: 
 roles: 
-  - Lead Engineer
+  - Lead FE Engineer
 
 ---
 
