@@ -68,7 +68,7 @@ const About = (props) => {
                     <ul>
                       {item.icons.map((lang, i) => (
                         <li key={`icon-item-${i}`}>
-                          <a className="app-social-link app-hover-2" href={lang.link} title={lang.title} target="_blank">
+                          <a className="app-social-link" href={lang.link} title={lang.title} target="_blank">
                             <i aria-hidden="true" className={lang.icon} />
                           </a>
                         </li>

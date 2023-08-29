@@ -129,7 +129,7 @@ const ProjectsGrid = ({projects, layout, cols, sideFilter, masonry, galleryMode}
                     <div key={`projects-item-${key}`} className={`${columns} app-portfolio-col ${item.category_slug}`}>
                       {layout === "grid" &&
                         <div className="app-portfolio-item">
-                          <div className={masonry ? "image" : "image image-square"} data-app-scroll>
+                          <div className={masonry ? "image" : "image image-square"} data-app-overlay data-app-scroll>
                             <Link href={galleryMode ? item.image : `/interactive/${item.id}`}>
                               <img src={item.image} alt={item.title}/>
                               <div className="desc">

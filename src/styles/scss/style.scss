@@ -1210,7 +1210,7 @@ hr {
   pointer-events: none;
 }
 
-.animated--active [data-scroll="in"] .app-overlay {
+.animated--active .app-overlay {
   transform: scaleX(0);
 }
 
@@ -1847,6 +1847,7 @@ button > span,
 .app-social-active ul li a:hover,
 .app-social-2 ul li button:hover {
   color: #000;
+  cursor: default;
   border-color: #D8FF36;
 }
 
