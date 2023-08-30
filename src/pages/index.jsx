@@ -7,6 +7,7 @@ import { getSortedServicesData } from "@library/services";
 import { getSortedTeamData } from "@library/team";
 
 import Waves from "@components/Waves";
+
 const Home3 = (props) => {
   return (
     <Layouts darkHeader>

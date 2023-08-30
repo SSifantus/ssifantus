@@ -1,8 +1,8 @@
 ---
 #preview details
-image: "/images/posts2.jpg"
+image: "/images/services_designsystem.png"
 icon: "/images/serv-icon5.png"
-title: "Creative Direction"
+title: "Design Systems"
 short: "Lorem ipm dolor amet, consectetur adipiing lit Sunt sed ad possimus ils magnam maores."
 
 #full details

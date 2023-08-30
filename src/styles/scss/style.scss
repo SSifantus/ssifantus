@@ -515,9 +515,10 @@ h6.app-title-3,
 }
 
 .app-subtitle-1 {
-  margin: 0 10px;
-  font-size: 16px;
-  font-weight: 500;
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: .03em;
   line-height: 1;
   text-transform: uppercase;
 }
@@ -4637,7 +4638,7 @@ ul.app-footer-menu li {
   margin: 0;
   display: flex;
   align-items: center;
-  font-size: 26px;
+  font-size: 23px;
   font-weight: 600;
 }
 
@@ -4649,7 +4650,7 @@ ul.app-footer-menu li {
 
 .app-services-showcase .items .num,
 .app-services-showcase .items .name {
-  padding: 17px 0;
+  padding: 14px 0;
   line-height: 1.2;
   display: block;
 }
@@ -4680,7 +4681,7 @@ ul.app-footer-menu li {
 
 .app-services-showcase .items .image {
   position: absolute;
-  left: 0;
+  right: 470px;
   top: 0;
   width: 628px;
   height: 422px;

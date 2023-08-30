@@ -43,9 +43,6 @@ const Hero2Slider = () => {
                                         </div>
                                         <div className="app-bts">
                                             <Link className="app-btn btn--border btn--white btn--color app-hover-btn" href={item.button.link}>
-                                                <i className="arrow">
-                                                    <span />
-                                                </i>
                                                 <span>{item.button.label}</span>
                                             </Link>
                                         </div>

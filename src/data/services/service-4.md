@@ -1,9 +1,10 @@
 ---
 #preview details
-image: "/images/post3.jpg"
+image: "/images/services_graphic.png"
 icon: "/images/serv-icon3.png"
-title: "Machine Learning / AI"
+title: "Graphic / UI Design"
 short: "Lorem ipm dolor amet, consectetur adipiing lit Sunt sed ad possimus ils magnam maores."
+link: /design
 
 #full details
 accordion:

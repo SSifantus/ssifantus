@@ -32,7 +32,7 @@ function MyApp({Component, pageProps}) {
         <meta name="HandheldFriendly" content="true"/>
         <meta property="og:type" content="website"/>
         <meta property="og:site_name" content="Samantha Sifantus"/>
-        <meta property="og:title" content="Samantha Sifantus"/>
+        <meta property="og:title" content="Samantha Sifantus / Software Engineer"/>
         <meta property="og:url" content="https://ssifantus.com"/>
         <meta property="og:description" content="Samantha Sifantus / Software Engineer"/>
         <meta property="og:image" content="/images/og-image.jpg"/>

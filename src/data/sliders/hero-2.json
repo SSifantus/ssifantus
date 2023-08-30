@@ -5,10 +5,10 @@
         "desktop": "/images/hero-digital-1.jpg",
         "mobile": "/images/hero-digital-1.jpg"
       },
-      "title": "Solid Design and <br />Development Expertise",
-      "text": "We build readymade websites, mobile apps <br>and elaborate online business services.",
+      "title": "Web &amp; <br />App Development",
+      "text": "I build websites, mobile apps <br>and elaborate online business services.",
       "button": {
-        "label": "Learn More",
+        "label": "View Projects",
         "link": "/about"
       }
     },

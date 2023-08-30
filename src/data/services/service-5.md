@@ -1,6 +1,6 @@
 ---
 #preview details
-image: "/images/posts4.jpg"
+image: "/images/services_identity.png"
 icon: "/images/serv-icon4.png"
 title: "Visual Identity"
 short: "Lorem ipm dolor amet, consectetur adipiing lit Sunt sed ad possimus ils magnam maores."

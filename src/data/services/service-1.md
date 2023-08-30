@@ -1,9 +1,10 @@
 ---
 #preview details
-image: "/images/post6.jpg"
+image: "/images/services_code.png"
 icon: "/images/serv-icon6.png"
-title: "Brand Strategy"
+title: "Software Development"
 short: "Lorem ipm dolor amet, consectetur adipiing lit Sunt sed ad possimus ils magnam maores."
+link: /interactive
 
 #full details
 accordion:

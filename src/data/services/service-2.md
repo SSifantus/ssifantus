@@ -1,9 +1,10 @@
 ---
 #preview details
-image: "/images/posts3.jpg"
+image: "/images/services_lines.png"
 icon: "/images/serv-icon1.png"
-title: "Social Media Campaign"
+title: "Information Architecture"
 short: "Lorem ipm dolor amet, consectetur adipiing lit Sunt sed ad possimus ils magnam maores."
+link: /interactive
 
 #full details
 accordion:
