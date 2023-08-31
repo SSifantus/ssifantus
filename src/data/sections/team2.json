@@ -1,8 +1,8 @@
 {
-    "title": "Our Team is The Difference. <br/>Our Chemistry is The Spark.",
-    "subtitle": "Meet Our Company Family",
-    "numOfItems": 5,
-    "button": {
-        "link": "/team"
-    }
+  "title": "I am a software engineer <br />passionate about using technology <br />to improve people's lives.",
+  "subtitle": "I specialize in building web applications, SaaS products, and design systems",
+  "numOfItems": 1,
+  "button": {
+    "link": "/about"
+  }
 }

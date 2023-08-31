@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "label": "Javascript",
+      "icon": "fab fa-js"
+    },
+    {
+      "label": "React",
+      "icon": "fab fa-react"
+    },
+    {
+      "label": "Vue",
+      "icon": "fab fa-vuejs"
+    },
+    {
+      "label": "Node",
+      "icon": "fab fa-node-js"
+    },
+    {
+      "label": "Databases",
+      "icon": "fa fa-database"
+    },
+    {
+      "label": "Sass",
+      "icon": "fab fa-sass"
+    },
+    {
+      "label": "CSS",
+      "icon": "fab fa-css3-alt"
+    },
+    {
+      "label": "HTML",
+      "icon": "fab fa-html5"
+    },
+    {
+      "label": "Version Control",
+      "icon": "fab fa-git-alt"
+    },
+    {
+      "label": "Docker",
+      "icon": "fab fa-docker"
+    }
+  ]
+}

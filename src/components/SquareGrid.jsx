@@ -102,27 +102,33 @@ const SquareGrid = ({projects, layout, cols, sideFilter, masonry, galleryMode}) 
               <div
                 className={!sideFilter ? "col-xs-12 col-sm-12 col-md-12 col-lg-12" : "col-xs-12 col-sm-12 col-md-12 col-lg-3"}>
                 <div className="app-filter-container">
-                  <h2 className="section-title hide-on-mobile">Logo Design</h2>
-                  {/*<div*/}
-                  {/*  className={!sideFilter ? "app-filter js-app-filter filter--default" : "app-filter js-app-filter"}>*/}
-                  {/*  {!sideFilter &&*/}
-                  {/*    <div className="app-filter-nav-active"/>*/}
-                  {/*  }*/}
-                  {/*  <ul>*/}
-                  {/*    <li key={`categories-item-first`}>*/}
-                  {/*      <button onClick={handleFilterKeyChange("*")} className="app-filter-item item--active"*/}
-                  {/*              type="button" data-filter="*">*/}
-                  {/*        <span>Branding</span>*/}
-                  {/*      </button>*/}
-                  {/*    </li>*/}
-                  {/*    <li key="systems">*/}
-                  {/*      <button onClick={handleFilterKeyChange("*")} className="app-filter-item item--active"*/}
-                  {/*              type="button" data-filter="*">*/}
-                  {/*        <span>Design Systems</span>*/}
-                  {/*      </button>*/}
-                  {/*    </li>*/}
-                  {/*  </ul>*/}
-                  {/*</div>*/}
+                  <h2 className="section-title hide-on-mobile">Design</h2>
+                  <div
+                    className={!sideFilter ? "app-filter js-app-filter filter--default" : "app-filter js-app-filter"}>
+                    {!sideFilter &&
+                      <div className="app-filter-nav-active"/>
+                    }
+                    <ul>
+                      <li key={`categories-item-first`}>
+                        <button onClick={handleFilterKeyChange("*")} className="app-filter-item item--active"
+                                type="button" data-filter="*">
+                          <span>All</span>
+                        </button>
+                      </li>
+                      <li key={`categories-item-identity`}>
+                        <button onClick={handleFilterKeyChange('identity')} className="app-filter-item" type="button"
+                                data-filter='identity'>
+                          <span>Identity</span>
+                        </button>
+                      </li>
+                      <li key={`categories-item-branding`}>
+                        <button onClick={handleFilterKeyChange('branding')} className="app-filter-item" type="button"
+                                data-filter='branding'>
+                          <span>Logo Design</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
 
               </div>
@@ -135,7 +141,7 @@ const SquareGrid = ({projects, layout, cols, sideFilter, masonry, galleryMode}) 
                     <div key={`projects-item-${key}`} className={`${columns} app-portfolio-col ${item.category_slug}`}>
                       {layout === "grid" &&
                         <div className="app-portfolio-item">
-                          <div className={masonry ? "image" : "image image-square"} data-app-scroll>
+                          <div className={masonry ? "image" : "image image-square"} data-app-overlay data-app-scroll>
                             <Link href={galleryMode ? item.image : `/interactive/${item.id}`}
                                   className={galleryMode ? "gal" : ""}>
                               <img src={item.image} alt={item.title}/>

@@ -1,7 +1,7 @@
 import Data from "@data/sections/partners.json";
 import Link from "next/link";
 
-const PartnersSection = ( { paddingTop } ) => {
+const PartnersSection = ( { paddingTop, title } ) => {
   return (
     <>
         {/*  Brands */}
@@ -11,11 +11,8 @@ const PartnersSection = ( { paddingTop } ) => {
                 {/* Heading */}
                 <div className="app-heading gap-bottom-20">
                     <div className="app-subtitle-1">
-                        <span dangerouslySetInnerHTML={{__html: Data.subtitle}} />
+                        <span dangerouslySetInnerHTML={{__html: title}} />
                     </div>
-                    <h2 className="app-title-2">
-                        <span dangerouslySetInnerHTML={{__html: Data.title}} />
-                    </h2>
                 </div>
 
                 {/* Brands items */}

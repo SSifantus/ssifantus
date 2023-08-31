@@ -5,9 +5,6 @@ name: Samantha Sifantus
 role: Software Engineer
 first_letter: S
 social:
-  - link: https://www.facebook.com/SSifantus/
-    icon: fab fa-facebook-f
-    title: Facebook
 
   - link: https://www.linkedin.com/in/ssifantus/
     icon: fab fa-linkedin-in

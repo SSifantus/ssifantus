@@ -7,6 +7,7 @@ import {circleText} from "@common/utilits";
 
 import PageBanner from "@components/PageBanner";
 import PartnersSection from "@components/sections/Partners";
+import Technologies from "@components/sections/Technologies";
 const Testimonial2Slider = dynamic(() => import("@components/sliders/Testimonial2"), {ssr: false});
 
 const About = (props) => {
@@ -17,7 +18,7 @@ const About = (props) => {
   return (
     <Layouts>
       <PageBanner pageTitle={"About"} />
-      <section className="app-section gap-top-70 gap-bottom-80">
+      <section className="app-section gap-top-70">
         <div className="container">
 
             {props.team.map((item, key) => (
@@ -62,27 +63,13 @@ const About = (props) => {
                   </div>
                 </div>
               </div>
-              <div className="row">
-                {typeof item.icons != "undefined" &&
-                  <div className="social-share app-post-socials app-social-2 align-center">
-                    <ul>
-                      {item.icons.map((lang, i) => (
-                        <li key={`icon-item-${i}`}>
-                          <a className="app-social-link" href={lang.link} title={lang.title} target="_blank">
-                            <i aria-hidden="true" className={lang.icon} />
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                }
-              </div>
               </>
             ))}
         </div>
       </section>
+      <Technologies/>
       <Testimonial2Slider/>
-      <PartnersSection paddingTop />
+      <PartnersSection paddingTop title="Past projects" />
     </Layouts>
   );
 };
