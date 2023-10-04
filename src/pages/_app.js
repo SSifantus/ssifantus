@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import Head from "next/head";
 import Script from "next/script";
-import {useRouter} from "next/router"
+import {useRouter} from "next/router";
 import appData from "@data/app.json";
 import * as gtag from "@common/gtag";
 
@@ -9,7 +9,7 @@ import '../styles/scss/style.scss';
 import "../styles/globals.css";
 
 import {register} from "swiper/element/bundle";
-// register Swiper custom elements
+
 register();
 
 function MyApp({Component, pageProps}) {
