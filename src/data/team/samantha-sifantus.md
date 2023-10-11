@@ -17,7 +17,7 @@ languages:
   - label: Apollo / GraphQL
   - label: MySQL / PostgreSQL
   - label: CSS3 / SASS / SCSS
-  - label: Git version control
+  - label: Prisma / Feathers ORM
 
 icons:
 
