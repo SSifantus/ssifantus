@@ -2,6 +2,11 @@
   "bg_image": "",
   "items": [
     {
+      "name": "Albert Hsu",
+      "role": "Software Engineer at Google",
+      "text": "She is a great leader and problem solver and possesses comprehensive and in-depth technical knowledge in frontend and full-stack web development. It was a great honor to work with Sam in the same team."
+    },
+    {
       "name": "Jesse Kanner",
       "role": "Programmer",
       "text": "It was a real pleasure working with Sam… She is a triple threat: coder, designer, and project manager."

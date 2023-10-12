@@ -184,6 +184,10 @@ strong {
   background-color: #f2f2f2;
 }
 
+.top-shadow {
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
 @media (max-width: 991px) {
   .hide-on-mobile {
     display: none;
@@ -5843,6 +5847,7 @@ ul.app-footer-menu li {
 
 .app-reviews-item .text {
   font-size: 1.1em;
+  line-height: 1.5;
 }
 
 .app-reviews-carousel.reviews--full .app-reviews-item .text {
