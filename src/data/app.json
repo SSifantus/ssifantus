@@ -36,8 +36,13 @@
     },
     "menu": [
       {
-        "label": "Work",
+        "label": "Interactive",
         "link": "/interactive",
+        "children": 0
+      },
+      {
+        "label": "Branding",
+        "link": "/branding",
         "children": 0
       },
       {

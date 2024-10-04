@@ -102,9 +102,9 @@ const SquareGrid = ({projects, layout, cols, sideFilter, masonry, galleryMode}) 
               <div
                 className={!sideFilter ? "col-xs-12 col-sm-12 col-md-12 col-lg-12" : "col-xs-12 col-sm-12 col-md-12 col-lg-3"}>
                 <div className="app-filter-container">
-                  <h2 className="section-title hide-on-mobile">Design</h2>
+                  <h2 className="section-title hide-on-mobile">Brand Design</h2>
                   <div
-                    className={!sideFilter ? "app-filter js-app-filter filter--default" : "app-filter js-app-filter"}>
+                    className={!sideFilter ? "app-filter js-app-filter filter--default" : "app-filter js-app-filter"}  style={{ opacity: 0 }}>
                     {!sideFilter &&
                       <div className="app-filter-nav-active"/>
                     }

@@ -10,7 +10,7 @@ const SquareGrid = dynamic( () => import("@components/SquareGrid"), { ssr: false
 const Design = (props) => {
   return (
     <Layouts>
-      <PageBanner pageTitle={"Branding"} />
+      <PageBanner pageTitle={"Brand Design"} />
 
       <SquareGrid projects={props.projects} cols={"5"} layout={"grid"} galleryMode />
 
