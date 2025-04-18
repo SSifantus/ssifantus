@@ -21,7 +21,7 @@ const Home3 = (props) => {
           <h2 className="app-title-2">
             <Link href="/about"><span data-splitting data-app-scroll>I am a software engineer <br />passionate about using technology <br />to improve people's lives.</span></Link>
           </h2>
-          <h5><Link href="/about"><span data-splitting data-app-scroll>I specialize in building web applications, SaaS products, and design systems</span></Link></h5>
+          {/*<h5><Link href="/about"><span data-splitting data-app-scroll>I specialize in building web applications, SaaS products, and design systems</span></Link></h5>*/}
         </div>
         <Waves />
       </div>
