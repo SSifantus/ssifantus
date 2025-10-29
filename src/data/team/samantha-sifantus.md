@@ -11,13 +11,13 @@ social:
     title: Linkedin
 
 languages:
-  - label: Javascript / ES6
-  - label: React / React Native / Next
-  - label: Vue / Nuxt
-  - label: Apollo / GraphQL
+  - label: JavaScript / TypeScript
+  - label: React / Next.js / Vue
+  - label: Node.js / NPM 
+  - label: CSS / Tailwind
+  - label: React Query / Apollo / Prisma
+  - label: GraphQL / REST
   - label: MySQL / PostgreSQL
-  - label: CSS3 / SASS / SCSS
-  - label: Prisma / Feathers ORM
 
 icons:
 
@@ -49,13 +49,12 @@ icons:
     icon: fab fa-git-alt
 
 roles: 
-  - Software Development
+  - Front-End / Full-Stack Development
   - Information Architecture
   - Technical Lead
   - Technical Project Management
-  - Graphic / UI Design
+  - UX Design
   - Strategic Consulting
-  - Lean/Agile Team Leader
   
 projects: 
   - project-04

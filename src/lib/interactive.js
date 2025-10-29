@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import {remark} from 'remark'
+import { remark } from 'remark'
 import html from 'remark-html'
 
 const projectsDirectory = path.join(process.cwd(), 'src/data/interactive')
@@ -22,17 +22,12 @@ export function getSortedProjectsData() {
 
     // Combine the data with the id
     return {
-      id,
-      ...matterResult.data
+      id, ...matterResult.data
     }
   })
   // Sort posts by date
   return allData.sort((a, b) => {
-    if (a.id > b.id) {
-      return 1
-    } else {
-      return -1
-    }
+    return new Date(b.date) - new Date(a.date)
   })
 }
 
@@ -55,8 +50,7 @@ export function getFeaturedProjectsData(ids) {
     if (ids.includes(id)) {
       // Combine the data with the id
       allData.push({
-        id,
-        ...matterResult.data
+        id, ...matterResult.data
       });
     }
   })
@@ -65,7 +59,8 @@ export function getFeaturedProjectsData(ids) {
   return allData.sort((a, b) => {
     if (a.id > b.id) {
       return 1
-    } else {
+    }
+    else {
       return -1
     }
   })
@@ -92,8 +87,7 @@ export function getRelatedProjects(current_id) {
     if (id != current_id) {
       // Combine the data with the id
       allData.push({
-        id,
-        ...matterResult.data
+        id, ...matterResult.data
       });
     }
   })
@@ -102,7 +96,8 @@ export function getRelatedProjects(current_id) {
   return allData.sort((a, b) => {
     if (a.category > b.category) {
       return 1
-    } else {
+    }
+    else {
       return -1
     }
   })
@@ -134,8 +129,6 @@ export async function getProjectData(id) {
 
   // Combine the data with the id and contentHtml
   return {
-    id,
-    contentHtml,
-    ...matterResult.data
+    id, contentHtml, ...matterResult.data
   }
 }
