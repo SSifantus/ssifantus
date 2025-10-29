@@ -19,7 +19,7 @@ const Home3 = (props) => {
       <div className="app-section-fullscreen">
         <div className="intro-summary">
           <h2 className="app-title-2">
-            <Link href="/about"><span data-splitting data-app-scroll>I am a software engineer <br />passionate about using technology <br />to improve people's lives.</span></Link>
+            <Link href="/about"><span data-splitting data-app-scroll>I am a software engineer <br />passionate about utilizing technology <br />to improve people's lives.</span></Link>
           </h2>
           {/*<h5><Link href="/about"><span data-splitting data-app-scroll>I specialize in building web applications, SaaS products, and design systems</span></Link></h5>*/}
         </div>
