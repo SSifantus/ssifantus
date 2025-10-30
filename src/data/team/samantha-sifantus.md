@@ -54,7 +54,6 @@ roles:
   - Technical Lead
   - Technical Project Management
   - UX Design
-  - Strategic Consulting
   
 projects: 
   - project-04

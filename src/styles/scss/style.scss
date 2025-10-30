@@ -1781,7 +1781,7 @@ button > span,
 }
 
 .app-social-1 ul li {
-  margin: 0 5px;
+  margin: 0;
   display: inline-block;
   vertical-align: top;
 }
@@ -1797,6 +1797,8 @@ button > span,
   justify-content: center;
   font-size: 12px;
   font-weight: 600;
+  width: 24px;
+  height: 24px;
   color: #666;
   transition: all .4s cubic-bezier(0.3, 0, 0.3, 1);
   -webkit-transition: all .4s cubic-bezier(0.3, 0, 0.3, 1);
@@ -3452,6 +3454,7 @@ a.app-menu-btn,
   bottom: 0;
   height: 38px;
   left: 0;
+  padding: 0 4px;
   position: fixed;
   width: 100%;
 }
@@ -3469,7 +3472,7 @@ a.app-menu-btn,
 }
 
 .app-footer .footer--default {
-  padding: 12px 0 10px 0;
+  padding: 6px 0 10px 0;
 }
 
 .app-footer .copyright {
