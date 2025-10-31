@@ -1,7 +1,7 @@
 ---
 #preview
 title: Marshall Strategy
-image: /images/marshall.jpg
+image: /images/marshall.webp
 marquee:
 category: Corporate
 category_slug: corporate

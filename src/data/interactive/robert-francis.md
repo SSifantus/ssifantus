@@ -1,7 +1,7 @@
 ---
 #preview
 title: Robert Francis Music
-image: /images/robertfrancis.jpg
+image: /images/robertfrancis.webp
 category: Music
 category_slug: music
 date: 2014

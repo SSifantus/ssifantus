@@ -2,7 +2,6 @@
 #preview
 title: Online Surveys
 image: /images/ols.jpg
-marquee:
 category: Services
 category_slug: services
 date: 2011

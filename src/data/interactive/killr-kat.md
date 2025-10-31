@@ -1,7 +1,7 @@
 ---
 #preview
 title: Killr Kat
-image: /images/killrkat.jpg
+image: /images/killrkat.webp
 category: Music
 category_slug: music
 client: Killr Kat

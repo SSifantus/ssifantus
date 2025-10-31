@@ -1,7 +1,7 @@
 ---
 #preview
 title: Eric Church
-image: /images/ericchurch.jpg
+image: /images/ericchurch.webp
 category: Music
 category_slug: music
 date: 2013

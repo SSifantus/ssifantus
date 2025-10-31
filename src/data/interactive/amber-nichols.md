@@ -1,7 +1,7 @@
 ---
 #preview
 title: Amber Nichols
-image: /images/ambernichols.jpg
+image: /images/ambernichols.webp
 category: Services
 category_slug: services
 client: Amber Nichols

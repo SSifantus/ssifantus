@@ -1,7 +1,7 @@
 ---
 #preview
 title: BRMC Underplay
-image: /images/brmc-underplay.jpg
+image: /images/brmc-underplay.webp
 category: Music
 category_slug: music
 client: BRMC

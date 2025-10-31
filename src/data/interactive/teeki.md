@@ -2,7 +2,6 @@
 #preview
 title: Teeki
 image: /images/teeki.jpg
-marquee: /images/teeki_marquee.jpg
 category: Ecommerce
 category_slug: ecommerce
 client: Teeki

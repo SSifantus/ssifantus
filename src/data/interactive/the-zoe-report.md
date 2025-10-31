@@ -2,7 +2,6 @@
 #preview
 title: The Zoe Report
 image: /images/tzr.jpg
-marquee: /images/tzr_marquee.jpg
 category: Ecommerce
 category_slug: ecommerce
 client: The Zoe Report

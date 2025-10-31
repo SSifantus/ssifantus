@@ -1,7 +1,7 @@
 ---
 #preview
 title: Local Natives
-image: /images/localnatives.jpg
+image: /images/localnatives.webp
 category: Music
 category_slug: music
 client: Local Natives

@@ -1,8 +1,7 @@
 ---
 #preview
 title: Shop Rachel Zoe
-image: /images/shoprachelzoe.jpg
-marquee: /images/rachelzoe_marquee.jpg
+image: /images/shoprachelzoe.webp
 category: Ecommerce
 category_slug: ecommerce
 client: Rachel Zoe Collection

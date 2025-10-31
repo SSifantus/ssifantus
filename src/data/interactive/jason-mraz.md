@@ -1,7 +1,7 @@
 ---
 #preview
 title: Jason Mraz
-image: /images/jmraz.jpg
+image: /images/jmraz.webp
 category: Music
 category_slug: music
 date: 2013

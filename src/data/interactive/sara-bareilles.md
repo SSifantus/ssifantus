@@ -1,7 +1,7 @@
 ---
 #preview
 title: Sara Bareilles
-image: /images/sarabareilles.jpg
+image: /images/sarabareilles.webp
 category: Music
 category_slug: music
 client: Sara Bareilles

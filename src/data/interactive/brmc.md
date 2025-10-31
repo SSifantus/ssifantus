@@ -1,7 +1,7 @@
 ---
 #preview
 title: BRMC
-image: /images/brmc.jpg
+image: /images/brmc.webp
 category: Music
 category_slug: music
 client: Black Rebel Motorcycle Club

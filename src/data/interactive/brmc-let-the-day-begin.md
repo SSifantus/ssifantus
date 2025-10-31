@@ -1,7 +1,7 @@
 ---
 #preview
 title: BRMC "Let the Day Begin"
-image: /images/brmcletthedaybegin.jpg
+image: /images/brmcletthedaybegin.webp
 category: Music
 category_slug: music
 client: BRMC
