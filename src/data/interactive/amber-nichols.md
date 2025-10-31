@@ -6,6 +6,7 @@ category: Services
 category_slug: services
 client: Amber Nichols
 date: 2012
+order: 2012
 description: Salon Website
 type: Hair Stylist
 roles: 

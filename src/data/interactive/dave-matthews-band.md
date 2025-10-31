@@ -6,6 +6,7 @@ category: Music
 category_slug: music
 client: Dave Matthews Band
 date: 2012
+order: 2017
 description: Official Website
 link: http://davematthewsband.com
 type: Band

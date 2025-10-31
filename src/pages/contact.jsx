@@ -139,7 +139,7 @@ const Contact = () => {
                         </div>
                         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                           <p>
-                            <button type="submit" className="app-btn app-hover-btn btn--border">
+                            <button type="submit" className="app-btn app-hover-btn">
                               <span>Send Message</span>
                             </button>
                           </p>

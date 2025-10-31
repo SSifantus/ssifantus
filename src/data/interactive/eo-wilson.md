@@ -6,6 +6,7 @@ category: Services
 category_slug: services
 client: E.O. Wilson Biodiversity Foundation
 date: 2013
+order: 2013
 description: Event Website
 link: 
 type: 

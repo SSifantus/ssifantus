@@ -6,6 +6,7 @@ category: Music
 category_slug: music
 client: AWOL Nation
 date: 2012
+order: 2012
 description: Tour Website
 link: 
 type: Band

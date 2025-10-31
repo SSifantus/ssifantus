@@ -6,7 +6,8 @@ category: Corporate
 category_slug: corporate
 client: Groundswell Giving
 date: 2022
-description: Corporate Philanthropy Software
+order: 2021
+description: Corporate Philanthropy SaaS
 link: https://groundswell.io
 type: 
 roles: 

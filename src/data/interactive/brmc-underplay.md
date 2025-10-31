@@ -6,6 +6,7 @@ category: Music
 category_slug: music
 client: BRMC
 date: 2012
+order: 2012
 description: US Underplay Tour Site
 link: 
 type: Band

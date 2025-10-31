@@ -5,6 +5,7 @@ image: /images/chrishajian.jpg
 category: Music
 category_slug: music
 date: 2011
+order: 2011
 description: Official Website
 client: Chris Hajian
 type: Composer

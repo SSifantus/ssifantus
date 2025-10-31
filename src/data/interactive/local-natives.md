@@ -6,6 +6,7 @@ category: Music
 category_slug: music
 client: Local Natives
 date: 2014
+order: 2014
 description: Official Website
 type: Band
 link:

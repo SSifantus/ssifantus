@@ -6,6 +6,7 @@ category: Music
 category_slug: music
 client: Black Rebel Motorcycle Club
 date: 2013
+order: 2013
 description: Official Website
 link: 
 type: Band

@@ -27,7 +27,12 @@ export function getSortedProjectsData() {
   })
   // Sort posts by date
   return allData.sort((a, b) => {
-    return new Date(b.date) - new Date(a.date)
+    if (a.order > b.order) {
+      return -1
+    }
+    else {
+      return 1
+    }
   })
 }
 

@@ -6,6 +6,7 @@ category: Ecommerce
 category_slug: ecommerce
 client: The Zoe Report
 date: 2015
+order: 2015
 description: Fashion and Retail Website
 link: http://thezoereport.com
 roles: 

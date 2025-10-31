@@ -5,6 +5,7 @@ image: /images/eugeneruffolo.jpg
 category: Music
 category_slug: music
 date: 2013
+order: 2013
 description: Official Website
 client: Eugene Ruffolo
 type: Singer / Songwriter
