@@ -13,20 +13,22 @@ const ProjectDetail = (props) => {
   let prev_id, next_id, prev_key, next_key = 0;
 
   props.projects.forEach(function (item, key) {
-    if (item.id == postData.id) {
+    if (item.id === postData.id) {
       prev_key = key - 1;
       next_key = key + 1;
     }
   })
 
   props.projects.forEach(function (item, key) {
-    if (key == prev_key) {
+    if (key === prev_key) {
       prev_id = item.id;
     }
-    if (key == next_key) {
+    if (key === next_key) {
       next_id = item.id;
     }
   });
+
+  const media = postData?.video ?? <img src={postData.image} alt={postData.title}/>;
 
   return (
     <Layouts>
@@ -37,8 +39,8 @@ const ProjectDetail = (props) => {
           <div className="gap-bottom-60">
             <div className="project-image">
               {postData?.link ? (
-                <Link href={postData.link} target="_blank"><img src={postData.image} alt={postData.title}/></Link>
-              ) : <img src={postData.image} alt={postData.title}/>}
+                <Link href={postData.link} target="_blank">{media}</Link>
+              ) : media}
             </div>
           </div>
 
@@ -50,7 +52,6 @@ const ProjectDetail = (props) => {
                   <li><span>Project:</span> <p>{postData.description}</p></li>
                   <li><span>Client:</span> {postData.client} {postData?.type ? <>
                     <br/>{postData.type}</> : null}</li>
-                  {/*<li><span>Launched:</span> {postData.date}</li>*/}
                 </ul>
               </div>
               {postData.contentHtml != "" &&

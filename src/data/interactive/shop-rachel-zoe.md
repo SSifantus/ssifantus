@@ -6,7 +6,7 @@ category: Ecommerce
 category_slug: ecommerce
 client: Rachel Zoe Collection
 date: 2016
-order: 2018
+order: 2016
 description: Ecommerce Retail Website
 link: http://shoprachelzoe.com
 roles: 
