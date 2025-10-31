@@ -62,7 +62,7 @@ projects:
   - project-05
   
 awards:
-  - label: 7 SOTD <br> 17 HONORABLE MENTION <br> 
+  - label: Webby Award
   
 services: 
   - service-1
@@ -79,6 +79,7 @@ bio:
     and worked as an in-house agency engineer at The Walt Disney Company from 2018 to 2020. She led the 
     front-end software engineering team for LuminAI at <a href="https://beyond.ai/" target="_blank" rel="noopener 
     noreferrer">Beyond Limits AI</a> from 2020 to 2022 before joining <a href="https://groundswell.io/" target="_blank" 
-    rel="noopener noreferrer">Groundswell Giving</a>, a philanthropy focused startup. She currently works at <a href="https://spotter.la" target="_blank" 
+    rel="noopener noreferrer">Groundswell Giving</a>, a philanthropy focused startup. She currently works at <a 
+    href="https://spotter.com" target="_blank" 
     rel="noopener noreferrer">Spotter</a>, building AI-based software for creators. 
 ---
