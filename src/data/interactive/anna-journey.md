@@ -1,7 +1,7 @@
 ---
 #preview
 title: Anna Journey
-image: /images/annajourney.jpg
+image: /images/annajourney.webp
 category: Arts & Entertainment
 category_slug: arts
 client: Anna Journey
