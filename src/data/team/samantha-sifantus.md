@@ -49,10 +49,11 @@ icons:
     icon: fab fa-git-alt
 
 roles: 
-  - Front-End / Full-Stack Development
+  - Front-End Development
+  - Full-Stack Development
   - Information Architecture
-  - Technical Lead
   - Technical Project Management
+  - Team Lead
   - UX Design
   
 projects: 
