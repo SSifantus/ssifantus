@@ -35,6 +35,10 @@
     {
       "label": "Version Control",
       "icon": "fab fa-git-alt"
+    },
+    {
+      "label": "Figma",
+      "icon": "fab fa-figma"
     }
   ]
 }

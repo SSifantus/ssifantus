@@ -19,35 +19,6 @@ languages:
   - label: GraphQL / REST
   - label: MySQL / PostgreSQL
 
-icons:
-
-  - label: Javascript
-    icon: fab fa-js
-    
-  - label: React
-    icon: fab fa-react
-    
-  - label: Vue
-    icon: fab fa-vuejs
-    
-  - label: Node
-    icon: fab fa-node-js
-    
-  - label: Databases
-    icon: fa fa-database
-    
-  - label: Sass
-    icon: fab fa-sass
-    
-  - label: CSS
-    icon: fab fa-css3-alt
-
-  - label: HTML
-    icon: fab fa-html5
-    
-  - label: Version Control
-    icon: fab fa-git-alt
-
 roles: 
   - Front-End Development
   - Full-Stack Development
@@ -55,22 +26,11 @@ roles:
   - Technical Project Management
   - Team Lead
   - UX Design
-  
-projects: 
-  - project-04
-  - project-02
-  - project-03
-  - project-05
+ 
   
 awards:
   - label: Webby Award
-  
-services: 
-  - service-1
-  - service-2
-  - service-3
-  - service-4
-  - service-5
+ 
 
 bio:
     Samantha Sifantus is a Los Angeles-based software engineer. She was the director and creative lead of 
