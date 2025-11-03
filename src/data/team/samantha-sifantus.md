@@ -23,8 +23,8 @@ roles:
   - Front-End Development
   - Full-Stack Development
   - Information Architecture
-  - Technical Project Management
   - Team Lead
+  - Technical Project Management
   - UX Design
  
   
