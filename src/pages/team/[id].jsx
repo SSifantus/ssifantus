@@ -11,11 +11,11 @@ const TeamDetail = ({postData, projects, services}) => {
     <Layouts>
       <PageBanner pageTitle={postData.name} pageDesc={"Meet our creativity company family."}/>
 
-      {/*  Team Detail */}
+
       <section className="app-section gap-top-140 gap-bottom-140">
         <div className="container">
 
-          {/* Team Card */}
+
           <div className="app-team-detail">
             <div className="row gap-140 gap-top-60 gap-bottom-0">
               <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -73,8 +73,6 @@ const TeamDetail = ({postData, projects, services}) => {
 
         </div>
       </section>
-
-      }
 
 
     </Layouts>
