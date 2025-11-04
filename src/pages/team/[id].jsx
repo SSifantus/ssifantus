@@ -64,7 +64,7 @@ const TeamDetail = ({postData, projects, services}) => {
             </div>
           </div>
 
-          {postData.contentHtml != "" &&
+          {postData.contentHtml !== "" &&
             <div className="app-text gap-top-140">
               <div dangerouslySetInnerHTML={{__html: postData.contentHtml}}/>
             </div>
@@ -74,125 +74,8 @@ const TeamDetail = ({postData, projects, services}) => {
         </div>
       </section>
 
-      {typeof postData.services != "undefined" &&
-        <section className="app-section gap-bottom-140">
-          <div className="container">
-
-            {/* Heading */}
-            <div className="app-heading gap-bottom-40">
-              <h5 className="app-subtitle-1">
-                <span> What we do </span>
-              </h5>
-            </div>
-
-            {/* Services items */}
-            <div className="app-services-list">
-
-              {services.map((item, key) => (
-                <div key={`services-item-${key}`} className="app-service-item-list">
-                  <div className="app-service-item-list-inner">
-                    <div className="image app-hover-1">
-                      <Link href={`/services/${item.id}`}>
-                        <img src={item.icon} alt={item.title}/>
-                      </Link>
-                    </div>
-                    <div className="num">
-                      <span>0{key + 1}.</span>
-                    </div>
-                    <h5 className="title">
-                      <a href={`/services/${item.id}`}>
-                        <span>{item.title}</span>
-                      </a>
-                    </h5>
-                    <div className="app-text">
-                      <div>
-                        <p>{item.short}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-
-            </div>
-
-          </div>
-        </section>
       }
 
-      {typeof postData.awards != "undefined" &&
-        <section className="app-section gap-bottom-140">
-          <div className="container">
-
-            {/* Heading */}
-            <div className="app-heading">
-              <h5 className="app-subtitle-1">
-                <span> Awards </span>
-              </h5>
-            </div>
-
-            {/* Awards items */}
-            <div className="row gap-row">
-
-              {postData.awards.map((item, key) => (
-                <div key={`awards-item-${key}`} className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                  <p><img src={item.image} alt="image"/></p>
-                  <h5 className="app-title-1">{item.value}</h5>
-                  <span dangerouslySetInnerHTML={{__html: item.label}}/>
-                </div>
-              ))}
-
-            </div>
-
-
-          </div>
-        </section>
-      }
-
-      {typeof postData.projects != "undefined" &&
-        <section className="app-section">
-          <div className="container">
-
-            {/* Heading */}
-            <div className="app-heading gap-bottom-40">
-              <h5 className="app-subtitle-1">
-                <span> Work Showcase </span>
-              </h5>
-            </div>
-
-            {/* Projects items */}
-            <div className="app-portfolio">
-              <div className="row gap-row app-portfolio-items">
-
-                {projects.map((item, key) => (
-                  <div key={`projects-item-${key}`} className="col-xs-12 col-sm-12 col-md-6 col-lg-6 app-portfolio-col">
-                    <div className="app-portfolio-item">
-                      <div className="image" data-app-overlay data-app-scroll>
-                        <Link href={`/interactive/${item.id}`} className="app-hover-3">
-                          <img src={item.image} alt={item.title}/>
-                        </Link>
-                      </div>
-                      <div className="desc">
-                        <h5 className="title">
-                          <Link className="app-lnk" href={`/interactive/${item.id}`}>
-                            <span data-splitting data-app-scroll>{item.title}</span>
-                          </Link>
-                        </h5>
-                        <div className="text">
-                          <div data-splitting data-app-scroll>
-                            <span>{item.category}</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-
-              </div>
-            </div>
-
-          </div>
-        </section>
-      }
 
     </Layouts>
   );
