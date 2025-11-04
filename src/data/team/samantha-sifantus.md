@@ -30,6 +30,19 @@ roles:
   
 awards:
   - label: Webby Award
+  
+projects: 
+  - project-04
+  - project-02
+  - project-03
+  - project-05
+
+services: 
+  - service-1
+  - service-2
+  - service-3
+  - service-4
+  - service-5
  
 
 bio:
