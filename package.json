@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "private": true,
     "engines": {
-        "node": ">=18.0.0"
+        "node": ">=20.0.0"
     },
     "scripts": {
         "dev": "next dev",
@@ -16,7 +16,7 @@
         "formik": "^2.4.2",
         "gray-matter": "^4.0.3",
         "isotope-layout": "^3.0.6",
-        "next": "13.4.3",
+        "next": "14.2.33",
         "react": "18.2.0",
         "react-bootstrap": "^2.8.0",
         "react-countup": "^6.4.2",
