@@ -1,16 +1,16 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import PageBanner from "@components/PageBanner";
 import Layouts from "@layouts/Layouts";
 import appData from "@data/app.json";
-import {Formik} from 'formik';
+import { Formik } from 'formik';
 
 const Contact = () => {
 
-  const [submitted, setSubmitted] = useState(false);
+  const [ submitted, setSubmitted ] = useState(false);
 
   return (
     <Layouts>
-      <PageBanner pageTitle={"Contact"}/>
+      <PageBanner pageTitle={"Contact"} />
       <section className="app-section gap-top-140">
         <div className="container-md">
           <div className="row">
@@ -24,7 +24,7 @@ const Contact = () => {
               {/* Form */}
               <div className="app-form">
                 <Formik
-                  initialValues={{email: '', name: '', tel: '', message: ''}}
+                  initialValues={{ email: '', name: '', tel: '', message: '' }}
                   validate={values => {
                     const errors = {};
                     if (!values.email) {
@@ -36,7 +36,7 @@ const Contact = () => {
                     }
                     return errors;
                   }}
-                  onSubmit={(values, {setSubmitting}) => {
+                  onSubmit={(values, { setSubmitting }) => {
                     const form = document.getElementById("contactForm");
                     const status = document.getElementById("contactFormStatus");
                     let data = new FormData();
@@ -60,7 +60,7 @@ const Contact = () => {
                       } else {
                         response.json().then(data => {
                           if (Object.hasOwn(data, 'errors')) {
-                            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                            status.innerHTML = data[ "errors" ].map(error => error[ "message" ]).join(", ")
                           } else {
                             status.innerHTML = "Oops! There was a problem submitting your form"
                           }
@@ -74,17 +74,17 @@ const Contact = () => {
                   }}
                 >
                   {({
-                      values,
-                      errors,
-                      touched,
-                      handleChange,
-                      handleBlur,
-                      handleSubmit,
-                      isSubmitting,
-                      /* and other goodies */
-                    }) => (
+                    values,
+                    errors,
+                    touched,
+                    handleChange,
+                    handleBlur,
+                    handleSubmit,
+                    isSubmitting,
+                    /* and other goodies */
+                  }) => (
                     <form onSubmit={handleSubmit} id="contactForm" action={appData.settings.formspreeURL}
-                          className="cform" method="post">
+                      className="cform" method="post">
                       <div className={`row contact-form ${submitted ? 'submitted' : ''}`}>
                         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                           <p>
@@ -127,14 +127,14 @@ const Contact = () => {
                         </div>
                         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                           <p>
-                                            <textarea
-                                              placeholder="Message"
-                                              name="message"
-                                              required="required"
-                                              onChange={handleChange}
-                                              onBlur={handleBlur}
-                                              value={values.message}
-                                            />
+                            <textarea
+                              placeholder="Message"
+                              name="message"
+                              required="required"
+                              onChange={handleChange}
+                              onBlur={handleBlur}
+                              value={values.message}
+                            />
                           </p>
                         </div>
                         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -146,7 +146,7 @@ const Contact = () => {
                         </div>
                       </div>
 
-                      <div className="form-status alert-success" id="contactFormStatus"/>
+                      <div className="form-status alert-success" id="contactFormStatus" />
                     </form>
                   )}
                 </Formik>
@@ -160,7 +160,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-
     </Layouts>
   );
 };
