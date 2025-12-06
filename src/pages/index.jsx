@@ -10,10 +10,10 @@ import { getSortedTeamData } from "@library/team";
 
 import Waves from "@components/Waves";
 import Technologies from "@components/sections/Technologies";
-const Testimonial2Slider = dynamic(() => import("@components/sliders/Testimonial2"), {ssr: false});
+const Testimonial2Slider = dynamic(() => import("@components/sliders/Testimonial2"), { ssr: false });
 import PartnersSection from "@components/sections/Partners";
 
-const Home3 = (props) => {
+const Home = (props) => {
   return (
     <Layouts darkHeader>
       <div className="app-section-fullscreen">
@@ -27,11 +27,11 @@ const Home3 = (props) => {
       </div>
       <Technologies bg />
       <PartnersSection paddingTop title="Projects" />
-      <Testimonial2Slider/>
+      <Testimonial2Slider />
     </Layouts>
   );
 };
-export default Home3;
+export default Home;
 
 export async function getStaticProps() {
   const allPosts = getSortedPostsData();
