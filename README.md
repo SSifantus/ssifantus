@@ -18,8 +18,7 @@ alt="Portfolio Site"/>
 
 <div align="center">
 
-Frontend focused full-stack Software Engineer based in Los Angeles. I am passionate about leveraging technology 
-as a tool for aiding human flourishing and efficiently building products that improve people’s lives.
+Frontend focused full-stack Software Engineer based in Los Angeles.
 
 
 </div>
