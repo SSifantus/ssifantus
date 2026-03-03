@@ -13,15 +13,5 @@ alt="Portfolio Site"/>
 
 
 
----
 
-
-<div align="center">
-
-Frontend focused full-stack Software Engineer based in Los Angeles.
-
-
-</div>
-
----
 
